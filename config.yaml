@@ -1,0 +1,42 @@
+niche: "sejarah peradaban kuno yang mengubah dunia (Mesir Kuno, Romawi, Yunani, Maya, Persia, Cina Kuno, Mesopotamia, Inca)"
+audience: "orang dewasa Indonesia yang suka sejarah, dokumenter, dan belajar tentang peradaban masa lalu"
+language: id
+
+script:
+  model: llama-3.3-70b-versatile
+  target_seconds: 420
+  words_per_second: 2.5
+
+voice:
+  provider: edge
+  voice: id-ID-ArdiNeural
+  rate: "-10%"
+  pitch: "+0Hz"
+
+captions:
+  whisper_model: base
+  font: "Anton"
+  font_size: 70
+  primary_color: "&H00FFFFFF"
+  outline_color: "&H00000000"
+  outline: 5
+  words_per_caption: 4
+  position_y: 0.90
+
+video:
+  width: 1920
+  height: 1080
+  fps: 30
+
+upload:
+  privacy: "public"
+  category_id: "27"
+  made_for_kids: false
+  channel: "sejarah"
+  default_tags: ["sejarah", "peradaban kuno", "dokumenter sejarah", "sejarah dunia", "Mesir Kuno", "Romawi", "peradaban", "fakta sejarah", "edukasi", "belajar sejarah", "dokumenter Indonesia"]
+
+comments:
+  model: llama-3.1-8b-instant
+  poll_interval_minutes: 180
+  auto_reply: true
+  delete_spam: true
