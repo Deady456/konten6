@@ -35,6 +35,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     _log("4/6 Generating AI images via Pollinations")
     image_dir = work / "images"
     image_dir.mkdir(parents=True, exist_ok=True)
+    image_paths = []
     v = CONFIG["video"]
     img_w, img_h = v["width"], v["height"]
     for i, seg in enumerate(segments):
