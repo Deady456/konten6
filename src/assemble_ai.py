@@ -63,9 +63,10 @@ def build(
         _run([
             "ffmpeg", "-y", "-loop", "1", "-i", str(img),
             "-vf", (
-                f"scale={w}:{h}:force_original_aspect_ratio=increase,"
+                f"scale={w}:{h}:flags=lanczos:force_original_aspect_ratio=increase,"
                 f"crop={w}:{h},"
-                f"zoompan=z='if(eq(on,1),1.1,zoom+0.002)':"
+                f"unsharp=5:5:0.6:3:3:0.3,"
+                f"zoompan=z='if(eq(on,1),1.0,min(1.25,zoom+0.0002))':"
                 f"d={n_frames}:s={w}x{h}:fps={fps}"
             ),
             "-c:v", "libx264", "-preset", "fast", "-crf", "22",
