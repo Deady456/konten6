@@ -59,15 +59,22 @@ def mix(voice_audio: Path, out_path: Path, bg_volume: float = 0.08) -> Path:
         ], check=True, capture_output=True)
     bg = bg_adj
 
-    subprocess.run([
-        "ffmpeg", "-y",
-        "-i", str(voice_audio),
-        "-i", str(bg),
-        "-filter_complex",
-        f"[1:a]volume={bg_volume}[bg];[0:a][bg]amix=inputs=2:duration=first:dropout_transition=2[a]",
-        "-map", "[a]",
-        "-c:a", "aac", "-b:a", "192k",
-        str(out_path),
-    ], check=True, capture_output=True)
-    print(f"      mixed with backsound (bg_volume={bg_volume})")
-    return out_path
+    try:
+        subprocess.run([
+            "ffmpeg", "-y",
+            "-i", str(voice_audio),
+            "-i", str(bg),
+            "-filter_complex",
+            f"[0:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo[voice];"
+            f"[1:a]volume={bg_volume},aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo[bg];"
+            f"[voice][bg]amix=inputs=2:duration=first:dropout_transition=2[a]",
+            "-map", "[a]",
+            "-c:a", "aac", "-b:a", "192k",
+            str(out_path),
+        ], check=True, capture_output=True)
+        print(f"      mixed with backsound (bg_volume={bg_volume})")
+        return out_path
+    except subprocess.CalledProcessError:
+        print(f"    backsound mix failed, falling back to voice-only")
+        out_path.write_bytes(voice_audio.read_bytes())
+        return out_path

@@ -69,7 +69,7 @@ Return ONLY valid JSON with this schema:
     t0 = time.time()
     resp = _call_llm(
         model=LLM_MODEL,
-        max_tokens=4000,
+        max_tokens=8000,
         response_format={"type": "json_object"},
         messages=[
             {"role": "system", "content": system_prompt},
