@@ -66,7 +66,7 @@ def build(
                 f"scale={w}:{h}:flags=lanczos:force_original_aspect_ratio=increase,"
                 f"crop={w}:{h},"
                 f"unsharp=5:5:0.6:3:3:0.3,"
-                f"zoompan=z='if(eq(on,1),1.0,min(1.25,zoom+0.0002))':"
+                f"zoompan=z='if(eq(on,1),1.0,min(1.08,zoom+0.00006))':"
                 f"d={n_frames}:s={w}x{h}:fps={fps}"
             ),
             "-c:v", "libx264", "-preset", "fast", "-crf", "22",
