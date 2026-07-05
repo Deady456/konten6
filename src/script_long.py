@@ -27,7 +27,7 @@ def generate():
     lang = CONFIG.get("language", "en")
     ts = s["target_seconds"]
     target_words = int(ts * s["words_per_second"])
-    sections = max(5, ts // 60)
+    sections = max(5, ts // 20)  # 1 gambar per ~20 detik
 
     if lang == "id":
         system_prompt = f"""Anda adalah penulis naskah video dokumenter YouTube.
@@ -83,7 +83,7 @@ Return ONLY valid JSON with this schema:
             resp = _call_llm(
                 api_key=api_key, base_url=base_url,
                 model=model,
-                max_tokens=8000,
+                max_tokens=12000,
                 response_format={"type": "json_object"},
                 messages=[
                     {"role": "system", "content": system_prompt},
