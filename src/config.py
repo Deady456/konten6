@@ -22,13 +22,21 @@ STATE_FILE = ROOT / "state.json"
 PEXELS_API_KEY = os.environ["PEXELS_API_KEY"]
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
 
+# Primary LLM
 if LLM_PROVIDER == "gemini":
-    LLM_API_KEY = os.environ["GEMINI_API_KEY"]
+    LLM_API_KEY = os.environ.get("GEMINI_API_KEY", "")
     LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
 elif LLM_PROVIDER == "groq":
-    LLM_API_KEY = os.environ["GROQ_API_KEY"]
+    LLM_API_KEY = os.environ.get("GROQ_API_KEY", "")
     LLM_BASE_URL = "https://api.groq.com/openai/v1"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "llama-3.3-70b-versatile")
 else:
     raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER}")
+
+# Fallback LLM (Groq backup when Gemini is primary)
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+FALLBACK_API_KEY = GROQ_API_KEY
+FALLBACK_BASE_URL = GROQ_BASE_URL
+FALLBACK_MODEL = "llama-3.3-70b-versatile"

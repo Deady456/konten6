@@ -1,10 +1,13 @@
 import json, re, time
 from openai import OpenAI
-from .config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG
+from .config import (
+    LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER,
+    FALLBACK_API_KEY, FALLBACK_BASE_URL, FALLBACK_MODEL,
+    CONFIG,
+)
 
-client = OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)
-
-def _call_llm(model, max_tokens, response_format, messages, retries=5):
+def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, retries=5):
+    client = OpenAI(api_key=api_key, base_url=base_url)
     for attempt in range(retries):
         try:
             return client.chat.completions.create(
@@ -65,19 +68,40 @@ Return ONLY valid JSON with this schema:
         f"Buat SATU naskah dokumenter."
     )
 
-    print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
-    t0 = time.time()
-    resp = _call_llm(
-        model=LLM_MODEL,
-        max_tokens=8000,
-        response_format={"type": "json_object"},
-        messages=[
-            {"role": "system", "content": system_prompt},
-            {"role": "user", "content": user_msg},
-        ],
-    )
-    raw = resp.choices[0].message.content
-    print(f"    LLM responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
+    providers = [
+        (LLM_PROVIDER, LLM_API_KEY, LLM_BASE_URL, LLM_MODEL),
+    ]
+    if LLM_PROVIDER != "groq" and FALLBACK_API_KEY:
+        providers.append(("groq", FALLBACK_API_KEY, FALLBACK_BASE_URL, FALLBACK_MODEL))
+
+    raw = None
+    last_err = None
+    for prov_name, api_key, base_url, model in providers:
+        print(f"    calling {prov_name}/{model}...")
+        t0 = time.time()
+        try:
+            resp = _call_llm(
+                api_key=api_key, base_url=base_url,
+                model=model,
+                max_tokens=8000,
+                response_format={"type": "json_object"},
+                messages=[
+                    {"role": "system", "content": system_prompt},
+                    {"role": "user", "content": user_msg},
+                ],
+            )
+            raw = resp.choices[0].message.content
+            print(f"    {prov_name} responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
+            break
+        except Exception as e:
+            last_err = e
+            print(f"    {prov_name} failed: {e}")
+            if prov_name == providers[-1][0]:
+                raise
+            print(f"    falling back to next provider...")
+
+    if raw is None:
+        raise last_err or RuntimeError("All LLM providers failed")
 
     text = raw.strip()
     if text.startswith("```"):
