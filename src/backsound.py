@@ -36,30 +36,35 @@ def mix(voice_audio: Path, out_path: Path, bg_volume: float = 0.08) -> Path:
     voice_dur = probe_duration(voice_audio)
     bg_dur = probe_duration(bg_raw)
 
+    bg_adj = out_path.parent / "backsound_prepared.wav"
     if bg_dur < voice_dur:
-        loops = int(voice_dur // bg_dur) + 1
+        import math
+        loops = int(math.ceil(voice_dur / bg_dur))
+        list_path = out_path.parent / "backsound_list.txt"
+        list_path.write_text("\n".join([f"file '{bg_raw.resolve()}'"] * loops) + "\n")
         subprocess.run([
-            "ffmpeg", "-y",
-            "-stream_loop", str(loops), "-i", str(bg_raw),
+            "ffmpeg", "-y", "-f", "concat", "-safe", "0",
+            "-i", str(list_path),
             "-t", f"{voice_dur:.3f}",
-            "-c", "copy", str(out_path.parent / "backsound_looped.mp3"),
+            "-ac", "2", "-ar", "44100",
+            "-c:a", "pcm_s16le", str(bg_adj),
         ], check=True, capture_output=True)
-        bg = out_path.parent / "backsound_looped.mp3"
     else:
         subprocess.run([
             "ffmpeg", "-y",
             "-i", str(bg_raw),
             "-t", f"{voice_dur:.3f}",
-            "-c", "copy", str(out_path.parent / "backsound_trimmed.mp3"),
+            "-ac", "2", "-ar", "44100",
+            "-c:a", "pcm_s16le", str(bg_adj),
         ], check=True, capture_output=True)
-        bg = out_path.parent / "backsound_trimmed.mp3"
+    bg = bg_adj
 
     subprocess.run([
         "ffmpeg", "-y",
         "-i", str(voice_audio),
         "-i", str(bg),
         "-filter_complex",
-        f"[1:a]volume={bg_volume}[bg];[0:a][bg]amix=inputs=2:duration=first[a]",
+        f"[1:a]volume={bg_volume}[bg];[0:a][bg]amix=inputs=2:duration=first:dropout_transition=2[a]",
         "-map", "[a]",
         "-c:a", "aac", "-b:a", "192k",
         str(out_path),
