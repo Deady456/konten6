@@ -48,6 +48,13 @@ def build(
     w, h, fps = v["width"], v["height"], v["fps"]
     work_dir.mkdir(parents=True, exist_ok=True)
 
+    MAX_CLIP = 20
+
+    def _zoom_expr(zs, ze, dur):
+        n = int(dur * fps)
+        inc = (ze - zs) / max(1, n - 1)
+        return f"z='if(eq(on,1),{zs},min({ze},zoom+{inc:.6f}))':d={n}:s={w}x{h}:fps={fps}"
+
     durations = _scene_durations(words, scenes)
     audio_dur = probe_duration(voice_audio)
     total_video = sum(durations)
@@ -56,24 +63,33 @@ def build(
         durations[-1] += extra
         print(f"    last scene extended +{extra:.1f}s to match audio")
 
+    zoom_profiles = [
+        (1.0, 1.06),    # slow zoom-in
+        (1.04, 1.0),    # zoom-out
+        (1.0, 1.0),     # static
+    ]
+
     seg_files = []
     for i, (img, dur) in enumerate(zip(image_paths, durations)):
-        n_frames = max(1, int(dur * fps))
-        seg = work_dir / f"seg_{i:04d}.mp4"
-        _run([
-            "ffmpeg", "-y", "-loop", "1", "-i", str(img),
-            "-vf", (
-                f"scale={w}:{h}:flags=lanczos:force_original_aspect_ratio=increase,"
-                f"crop={w}:{h},"
-                f"unsharp=5:5:0.6:3:3:0.3,"
-                f"zoompan=z='if(eq(on,1),1.0,min(1.08,zoom+0.00006))':"
-                f"d={n_frames}:s={w}x{h}:fps={fps}"
-            ),
-            "-c:v", "libx264", "-preset", "fast", "-crf", "22",
-            "-pix_fmt", "yuv420p", "-t", f"{dur:.3f}",
-            str(seg),
-        ], f"scene {i+1}/{len(image_paths)} zoompan")
-        seg_files.append(seg)
+        n_clips = max(1, int(dur // MAX_CLIP))
+        clip_dur = dur / n_clips
+        for j in range(n_clips):
+            z_in, z_out = zoom_profiles[j % len(zoom_profiles)]
+            seg = work_dir / f"seg_{i:04d}_{j:02d}.mp4"
+            n_frames = max(1, int(clip_dur * fps))
+            _run([
+                "ffmpeg", "-y", "-loop", "1", "-i", str(img),
+                "-vf", (
+                    f"scale={w}:{h}:flags=lanczos:force_original_aspect_ratio=increase,"
+                    f"crop={w}:{h},"
+                    f"unsharp=5:5:0.6:3:3:0.3,"
+                    f"zoompan=" + _zoom_expr(z_in, z_out, clip_dur)
+                ),
+                "-c:v", "libx264", "-preset", "fast", "-crf", "22",
+                "-pix_fmt", "yuv420p", "-t", f"{clip_dur:.3f}",
+                str(seg),
+            ], f"scene {i+1}/{len(image_paths)} clip {j+1}/{n_clips} ({z_in}->{z_out})")
+            seg_files.append(seg)
 
     concat_list = work_dir / "concat.txt"
     concat_list.write_text("\n".join(f"file '{seg.name}'" for seg in seg_files), encoding="utf-8")
