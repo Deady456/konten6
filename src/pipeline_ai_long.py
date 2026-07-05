@@ -1,6 +1,6 @@
 import argparse, re, time
 from datetime import datetime
-from . import script_long, voice, captions, visuals_ai, assemble_ai, upload, state
+from . import script_long, voice, captions, visuals_ai, assemble_ai, backsound, upload, state
 from .config import CONFIG, OUTPUT_DIR
 
 def slug(s: str) -> str:
@@ -22,6 +22,10 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     _log("2/6 Synthesizing voiceover with Edge TTS")
     voice_mp3 = voice.synth(data["full_text"], work / "voice.mp3")
     _log(f"    voice saved ({voice_mp3.stat().st_size/1024:.0f} KB)")
+
+    voice_mixed = work / "voice_mixed.mp3"
+    _log(f"    mixing backsound -> {voice_mixed.name}")
+    backsound.mix(voice_mp3, voice_mixed, bg_volume=CONFIG.get("backsound_volume", 0.08))
 
     _log("3/6 Transcribing for word-level captions (Faster-Whisper)")
     t0 = time.time()
@@ -50,7 +54,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     scenes = [{"text": s["text"]} for s in segments]
     final = assemble_ai.build(
         image_paths=image_paths,
-        voice_audio=voice_mp3,
+        voice_audio=voice_mixed,
         captions_ass=ass_path,
         words=words,
         scenes=scenes,

@@ -23,6 +23,8 @@ captions:
   words_per_caption: 4
   position_y: 0.90
 
+backsound_volume: 0.08
+
 video:
   width: 1920
   height: 1080
