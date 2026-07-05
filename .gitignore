@@ -6,6 +6,7 @@ logs/
 client_secret.json
 token.json
 token_default.json
+token_*.json
 __pycache__/
 *.pyc
 .venv/
