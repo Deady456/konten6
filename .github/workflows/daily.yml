@@ -2,7 +2,7 @@ name: Daily Long-Form Documentary
 
 on:
   schedule:
-    - cron: '0 0 * * *'  # 07:00 WIB
+    - cron: '0 22 * * *'  # 07:00 WIT
   workflow_dispatch:
 
 jobs:
