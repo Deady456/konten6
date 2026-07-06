@@ -5,6 +5,7 @@ from .config import (
     FALLBACK_API_KEY, FALLBACK_BASE_URL, FALLBACK_MODEL,
     CONFIG,
 )
+from . import state
 
 def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, retries=5):
     client = OpenAI(api_key=api_key, base_url=base_url)
@@ -62,10 +63,15 @@ Rules:
 Return ONLY valid JSON with this schema:
 {{"title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "segments": [{{"title": "...", "text": "...", "image_prompt": "..."}}]}}"""
 
+    s = state.load()
+    used = s.get("used_topics", [])
+    used_str = ", ".join(used[-30:]) if used else "(none yet)"
+
     user_msg = (
         f"Niche: {CONFIG['niche']}\n"
         f"Audience: {CONFIG['audience']}\n"
-        f"Buat SATU naskah dokumenter."
+        f"Topik yang sudah pernah dibuat: {used_str}\n"
+        f"Buat SATU naskah dokumenter dengan topik yang BENAR-BENAR BARU. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
     )
 
     providers = [

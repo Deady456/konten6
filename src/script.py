@@ -72,17 +72,23 @@ def _extract_json(text: str) -> dict:
 def generate():
     lang = CONFIG.get("language", "en")
 
+    s = state.load()
+    used = s.get("used_topics", [])
+    used_str = ", ".join(used[-30:]) if used else "(none yet)"
+
     if lang == "id":
         user_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
-            f"Buat SATU Short baru."
+            f"Topik yang sudah pernah dibuat: {used_str}\n"
+            f"Buat SATU Short dengan topik yang BENAR-BENAR BARU. DILARANG menggunakan topik yang sudah pernah dibuat. Judul dan isi harus orisinal dan tidak mirip dengan yang sudah ada."
         )
     else:
         user_msg = (
             f"Niche: {CONFIG['niche']}\n"
             f"Audience: {CONFIG['audience']}\n"
-            f"Generate ONE fresh Short."
+            f"Previously used topics: {used_str}\n"
+            f"Generate ONE completely NEW Short. DO NOT use any of the previously used topics. Title and content must be original and not similar to what has been done before."
         )
 
     print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
