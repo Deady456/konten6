@@ -2,7 +2,7 @@ name: Daily Long-Form Documentary
 
 on:
   schedule:
-    - cron: '0 22 * * *'  # 07:00 WIT
+    - cron: '0 * * * *'  # every hour — hour check gates actual run at 22 UTC = 07:00 WIT
   workflow_dispatch:
 
 jobs:
@@ -10,6 +10,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
+      - name: Check upload hour
+        id: check
+        run: echo "hour=$(date -u +%H)" >> $GITHUB_OUTPUT
+
+      - name: Conditional run
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then exit 0; fi
+          if [ "${{ steps.check.outputs.hour }}" = "22" ]; then exit 0; fi
+          echo "Not scheduled hour, skipping"
+          exit 1
 
       - uses: actions/setup-python@v5
         with:
