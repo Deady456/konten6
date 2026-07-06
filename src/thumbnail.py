@@ -11,16 +11,20 @@ _COLORS = [
     ["#30cfd0", "#330867"],
 ]
 
+def _hex(c):
+    return (int(c[1:3], 16), int(c[3:5], 16), int(c[5:7], 16))
+
 def _gradient(w, h, colors):
     img = Image.new("RGB", (w, h))
     pix = img.load()
-    n = len(colors) - 1
+    rgb = [_hex(c) for c in colors]
+    n = len(rgb) - 1
     for y in range(h):
         ratio = y / h
         idx = min(int(ratio * n), n - 1)
         local_r = (ratio * n) - idx
-        c1 = colors[idx]
-        c2 = colors[min(idx + 1, n)]
+        c1 = rgb[idx]
+        c2 = rgb[min(idx + 1, n)]
         r = int(c1[0] + (c2[0] - c1[0]) * local_r)
         g = int(c1[1] + (c2[1] - c1[1]) * local_r)
         b = int(c1[2] + (c2[2] - c1[2]) * local_r)
