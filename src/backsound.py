@@ -1,12 +1,12 @@
-import subprocess, json, requests, random
+import subprocess, json, random
 from pathlib import Path
 
 SOURCES = [
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-4.mp3",
-    "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-5.mp3",
+    "https://www.youtube.com/watch?v=5XEotddQbPY",  # Clear Skies - Scott Buckley
+    "https://www.youtube.com/watch?v=hzb9DsLguJo",  # The Great Sea - Scott Buckley
+    "https://www.youtube.com/watch?v=z6Zpo1ipCPQ",  # Audio Library daily
+    "https://www.youtube.com/watch?v=nr32COcc90s",  # Audio Library daily
+    "https://www.youtube.com/watch?v=4hjQD1aPMVw",  # Audio Library daily
 ]
 
 def probe_duration(path: Path) -> float:
@@ -19,19 +19,27 @@ def probe_duration(path: Path) -> float:
 
 def download_random(out_path: Path) -> Path:
     url = random.choice(SOURCES)
-    print(f"    downloading backsound from SoundHelix...")
-    r = requests.get(url, timeout=60)
-    r.raise_for_status()
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-    out_path.write_bytes(r.content)
-    print(f"      saved ({out_path.stat().st_size//1024} KB)")
-    return out_path
+    print(f"    downloading backsound from YouTube Audio Library...")
+    bg_pattern = str(out_path.parent / "backsound_raw.%(ext)s")
+    subprocess.run([
+        "yt-dlp", "-f", "bestaudio", "--extract-audio",
+        "--audio-format", "mp3", "--audio-quality", "192K",
+        "--no-playlist",
+        "-o", bg_pattern,
+        url,
+    ], check=True, capture_output=True)
+    bg_mp3 = out_path.parent / "backsound_raw.mp3"
+    print(f"      saved ({bg_mp3.stat().st_size//1024} KB)")
+    return bg_mp3
 
 def mix(voice_audio: Path, out_path: Path, bg_volume: float = 0.08) -> Path:
-    """Mix voice audio with background music at low volume."""
     out_path.parent.mkdir(parents=True, exist_ok=True)
-    bg_raw = out_path.parent / "backsound_raw.mp3"
-    download_random(bg_raw)
+    try:
+        bg_raw = download_random(out_path)
+    except Exception as e:
+        print(f"    backsound download failed ({e}), falling back to voice-only")
+        out_path.write_bytes(voice_audio.read_bytes())
+        return out_path
 
     voice_dur = probe_duration(voice_audio)
     bg_dur = probe_duration(bg_raw)
