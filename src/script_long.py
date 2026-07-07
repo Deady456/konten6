@@ -1,27 +1,42 @@
 import json, re, time
-from openai import OpenAI
+from openai import OpenAI, RateLimitError
 from .config import (
     LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER,
     FALLBACK_API_KEY, FALLBACK_BASE_URL, FALLBACK_MODEL,
+    GROQ_API_KEYS, GROQ_BASE_URL,
     CONFIG,
 )
 from . import state
 
-def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, retries=5):
-    client = OpenAI(api_key=api_key, base_url=base_url)
+def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, retries=5, extra_keys=None):
+    clients = [OpenAI(api_key=api_key, base_url=base_url)]
+    if extra_keys:
+        for k in extra_keys:
+            clients.append(OpenAI(api_key=k, base_url=base_url))
+
     for attempt in range(retries):
-        try:
-            return client.chat.completions.create(
-                model=model, max_tokens=max_tokens,
-                response_format=response_format, messages=messages,
-            )
-        except Exception as e:
-            if attempt < retries - 1:
+        for key_idx, client in enumerate(clients):
+            try:
+                return client.chat.completions.create(
+                    model=model, max_tokens=max_tokens,
+                    response_format=response_format, messages=messages,
+                )
+            except RateLimitError:
+                if key_idx < len(clients) - 1:
+                    print(f"  Key {key_idx+1} rate limited, trying next key")
+                    continue
+                print(f"  All keys rate limited. Retry {attempt+1}/{retries}...")
                 wait = 2 ** attempt
-                print(f"  LLM error (retry {attempt+1}/{retries} in {wait}s): {e}")
                 time.sleep(wait)
-            else:
+                break
+            except Exception as e:
+                if attempt < retries - 1:
+                    wait = 2 ** attempt
+                    print(f"  LLM error (retry {attempt+1}/{retries} in {wait}s): {e}")
+                    time.sleep(wait)
+                    break
                 raise
+    raise RuntimeError(f"LLM call failed after {retries} attempts across {len(clients)} keys")
 
 def generate():
     s = CONFIG["script"]
@@ -83,6 +98,9 @@ Return ONLY valid JSON with this schema:
     raw = None
     last_err = None
     for prov_name, api_key, base_url, model in providers:
+        extra = []
+        if prov_name == "groq":
+            extra = [k for k in GROQ_API_KEYS if k != api_key]
         print(f"    calling {prov_name}/{model}...")
         t0 = time.time()
         try:
@@ -95,6 +113,7 @@ Return ONLY valid JSON with this schema:
                     {"role": "system", "content": system_prompt},
                     {"role": "user", "content": user_msg},
                 ],
+                extra_keys=extra,
             )
             raw = resp.choices[0].message.content
             print(f"    {prov_name} responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
