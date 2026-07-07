@@ -1,8 +1,6 @@
 name: Daily Long-Form Documentary
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # every hour - hour check gates actual run at 22 UTC = 07:00 WIT
   workflow_dispatch:
 
 jobs:
