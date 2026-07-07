@@ -34,7 +34,12 @@ elif LLM_PROVIDER == "groq":
 else:
     raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER}")
 
-# Fallback LLM (Groq backup when Gemini is primary)
+# Collect all GROQ_API_KEY* env vars for multi-key fallback
+GROQ_API_KEYS = []
+for k, v in sorted(os.environ.items()):
+    if k.startswith("GROQ_API_KEY"):
+        GROQ_API_KEYS.append(v)
+
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
 FALLBACK_API_KEY = GROQ_API_KEY
