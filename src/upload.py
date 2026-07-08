@@ -14,7 +14,6 @@ CLIENT_SECRET = ROOT / "client_secret.json"
 
 
 def _token_path() -> Path:
-    """Return token file path based on channel config."""
     channel = CONFIG.get("upload", {}).get("channel", "default")
     return ROOT / f"token_{channel}.json"
 
@@ -23,7 +22,7 @@ def get_service():
     token_path = _token_path()
     creds = None
     if token_path.exists():
-        creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
+        creds = Credentials.from_authorized_user_file(str(token_path), None)
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -62,3 +61,8 @@ def upload_video(video_path: Path, title: str, description: str, tags: list[str]
     while resp is None:
         _, resp = req.next_chunk()
     return resp["id"]
+
+
+def delete_video(video_id: str):
+    yt = get_service()
+    yt.videos().delete(id=video_id).execute()
