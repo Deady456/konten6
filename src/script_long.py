@@ -8,6 +8,7 @@ from .config import (
 )
 from . import state
 
+
 def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, retries=5, extra_keys=None):
     clients = [OpenAI(api_key=api_key, base_url=base_url)]
     if extra_keys:
@@ -30,6 +31,13 @@ def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, r
                 time.sleep(wait)
                 break
             except Exception as e:
+                if "413" in str(e) or "Request too large" in str(e):
+                    print(f"  Request too large ({max_tokens} max), halving to {max_tokens//2}")
+                    max_tokens = max_tokens // 2
+                    if max_tokens < 500:
+                        raise
+                    time.sleep(1)
+                    break
                 if attempt < retries - 1:
                     wait = 2 ** attempt
                     print(f"  LLM error (retry {attempt+1}/{retries} in {wait}s): {e}")
@@ -38,12 +46,13 @@ def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, r
                 raise
     raise RuntimeError(f"LLM call failed after {retries} attempts across {len(clients)} keys")
 
+
 def generate():
     s = CONFIG["script"]
     lang = CONFIG.get("language", "en")
     ts = s["target_seconds"]
     target_words = int(ts * s["words_per_second"])
-    sections = max(5, ts // 20)  # 1 gambar per ~20 detik
+    sections = max(5, ts // 20)
 
     if lang == "id":
         system_prompt = f"""Anda adalah penulis naskah video dokumenter YouTube.
@@ -107,7 +116,7 @@ Return ONLY valid JSON with this schema:
             resp = _call_llm(
                 api_key=api_key, base_url=base_url,
                 model=model,
-                max_tokens=12000,
+                max_tokens=8000,
                 response_format={"type": "json_object"},
                 messages=[
                     {"role": "system", "content": system_prompt},
