@@ -3,38 +3,39 @@ import re
 import time
 from datetime import datetime
 from openai import OpenAI, RateLimitError
-from .config import LLM_API_KEY, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG, GROQ_API_KEYS
+from .config import LLM_API_KEYS, LLM_BASE_URL, LLM_MODEL, LLM_PROVIDER, CONFIG
 from . import state
 
-if LLM_PROVIDER == "groq" and len(GROQ_API_KEYS) > 1:
-    clients = [OpenAI(api_key=k, base_url=LLM_BASE_URL) for k in GROQ_API_KEYS]
-else:
-    clients = [OpenAI(api_key=LLM_API_KEY, base_url=LLM_BASE_URL)]
+_key_idx = 0
+_client = OpenAI(api_key=LLM_API_KEYS[_key_idx], base_url=LLM_BASE_URL)
 
 def _call_llm(model, max_tokens, response_format, messages, retries=5):
+    global _key_idx, _client
     for attempt in range(retries):
-        for key_idx, client in enumerate(clients):
-            try:
-                return client.chat.completions.create(
-                    model=model, max_tokens=max_tokens,
-                    response_format=response_format, messages=messages,
-                )
-            except RateLimitError:
-                if key_idx < len(clients) - 1:
-                    print(f"  Key {key_idx+1} rate limited, trying key {key_idx+2}")
-                    continue
-                print(f"  All keys rate limited. Retry {attempt+1}/{retries}...")
-                wait = 2 ** attempt
-                time.sleep(wait)
-                break
-            except Exception as e:
-                if attempt < retries - 1:
-                    wait = 2 ** attempt
-                    print(f"  LLM error (retry {attempt+1}/{retries} in {wait}s): {e}")
-                    time.sleep(wait)
-                    break
+        try:
+            return _client.chat.completions.create(
+                model=model, max_tokens=max_tokens,
+                response_format=response_format, messages=messages,
+            )
+        except RateLimitError as e:
+            if _key_idx < len(LLM_API_KEYS) - 1:
+                _key_idx += 1
+                _client = OpenAI(api_key=LLM_API_KEYS[_key_idx], base_url=LLM_BASE_URL)
+                print(f"  Rate limited, switching to key {_key_idx+1}/{len(LLM_API_KEYS)}")
+                continue
+            if attempt < retries - 1:
+                _wait = 2 ** attempt
+                print(f"  Rate limited (retry {attempt+1}/{retries} in {_wait}s): {e}")
+                time.sleep(_wait)
+            else:
                 raise
-    raise RuntimeError(f"LLM call failed after {retries} attempts across {len(clients)} keys")
+        except Exception as e:
+            if attempt < retries - 1:
+                _wait = 2 ** attempt
+                print(f"  LLM error (retry {attempt+1}/{retries} in {_wait}s): {e}")
+                time.sleep(_wait)
+            else:
+                raise
 
 def _system_prompt():
     s = CONFIG["script"]
@@ -128,4 +129,32 @@ def generate():
             s["visual_query"] = fallback
 
     data["full_text"] = " ... ".join(s["text"] for s in data["scenes"])
+
+    s_cfg = CONFIG["script"]
+    target_words = int(s_cfg["target_seconds"] * s_cfg["words_per_second"])
+    min_words = int(target_words * 0.75)
+    wc = len(data["full_text"].split())
+    if wc < min_words:
+        print(f"    WARNING: script too short ({wc} words, need {min_words}), retrying...")
+        print(f"    calling {LLM_PROVIDER}/{LLM_MODEL}...")
+        t0 = time.time()
+        resp = _call_llm(
+            model=LLM_MODEL,
+            max_tokens=2000,
+            response_format={"type": "json_object"},
+            messages=[
+                {"role": "system", "content": _system_prompt()},
+                {"role": "user", "content": user_msg},
+            ],
+        )
+        raw = resp.choices[0].message.content
+        print(f"    LLM responded in {time.time()-t0:.1f}s ({len(raw)} chars)")
+        data = _extract_json(raw)
+        for i, s in enumerate(data["scenes"]):
+            if "visual_query" not in s or not s["visual_query"]:
+                words = re.findall(r"[a-zA-Z]{3,}", s.get("text", ""))
+                fallback = " ".join(words[-3:]) if len(words) >= 3 else "abstract background"
+                s["visual_query"] = fallback
+        data["full_text"] = " ... ".join(s["text"] for s in data["scenes"])
+    
     return data
