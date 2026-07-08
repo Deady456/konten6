@@ -4,7 +4,7 @@ language: id
 
 script:
   model: llama-3.3-70b-versatile
-  target_seconds: 420
+  target_seconds: 180
   words_per_second: 2.5
 
 voice:
