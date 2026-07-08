@@ -28,9 +28,14 @@ if LLM_PROVIDER == "gemini":
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
 elif LLM_PROVIDER == "groq":
     _keys_str = os.environ["GROQ_API_KEY"]
-    LLM_API_KEYS = [k.strip() for k in _keys_str.split(",") if k.strip()]
-    LLM_API_KEY = LLM_API_KEYS[0]
-    LLM_BASE_URL = "https://api.groq.com/openai/v1"
+    GROQ_API_KEYS = [k.strip() for k in _keys_str.split(",") if k.strip()]
+    GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+    LLM_API_KEY = GROQ_API_KEYS[0]
+    LLM_API_KEYS = GROQ_API_KEYS
+    LLM_BASE_URL = GROQ_BASE_URL
     LLM_MODEL = CONFIG.get("script", {}).get("model", "llama-3.3-70b-versatile")
+    FALLBACK_API_KEY = os.environ.get("FALLBACK_API_KEY", "")
+    FALLBACK_BASE_URL = "https://api.groq.com/openai/v1"
+    FALLBACK_MODEL = os.environ.get("FALLBACK_MODEL", "llama-3.3-70b-versatile")
 else:
     raise ValueError(f"Unknown LLM_PROVIDER: {LLM_PROVIDER}")
