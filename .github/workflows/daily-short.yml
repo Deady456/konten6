@@ -61,6 +61,24 @@ jobs:
             git push
           fi
 
+      - name: Post to blog-web
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GITHUB_PAT: ${{ secrets.GITHUB_PAT }}
+        run: |
+          BWD=/tmp/blog-web
+          rm -rf $BWD
+          git clone --depth=1 https://x-access-token:${GITHUB_PAT}@github.com/Deady456/blog-web.git $BWD
+          jq -c '{video_id:(.published[-1].video_id//""), title:(.published[-1].title//""), topic:(.published[-1].topic//""), ts:(.published[-1].ts//""), channel:"konten6"}' state.json 2>/dev/null | python $BWD/add_post.py
+          cd $BWD
+          git add posts/
+          if git diff --staged --quiet; then
+            echo "blog-web: no changes"
+          else
+            git commit -m "auto: add post from konten6"
+            git push
+          fi
+
       - name: Commit refreshed token (if changed)
         run: |
           if git diff --quiet token_sejarah.json 2>/dev/null; then
