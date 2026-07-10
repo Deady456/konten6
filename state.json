@@ -1,11 +1,21 @@
 {
-  "used_topics": [],
+  "used_topics": [
+    "peradaban-inca"
+  ],
   "published": [
     {
       "ts": "20260709_220311",
       "title": "Misteri Peradaban Nubia: Warisan Afrika yang Terlupakan",
       "path": "/home/runner/work/konten6/konten6/output/20260709_220311_misteri-peradaban-nubia-warisan-afrika-yang-terlupakan/final.mp4",
       "video_id": "OdzxFpl-i1A",
+      "publish_at": null
+    },
+    {
+      "ts": "20260710_030253",
+      "topic": "peradaban-inca",
+      "title": "Mengungkap Rahasia Kerajaan Inca Yang Hilang",
+      "path": "/home/runner/work/konten6/konten6/output/20260710_030253_peradaban-inca/final.mp4",
+      "video_id": "yQZfLamYoNw",
       "publish_at": null
     }
   ]
