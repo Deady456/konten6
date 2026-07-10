@@ -4,6 +4,7 @@ import time
 from pathlib import Path
 import edge_tts
 from .config import CONFIG
+from elevenlabs.client import ElevenLabs
 
 
 def _synth_edge(text: str, out_path: Path, v: dict) -> None:
@@ -19,15 +20,17 @@ def _synth_edge(text: str, out_path: Path, v: dict) -> None:
 
 
 def _synth_elevenlabs(text: str, out_path: Path, v: dict, api_key: str) -> None:
-    from elevenlabs import generate, save
-
-    audio = generate(
+    client = ElevenLabs(api_key=api_key)
+    audio = client.text_to_speech.convert(
+        voice_id=v.get("elevenlabs_voice_id", "3mAVBNEqop5UbHtD8oxQ"),
         text=text,
-        voice=v.get("elevenlabs_voice_id", "3mAVBNEqop5UbHtD8oxQ"),
-        model="eleven_multilingual_v2",
-        api_key=api_key,
+        model_id="eleven_multilingual_v2",
+        output_format="mp3_44100_128",
     )
-    save(audio, str(out_path))
+    with open(out_path, "wb") as f:
+        for chunk in audio:
+            if chunk:
+                f.write(chunk)
 
 
 def synth(text: str, out_path: Path) -> Path:
