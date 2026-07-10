@@ -1,6 +1,7 @@
 {
   "used_topics": [
-    "peradaban-inca"
+    "peradaban-inca",
+    "peradaban-mesopotamia"
   ],
   "published": [
     {
@@ -16,6 +17,14 @@
       "title": "Mengungkap Rahasia Kerajaan Inca Yang Hilang",
       "path": "/home/runner/work/konten6/konten6/output/20260710_030253_peradaban-inca/final.mp4",
       "video_id": "yQZfLamYoNw",
+      "publish_at": null
+    },
+    {
+      "ts": "20260710_100230",
+      "topic": "peradaban-mesopotamia",
+      "title": "Mengungkap Rahasia Mesopotamia, Tempat Lahir Peradaban Modern",
+      "path": "/home/runner/work/konten6/konten6/output/20260710_100230_peradaban-mesopotamia/final.mp4",
+      "video_id": "VIH2mTzynOQ",
       "publish_at": null
     }
   ]
