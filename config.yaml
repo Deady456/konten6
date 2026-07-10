@@ -8,8 +8,9 @@ script:
   words_per_second: 2.5
 
 voice:
-  provider: edge
+  provider: elevenlabs
   voice: id-ID-ArdiNeural
+  elevenlabs_voice_id: 3mAVBNEqop5UbHtD8oxQ
   rate: "-10%"
   pitch: "+0Hz"
 
