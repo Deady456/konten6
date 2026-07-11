@@ -2,7 +2,7 @@ import argparse
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals, assemble, upload, state
+from . import script, voice, captions, visuals, assemble, upload, state, branding
 from .config import OUTPUT_DIR
 
 
@@ -61,7 +61,24 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
 
     video_id = None
     if upload_to_youtube:
-        _log("7/7 Uploading to YouTube")
+
+    # ============================================================
+    # Step 8/9: Apply branding (watermark + comment box)
+    # ============================================================
+    _log("8/9 Applying branding")
+    branded = branding.apply_all(final, work / "branding")
+    if branded != final:
+        final_branded = work / "final.mp4"
+        branded.rename(final_branded)
+        final = final_branded
+    else:
+        final_branded = work / "final.mp4"
+        final.rename(final_branded)
+        final = final_branded
+
+    sz = final.stat().st_size / (1024 * 1024)
+    _log(f"    final: {{final.name}} ({{sz:.0f}} MB)")
+        _log("9/9 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
