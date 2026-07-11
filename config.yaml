@@ -50,6 +50,20 @@ upload:
   default_tags: ["sejarah", "peradaban kuno", "dokumenter sejarah", "sejarah dunia", "Mesir Kuno", "Romawi", "peradaban", "fakta sejarah", "edukasi", "belajar sejarah", "dokumenter Indonesia"]
 
 
+
+music:
+  enabled: true
+  source: "local"
+  local_dir: "assets/music"
+  volume: 0.03
+  fade_in: 2.0
+  fade_out: 3.0
+  mood_mapping:
+    list: "upbeat"
+    story: "cinematic"
+    comparison: "neutral"
+    myth_busting: "suspense"
+    neutral: "neutral"
 branding:
   enabled: true
   intro:
