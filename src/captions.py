@@ -1,4 +1,5 @@
 import time
+import re
 from pathlib import Path
 from faster_whisper import WhisperModel
 from .config import CONFIG
@@ -14,7 +15,74 @@ def _get_model() -> WhisperModel:
     return _model
 
 
-def transcribe_words(audio_path: Path) -> list[dict]:
+def _normalize(word: str) -> str:
+    """Normalize word for comparison (lowercase, strip punctuation)."""
+    return re.sub(r"[^\w]", "", word.lower().strip())
+
+
+def verify_transcription(words: list[dict], original_text: str) -> list[dict]:
+    """Fix Whisper misspellings by comparing with original script text.
+
+    Whisper writes phonetically (e.g. 'cacing' -> 'chatching').
+    This function verifies each word against the original LLM script
+    and replaces incorrect spellings while keeping timestamps.
+    """
+    original_words = [_normalize(w) for w in original_text.split() if _normalize(w)]
+    verified = []
+    orig_idx = 0
+
+    for w in words:
+        whisper_word = _normalize(w["word"])
+
+        if not whisper_word:
+            verified.append(w)
+            continue
+
+        # Try to find matching word in original text
+        matched = False
+        if orig_idx < len(original_words):
+            # Check current position and nearby positions (fuzzy match)
+            for offset in range(-2, 3):
+                check_idx = orig_idx + offset
+                if 0 <= check_idx < len(original_words):
+                    orig_word = original_words[check_idx]
+                    # Exact match
+                    if whisper_word == orig_word:
+                        w = {**w, "word": original_text.split()[check_idx]}
+                        orig_idx = check_idx + 1
+                        matched = True
+                        break
+                    # Similar match (edit distance 1-2 for short words)
+                    elif len(whisper_word) > 3 and len(orig_word) > 3:
+                        if _similar(whisper_word, orig_word):
+                            w = {**w, "word": original_text.split()[check_idx]}
+                            orig_idx = check_idx + 1
+                            matched = True
+                            break
+
+        if not matched:
+            # Keep original whisper word if no match found
+            pass
+
+        verified.append(w)
+
+    return verified
+
+
+def _similar(a: str, b: str) -> bool:
+    """Check if two words are similar (simple character overlap)."""
+    if a == b:
+        return True
+    # Check if most characters match (for typo-like differences)
+    if len(a) >= 4 and len(b) >= 4:
+        # Count matching characters in order
+        matches = sum(1 for ca, cb in zip(a, b) if ca == cb)
+        ratio = matches / max(len(a), len(b))
+        return ratio > 0.7
+    return False
+
+
+def transcribe_words(audio_path: Path, original_text: str = "") -> list[dict]:
     model = _get_model()
     print(f"    model loaded, transcribing {audio_path.name}...")
     t0 = time.time()
@@ -24,6 +92,16 @@ def transcribe_words(audio_path: Path) -> list[dict]:
         for w in (seg.words or []):
             words.append({"word": w.word, "start": float(w.start), "end": float(w.end)})
     print(f"    done in {time.time()-t0:.1f}s")
+
+    # Fix misspellings by verifying against original script
+    if original_text:
+        before_fix = [w["word"] for w in words]
+        words = verify_transcription(words, original_text)
+        after_fix = [w["word"] for w in words]
+        changes = sum(1 for a, b in zip(before_fix, after_fix) if a != b)
+        if changes:
+            print(f"    fixed {changes} misspelled words")
+
     return words
 
 
