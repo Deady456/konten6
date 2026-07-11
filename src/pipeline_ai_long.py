@@ -1,6 +1,6 @@
 import argparse, re, time
 from datetime import datetime
-from . import script_long, voice, captions, visuals_ai, assemble_ai, backsound, thumbnail, upload, state
+from . import script_long, voice, captions, visuals_ai, assemble_ai, backsound, thumbnail, upload, state, branding
 from .config import CONFIG, OUTPUT_DIR
 
 def slug(s: str) -> str:
