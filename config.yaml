@@ -38,6 +38,55 @@ upload:
   channel: "sejarah"
   default_tags: ["sejarah", "peradaban kuno", "dokumenter sejarah", "sejarah dunia", "Mesir Kuno", "Romawi", "peradaban", "fakta sejarah", "edukasi", "belajar sejarah", "dokumenter Indonesia"]
 
+
+branding:
+  enabled: true
+  intro:
+    enabled: false
+    path: "assets/branding/intro.mp4"
+    duration: 2.5
+  outro:
+    enabled: false
+    path: "assets/branding/outro.mp4"
+    duration: 3.0
+    cta_text: "Subscribe untuk fakta unik lainnya!"
+  watermark:
+    enabled: true
+    path: "assets/branding/watermark.png"
+    position: "center"
+    opacity: 0.6
+    size: 300
+  comment_box:
+    enabled: true
+    position: "bottom"
+    delay_seconds: 1.5
+    font: "Anton"
+    font_size: 26
+    font_color: "black"
+    box_color: "white@0.9"
+    box_radius: 20
+    margin: 40
+    usernames:
+      - "@fakta.unik.hari.ini"
+      - "@sains.cepat"
+      - "@ilmu.random"
+      - "@facts.indo"
+      - "@pengetahuan.umum"
+      - "@daily.science.id"
+      - "@sains.populer"
+      - "@trivia.indonesia"
+    comments:
+      - "Keren banget! Ga nyangka gitu"
+      - "Wajib tahu nih buat semua orang!"
+      - "Fakta yang jarang diketahui orang"
+      - "Ternyata begini ya, mantap!"
+      - "Share ke temen yang belum tau!"
+      - "Baru tau gw, ternyata begitu"
+      - "Wah, ga sangka bisa begitu!"
+      - "Beneran? Cekidot guys!"
+      - "Info penting nih, jangan skip!"
+      - "Setuju gak sama fakta ini?"
+
 comments:
   model: llama-3.1-8b-instant
   poll_interval_minutes: 180
