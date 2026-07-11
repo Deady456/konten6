@@ -91,15 +91,6 @@ branding:
     box_color: "white@0.9"
     box_radius: 20
     margin: 40
-    usernames:
-      - "@fakta.unik.hari.ini"
-      - "@sains.cepat"
-      - "@ilmu.random"
-      - "@facts.indo"
-      - "@pengetahuan.umum"
-      - "@daily.science.id"
-      - "@sains.populer"
-      - "@trivia.indonesia"
     comments:
       - "Keren banget! Ga nyangka gitu"
       - "Wajib tahu nih buat semua orang!"
