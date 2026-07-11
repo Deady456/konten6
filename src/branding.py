@@ -163,7 +163,18 @@ def add_comment_box(video_path: Path, output_path: Path) -> Path:
     if not usernames or not comments:
         return video_path
 
-    u1, u2 = random.sample(usernames, 2)
+    # Random Indonesian names
+    indonesian_names = [
+        "Budi", "Siti", "Ahmad", "Dewi", "Rizki", "Anisa", "Dwi", "Rina",
+        "Fajar", "Lestari", "Andi", "Putri", "Yoga", "Mega", "Arif", "Sari",
+        "Dimas", "Citra", "Bayu", "Nisa", "Fadil", "Ayu", "Raka", "Dina",
+        "Ilham", "Wati", "Reza", "Eka", "Gilang", "Rani", "Vina", "Hendra",
+        "Salsa", "Kiki", "Lailatul", "Yusuf", "Amelia", "Rudi", "Novi", "Taufik",
+        "Dian", "Hendra", "Nugraha", "Yulianti", "Bagas", "Rahma", "Prasetyo", "Putri",
+        "Aditya", "Ghea", "Firmansyah", "Anggun", "Zaki", "Syifa", "Alif", "Nadhira",
+        "Rifqi", "Salwa", "Fauzan", "Aulia", "Irgi", "Naila"
+    ]
+    u1, u2 = random.sample(indonesian_names, 2)
     c1, c2 = random.sample(comments, 2)
     font = cfg.get("font", "Anton")
     font_size = cfg.get("font_size", 26)
