@@ -30,7 +30,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     _log("3/7 Transcribing for word-level captions (Faster-Whisper)")
     _log("    loading model (first run downloads)...")
     t0 = time.time()
-    words = captions.transcribe_words(voice_mp3)
+    words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
     _log("4/7 Fetching footage from Pexels")
