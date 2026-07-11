@@ -163,18 +163,23 @@ def add_comment_box(video_path: Path, output_path: Path) -> Path:
     if not usernames or not comments:
         return video_path
 
-    # Random Indonesian names
-    indonesian_names = [
-        "Budi", "Siti", "Ahmad", "Dewi", "Rizki", "Anisa", "Dwi", "Rina",
-        "Fajar", "Lestari", "Andi", "Putri", "Yoga", "Mega", "Arif", "Sari",
-        "Dimas", "Citra", "Bayu", "Nisa", "Fadil", "Ayu", "Raka", "Dina",
-        "Ilham", "Wati", "Reza", "Eka", "Gilang", "Rani", "Vina", "Hendra",
-        "Salsa", "Kiki", "Lailatul", "Yusuf", "Amelia", "Rudi", "Novi", "Taufik",
-        "Dian", "Hendra", "Nugraha", "Yulianti", "Bagas", "Rahma", "Prasetyo", "Putri",
-        "Aditya", "Ghea", "Firmansyah", "Anggun", "Zaki", "Syifa", "Alif", "Nadhira",
-        "Rifqi", "Salwa", "Fauzan", "Aulia", "Irgi", "Naila"
+    # Random social media usernames
+    social_usernames = [
+        "budi_santoso", "sitinurhaliza", "ahmad_kurniawan", "dewilestari23", "rizki_pratama",
+        "anisa.putri", "dwifajar", "rinawati_99", "fajar_hermawan", "lestari_dwi",
+        "andi_saputra", "putri.mega", "yoga_permadi", "mega_ayu", "arif_rahman",
+        "sari_melati", "dimas_aditya", "citra_purnama", "bayu_sakti", "nisa_rahmawati",
+        "fadil_ahmad", "ayu_laksmini", "raka_darmawan", "dina_permana", "ilham_fauzi",
+        "wati_susanti", "reza_mahendra", "eka_sari", "gilang_ramadhan", "rani_puspita",
+        "vina_anggraeni", "hendra_wijaya", "salsa_bila", "kiki_nurjannah", "lailatul_qodriah",
+        "yusuf_mubarok", "amelia_sari", "rudi_hartono", "novi_rahmawati", "taufik_hidayat",
+        "dian_kusuma", "hendra_nugraha", "yulianti_putri", "bagas_prasetyo", "rahma_dani",
+        "prasetyo_budi", "putri_nabila", "aditya_nugroho", "ghea_pramudita", "firmansyah_ali",
+        "anggun_permatasari", "zaki_mubarok", "syifa_nurhaliza", "alif_akbar", "nadhira_azzahra",
+        "rifqi_maulana", "salwa_rahmania", "fauzan_hakim", "aulia_sari", "irgi_firmansyah",
+        "naila_zahra", "rafa_pratama", "maya_sari", "raka_nugroho", "dita_ayu"
     ]
-    u1, u2 = random.sample(indonesian_names, 2)
+    u1, u2 = random.sample(social_usernames, 2)
     c1, c2 = random.sample(comments, 2)
     font = cfg.get("font", "Anton")
     font_size = cfg.get("font_size", 26)
@@ -208,8 +213,8 @@ def add_comment_box(video_path: Path, output_path: Path) -> Path:
             s = s.replace(ch, f"\\{ch}")
         return s
 
-    u1e = _esc(u1)
-    u2e = _esc(u2)
+    u1e = _esc(f"@{u1}")
+    u2e = _esc(f"@{u2}")
     c1e = _esc(c1)
     c2e = _esc(c2)
 
