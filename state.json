@@ -1,7 +1,8 @@
 {
   "used_topics": [
     "peradaban-inca",
-    "peradaban-mesopotamia"
+    "peradaban-mesopotamia",
+    "peradaban-yunani-kuno"
   ],
   "published": [
     {
@@ -32,6 +33,14 @@
       "title": "Mengungkap Rahasia Peradaban Kuno Persia",
       "path": "/home/runner/work/konten6/konten6/output/20260710_220147_mengungkap-rahasia-peradaban-kuno-persia/final.mp4",
       "video_id": "faCtbjqQT-4",
+      "publish_at": null
+    },
+    {
+      "ts": "20260711_030141",
+      "topic": "peradaban-yunani-kuno",
+      "title": "Rahasia di Balik Kekuasaan Yunani Kuno",
+      "path": "/home/runner/work/konten6/konten6/output/20260711_030141_peradaban-yunani-kuno/final.mp4",
+      "video_id": "cICmAOierCk",
       "publish_at": null
     }
   ]
