@@ -1,5 +1,5 @@
 """
-Branding layer: intro, outro, watermark, and comment box.
+Branding layer: intro, outro, and watermark.
 
 Adds professional branding to videos for better channel identity.
 """
@@ -152,119 +152,6 @@ def add_watermark(video_path: Path, output_path: Path) -> Path:
 
     return output_path
 
-def add_comment_box(video_path: Path, output_path: Path) -> Path:
-    """Add a random comment bubble with 2 fake users and comments."""
-    cfg = _get_branding_config().get("comment_box", {})
-    if not cfg.get("enabled", False):
-        return video_path
-
-    comments = cfg.get("comments", [])
-    if not comments:
-        return video_path
-
-    # Random social media usernames
-    social_usernames = [
-        "budi_santoso", "sitinurhaliza", "ahmad_kurniawan", "dewilestari23", "rizki_pratama",
-        "anisa.putri", "dwifajar", "rinawati_99", "fajar_hermawan", "lestari_dwi",
-        "andi_saputra", "putri.mega", "yoga_permadi", "mega_ayu", "arif_rahman",
-        "sari_melati", "dimas_aditya", "citra_purnama", "bayu_sakti", "nisa_rahmawati",
-        "fadil_ahmad", "ayu_laksmini", "raka_darmawan", "dina_permana", "ilham_fauzi",
-        "wati_susanti", "reza_mahendra", "eka_sari", "gilang_ramadhan", "rani_puspita",
-        "vina_anggraeni", "hendra_wijaya", "salsa_bila", "kiki_nurjannah", "lailatul_qodriah",
-        "yusuf_mubarok", "amelia_sari", "rudi_hartono", "novi_rahmawati", "taufik_hidayat",
-        "dian_kusuma", "hendra_nugraha", "yulianti_putri", "bagas_prasetyo", "rahma_dani",
-        "prasetyo_budi", "putri_nabila", "aditya_nugroho", "ghea_pramudita", "firmansyah_ali",
-        "anggun_permatasari", "zaki_mubarok", "syifa_nurhaliza", "alif_akbar", "nadhira_azzahra",
-        "rifqi_maulana", "salwa_rahmania", "fauzan_hakim", "aulia_sari", "irgi_firmansyah",
-        "naila_zahra", "rafa_pratama", "maya_sari", "raka_nugroho", "dita_ayu"
-    ]
-    u1, u2 = random.sample(social_usernames, 2)
-    c1, c2 = random.sample(comments, 2)
-    font = cfg.get("font", "Anton")
-    font_size = cfg.get("font_size", 26)
-    font_color = cfg.get("font_color", "black")
-    box_color = cfg.get("box_color", "white@0.9")
-    delay = cfg.get("delay_seconds", 1.5)
-    margin = cfg.get("margin", 40)
-
-    font_path = ROOT / "assets" / "fonts" / f"{font}-Regular.ttf"
-    if not font_path.exists():
-        print(f"    branding: font not found, skipping comment box")
-        return video_path
-
-    font_ff = str(font_path).replace("\\", "/").replace(":", "\\:")
-
-    def _escape(s):
-        for ch in ["\\", "'", '"', ":", "?", ";", "[", "]"]:
-            s = s.replace(ch, f"\\{ch}")
-        return s
-
-    u1e = _escape(u1)
-    u2e = _escape(u2)
-    c1e = _escape(c1)
-    c2e = _escape(c2)
-
-    print(f"    branding: adding comment box")
-
-    def _esc(s):
-        """Escape special chars for ffmpeg drawtext."""
-        for ch in ["\\", "'", '"', ":", "?", ";", "[", "]", ","]:
-            s = s.replace(ch, f"\\{ch}")
-        return s
-
-    u1e = _esc(f"@{u1}")
-    u2e = _esc(f"@{u2}")
-    c1e = _esc(c1)
-    c2e = _esc(c2)
-
-    box_h = 190
-    box_top_from_bottom = int(1920 * 0.35)
-    line_spacing = 42
-    pad_top = 15
-
-    vf = (
-        f"drawbox=x=20:y=ih-{box_top_from_bottom}:w=iw-40:h={box_h}:"
-        f"color={box_color}:t=fill:"
-        f"enable='gte(t,{delay})',"
-        f"drawtext=fontfile='{font_ff}':"
-        f"text='{u1e}':"
-        f"fontcolor=gray:fontsize={font_size - 2}:"
-        f"x=40:y=h-{box_top_from_bottom - pad_top}:"
-        f"enable='gte(t,{delay})',"
-        f"drawtext=fontfile='{font_ff}':"
-        f"text='{c1e}':"
-        f"fontcolor={font_color}:fontsize={font_size}:"
-        f"x=40:y=h-{box_top_from_bottom - pad_top - line_spacing}:"
-        f"enable='gte(t,{delay})',"
-        f"drawtext=fontfile='{font_ff}':"
-        f"text='{u2e}':"
-        f"fontcolor=gray:fontsize={font_size - 2}:"
-        f"x=40:y=h-{box_top_from_bottom - pad_top - line_spacing * 2}:"
-        f"enable='gte(t,{delay})',"
-        f"drawtext=fontfile='{font_ff}':"
-        f"text='{c2e}':"
-        f"fontcolor={font_color}:fontsize={font_size}:"
-        f"x=40:y=h-{box_top_from_bottom - pad_top - line_spacing * 3}:"
-        f"enable='gte(t,{delay})'"
-    )
-
-    cmd = [
-        "ffmpeg", "-y",
-        "-i", str(video_path),
-        "-vf", vf,
-        "-c:v", "libx264", "-preset", "fast", "-crf", "20",
-        "-c:a", "copy",
-        "-pix_fmt", "yuv420p",
-        "-movflags", "+faststart",
-        str(output_path),
-    ]
-
-    p = subprocess.run(cmd, capture_output=True, text=True)
-    if p.returncode != 0:
-        print(f"    branding: comment box failed: {p.stderr[-300:]}")
-        return video_path
-
-    return output_path
 
 
 def apply_all(video_path: Path, work_dir: Path) -> Path:
@@ -287,11 +174,6 @@ def apply_all(video_path: Path, work_dir: Path) -> Path:
     if cfg.get("watermark", {}).get("enabled", False):
         out = brand_dir / "with_watermark.mp4"
         current = add_watermark(current, out)
-
-    # Comment Box
-    if cfg.get("comment_box", {}).get("enabled", False):
-        out = brand_dir / "with_comment.mp4"
-        current = add_comment_box(current, out)
 
     # Outro
     if cfg.get("outro", {}).get("enabled", False):

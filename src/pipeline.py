@@ -2,7 +2,7 @@ import argparse
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals, assemble, upload, state, music, branding
+from . import script, voice, captions, visuals, assemble, upload, state, branding
 from .config import CONFIG, OUTPUT_DIR
 
 
@@ -22,11 +22,11 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
         format_idx = s.get("_format_idx", 0)
         selected_format = formats[format_idx % len(formats)]
         state.update({"_format_idx": format_idx + 1})
-        _log(f"0/9 Content format: {selected_format}")
+        _log(f"0/8 Content format: {selected_format}")
     else:
         selected_format = None
 
-    _log("1/9 Generating script with LLM")
+    _log("1/8 Generating script with LLM")
     data = script.generate(content_format=selected_format)
     _log(f"    topic: {data['topic']} ({len(data['scenes'])} scenes)")
 
@@ -34,37 +34,31 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     work = OUTPUT_DIR / f"{stamp}_{slug(data['topic'])}"
     work.mkdir(parents=True, exist_ok=True)
 
-    _log("2/9 Synthesizing voiceover")
+    _log("2/8 Synthesizing voiceover")
     voice_mp3 = voice.synth(data["full_text"], work / "voice.mp3")
     _log(f"    voice saved ({voice_mp3.stat().st_size/1024:.0f} KB)")
 
-    _log("3/9 Transcribing for word-level captions (Faster-Whisper)")
+    _log("3/8 Transcribing for word-level captions (Faster-Whisper)")
     _log("    loading model (first run downloads)...")
     t0 = time.time()
     words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
-    _log("4/9 Fetching footage from Pexels")
+    _log("4/8 Fetching footage from Pexels")
     scene_videos = visuals.fetch_for_scenes(data["scenes"], work / "broll")
     _log(f"    {len(scene_videos)} clips ready")
 
-    _log("5/9 Writing caption file")
+    _log("5/8 Writing caption file")
     from .config import CONFIG as CFG
     ass_path = captions.write_ass(words, work / "captions.ass",
                                   CFG["video"]["width"], CFG["video"]["height"])
 
-    _log("6/9 Mixing background music")
-    from .assemble import probe_duration
-    audio_dur = probe_duration(voice_mp3)
-    mixed_audio = work / "voice_mixed.aac"
-    music.mix_with_voice(voice_mp3, mixed_audio, audio_dur, data["scenes"])
-
-    _log("7/9 Assembling final video with ffmpeg")
+    _log("6/8 Assembling final video with ffmpeg")
     _log("    processing scenes (scale/crop/loop)...")
     t0 = time.time()
     final = assemble.build(
         scene_videos=scene_videos,
-        voice_audio=mixed_audio,
+        voice_audio=voice_mp3,
         captions_ass=ass_path,
         words=words,
         scenes=data["scenes"],
@@ -76,7 +70,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
     sz = final.stat().st_size / (1024 * 1024)
     _log(f"    raw video: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
 
-    _log("8/9 Applying branding")
+    _log("7/8 Applying branding")
     branded = branding.apply_all(final, work / "branding")
     if branded != final:
         final_branded = work / "final.mp4"
@@ -92,7 +86,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
 
     video_id = None
     if upload_to_youtube:
-        _log("9/9 Uploading to YouTube")
+        _log("8/8 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
@@ -102,7 +96,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
         )
         _log(f"    uploaded: https://youtube.com/shorts/{video_id}")
     else:
-        _log("9/9 Upload skipped (--no-upload)")
+        _log("8/8 Upload skipped (--no-upload)")
 
     state.add_topic(data["topic"])
     state.add_published({
