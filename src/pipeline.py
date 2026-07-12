@@ -2,8 +2,8 @@ import argparse
 import re
 import time
 from datetime import datetime
-from . import script, voice, captions, visuals, assemble, upload, state, branding
-from .config import OUTPUT_DIR
+from . import script, voice, captions, visuals, assemble, upload, state, music, branding
+from .config import CONFIG, OUTPUT_DIR
 
 
 def slug(s: str) -> str:
@@ -15,56 +15,67 @@ def _log(msg: str):
 
 
 def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> dict:
-    _log("1/7 Generating script with LLM")
-    data = script.generate()
+    content_cfg = CONFIG.get("content_variation", {})
+    if content_cfg.get("enabled", False):
+        formats = content_cfg.get("formats", ["list"])
+        s = state.load()
+        format_idx = s.get("_format_idx", 0)
+        selected_format = formats[format_idx % len(formats)]
+        state.update({"_format_idx": format_idx + 1})
+        _log(f"0/9 Content format: {selected_format}")
+    else:
+        selected_format = None
+
+    _log("1/9 Generating script with LLM")
+    data = script.generate(content_format=selected_format)
     _log(f"    topic: {data['topic']} ({len(data['scenes'])} scenes)")
 
     stamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     work = OUTPUT_DIR / f"{stamp}_{slug(data['topic'])}"
     work.mkdir(parents=True, exist_ok=True)
 
-    _log("2/7 Synthesizing voiceover with Edge TTS")
+    _log("2/9 Synthesizing voiceover")
     voice_mp3 = voice.synth(data["full_text"], work / "voice.mp3")
     _log(f"    voice saved ({voice_mp3.stat().st_size/1024:.0f} KB)")
 
-    _log("3/7 Transcribing for word-level captions (Faster-Whisper)")
+    _log("3/9 Transcribing for word-level captions (Faster-Whisper)")
     _log("    loading model (first run downloads)...")
     t0 = time.time()
     words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
-    _log("4/7 Fetching footage from Pexels")
+    _log("4/9 Fetching footage from Pexels")
     scene_videos = visuals.fetch_for_scenes(data["scenes"], work / "broll")
     _log(f"    {len(scene_videos)} clips ready")
 
-    _log("5/7 Writing caption file")
+    _log("5/9 Writing caption file")
     from .config import CONFIG as CFG
     ass_path = captions.write_ass(words, work / "captions.ass",
                                   CFG["video"]["width"], CFG["video"]["height"])
 
-    _log("6/7 Assembling final video with ffmpeg")
+    _log("6/9 Mixing background music")
+    from .assemble import probe_duration
+    audio_dur = probe_duration(voice_mp3)
+    mixed_audio = work / "voice_mixed.aac"
+    music.mix_with_voice(voice_mp3, mixed_audio, audio_dur, data["scenes"])
+
+    _log("7/9 Assembling final video with ffmpeg")
     _log("    processing scenes (scale/crop/loop)...")
     t0 = time.time()
     final = assemble.build(
         scene_videos=scene_videos,
-        voice_audio=voice_mp3,
+        voice_audio=mixed_audio,
         captions_ass=ass_path,
         words=words,
         scenes=data["scenes"],
-        out_path=work / "final.mp4",
+        out_path=work / "final_raw.mp4",
         work_dir=work / "ffmpeg",
         videos_per_scene=2,
     )
     dur = time.time() - t0
     sz = final.stat().st_size / (1024 * 1024)
-    _log(f"    final: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
+    _log(f"    raw video: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
 
-    video_id = None
-    if upload_to_youtube:
-
-    # ============================================================
-    # Step 8/9: Apply branding (watermark + comment box)
-    # ============================================================
     _log("8/9 Applying branding")
     branded = branding.apply_all(final, work / "branding")
     if branded != final:
@@ -77,7 +88,10 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
         final = final_branded
 
     sz = final.stat().st_size / (1024 * 1024)
-    _log(f"    final: {{final.name}} ({{sz:.0f}} MB)")
+    _log(f"    final: {final.name} ({sz:.0f} MB)")
+
+    video_id = None
+    if upload_to_youtube:
         _log("9/9 Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
@@ -87,6 +101,8 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
             publish_at=publish_at,
         )
         _log(f"    uploaded: https://youtube.com/shorts/{video_id}")
+    else:
+        _log("9/9 Upload skipped (--no-upload)")
 
     state.add_topic(data["topic"])
     state.add_published({
@@ -96,6 +112,7 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True) -> d
         "path": str(final),
         "video_id": video_id,
         "publish_at": publish_at,
+        "format": selected_format,
     })
     return {"video_id": video_id, "path": str(final), "topic": data["topic"]}
 
@@ -104,7 +121,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--no-upload", action="store_true", help="Build only, don't upload")
     p.add_argument("--publish-at", default=None,
-                   help="ISO8601 UTC timestamp for scheduled publish, e.g. 2026-05-20T14:00:00Z")
+                   help="ISO8601 UTC timestamp for scheduled publish")
     args = p.parse_args()
     run_once(publish_at=args.publish_at, upload_to_youtube=not args.no_upload)
 

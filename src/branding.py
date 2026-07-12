@@ -158,9 +158,8 @@ def add_comment_box(video_path: Path, output_path: Path) -> Path:
     if not cfg.get("enabled", False):
         return video_path
 
-    usernames = cfg.get("usernames", [])
     comments = cfg.get("comments", [])
-    if not usernames or not comments:
+    if not comments:
         return video_path
 
     # Random social media usernames
