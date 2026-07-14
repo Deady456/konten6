@@ -1,5 +1,5 @@
-niche: "sejarah peradaban kuno yang mengubah dunia (Mesir Kuno, Romawi, Yunani, Maya, Persia, Cina Kuno, Mesopotamia, Inca)"
-audience: "orang dewasa Indonesia yang suka sejarah, dokumenter, dan belajar tentang peradaban masa lalu"
+niche: "fakta psikologi dan otak yang bikin penasaran (bias kognitif, perilaku manusia, trik otak, psikologi warna, body language, kebiasaan aneh, fakta psikologi tersembunyi, cara kerja memori, emosi, motivasi, self-improvement)"
+audience: "orang dewasa Indonesia yang ingin memahami cara kerja otak dan pikiran manusia, suka fakta psikologi dan self-improvement"
 language: id
 
 script:
@@ -44,8 +44,8 @@ upload:
   privacy: "public"
   category_id: "27"
   made_for_kids: false
-  channel: "sejarah"
-  default_tags: ["sejarah", "peradaban kuno", "dokumenter sejarah", "sejarah dunia", "Mesir Kuno", "Romawi", "peradaban", "fakta sejarah", "edukasi", "belajar sejarah", "dokumenter Indonesia"]
+  channel: "serenitymind"
+  default_tags: ["fakta psikologi", "psikologi", "fakta otak", "bias kognitif", "perilaku manusia", "self improvement", "mindset", "ilmu psikologi", "trik otak", "kebiasaan", "emosi", "motivasi"]
 
 
 
