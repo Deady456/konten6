@@ -4,7 +4,8 @@
     "peradaban-mesopotamia",
     "peradaban-yunani-kuno",
     "peradaban-cina-kuno",
-    "psikologi-warna"
+    "psikologi-warna",
+    "bias-kognitif-dalam-keputusan"
   ],
   "published": [
     {
@@ -67,7 +68,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260714_192049_psikologi-warna/final.mp4",
       "video_id": "fIwZviU5oGY",
       "publish_at": null
+    },
+    {
+      "ts": "20260714_192638",
+      "topic": "bias-kognitif-dalam-keputusan",
+      "title": "5 Bias Kognitif yang Mempengaruhi Keputusan Hidup Anda",
+      "path": "/home/runner/work/konten6/konten6/output/20260714_192638_bias-kognitif-dalam-keputusan/final.mp4",
+      "video_id": "ydMdQNQTTvw",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 1
+  "_voice_idx": 2
 }
