@@ -62,13 +62,10 @@ def run_once(publish_at: str | None = None,
     sz = final.stat().st_size / (1024 * 1024)
     _log(f"    final: {final.name} ({sz:.0f} MB, {dur:.0f}s render)")
 
-    video_id = None
-    if upload_to_youtube:
-
     # ============================================================
-    # Step 8/9: Apply branding (watermark + comment box)
+    # Step 7: Apply branding (watermark + comment box)
     # ============================================================
-    _log("8/9 Applying branding")
+    _log("7/7 Applying branding")
     branded = branding.apply_all(final, work / "branding")
     if branded != final:
         final_branded = work / "final.mp4"
@@ -81,7 +78,10 @@ def run_once(publish_at: str | None = None,
 
     sz = final.stat().st_size / (1024 * 1024)
     _log(f"    final: {final.name} ({sz:.0f} MB)")
-        _log("9/9 Uploading to YouTube")
+
+    video_id = None
+    if upload_to_youtube:
+        _log("    Uploading to YouTube")
         video_id = upload.upload_video(
             video_path=final,
             title=data["title"],
