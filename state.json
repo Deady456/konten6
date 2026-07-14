@@ -3,7 +3,8 @@
     "peradaban-inca",
     "peradaban-mesopotamia",
     "peradaban-yunani-kuno",
-    "peradaban-cina-kuno"
+    "peradaban-cina-kuno",
+    "psikologi-warna"
   ],
   "published": [
     {
@@ -58,6 +59,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260711_220147_misteri-peradaban-maya-warisan-ilmu-pengetahuan-dan-teknolog/final.mp4",
       "video_id": "002n-qLoJiU",
       "publish_at": null
+    },
+    {
+      "ts": "20260714_192049",
+      "topic": "psikologi-warna",
+      "title": "Mengapa Warna Merah Membuat Kita Merasa Bersemangat?",
+      "path": "/home/runner/work/konten6/konten6/output/20260714_192049_psikologi-warna/final.mp4",
+      "video_id": "fIwZviU5oGY",
+      "publish_at": null
     }
-  ]
+  ],
+  "_voice_idx": 1
 }
