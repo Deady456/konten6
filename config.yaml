@@ -33,7 +33,7 @@ captions:
   outline_color: "&H00000000"
   outline: 5
   words_per_caption: 4
-  position_y: 0.90
+  position_y: 0.50
 
 video:
   width: 1080
