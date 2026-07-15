@@ -5,7 +5,8 @@
     "peradaban-yunani-kuno",
     "peradaban-cina-kuno",
     "psikologi-warna",
-    "bias-kognitif-dalam-keputusan"
+    "bias-kognitif-dalam-keputusan",
+    "kekuatan-mimpi"
   ],
   "published": [
     {
@@ -76,7 +77,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260714_192638_bias-kognitif-dalam-keputusan/final.mp4",
       "video_id": "ydMdQNQTTvw",
       "publish_at": null
+    },
+    {
+      "ts": "20260715_030155",
+      "topic": "kekuatan-mimpi",
+      "title": "Apa yang Otak Anda Lakukan Saat Anda Mimpi?",
+      "path": "/home/runner/work/konten6/konten6/output/20260715_030155_kekuatan-mimpi/final.mp4",
+      "video_id": "6rPQ49MdeHw",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 2
+  "_voice_idx": 3
 }
