@@ -7,7 +7,8 @@
     "psikologi-warna",
     "bias-kognitif-dalam-keputusan",
     "kekuatan-mimpi",
-    "psikologi-mengabaikan"
+    "psikologi-mengabaikan",
+    "psikologi-kebiasaan-malam"
   ],
   "published": [
     {
@@ -94,7 +95,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260715_100206_psikologi-mengabaikan/final.mp4",
       "video_id": "eUqlang5xvg",
       "publish_at": null
+    },
+    {
+      "ts": "20260715_230206",
+      "topic": "psikologi-kebiasaan-malam",
+      "title": "Rahasia Otak di Malam Hari: Fakta Psikologi yang Tersembunyi",
+      "path": "/home/runner/work/konten6/konten6/output/20260715_230206_psikologi-kebiasaan-malam/final.mp4",
+      "video_id": "iVSe0GLwRzA",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 4
+  "_voice_idx": 5
 }
