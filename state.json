@@ -6,7 +6,8 @@
     "peradaban-cina-kuno",
     "psikologi-warna",
     "bias-kognitif-dalam-keputusan",
-    "kekuatan-mimpi"
+    "kekuatan-mimpi",
+    "psikologi-mengabaikan"
   ],
   "published": [
     {
@@ -85,7 +86,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260715_030155_kekuatan-mimpi/final.mp4",
       "video_id": "6rPQ49MdeHw",
       "publish_at": null
+    },
+    {
+      "ts": "20260715_100206",
+      "topic": "psikologi-mengabaikan",
+      "title": "Mengapa Kita Cenderung Mengabaikan Hal-Hal Penting?",
+      "path": "/home/runner/work/konten6/konten6/output/20260715_100206_psikologi-mengabaikan/final.mp4",
+      "video_id": "eUqlang5xvg",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 3
+  "_voice_idx": 4
 }
