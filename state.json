@@ -8,7 +8,8 @@
     "bias-kognitif-dalam-keputusan",
     "kekuatan-mimpi",
     "psikologi-mengabaikan",
-    "psikologi-kebiasaan-malam"
+    "psikologi-kebiasaan-malam",
+    "psikologi-emosi-dan-motivasi"
   ],
   "published": [
     {
@@ -103,7 +104,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260715_230206_psikologi-kebiasaan-malam/final.mp4",
       "video_id": "iVSe0GLwRzA",
       "publish_at": null
+    },
+    {
+      "ts": "20260716_070200",
+      "topic": "psikologi-emosi-dan-motivasi",
+      "title": "Rahasia Otak Menggunakan Emosi untuk Mengontrol Motivasi",
+      "path": "/home/runner/work/konten6/konten6/output/20260716_070200_psikologi-emosi-dan-motivasi/final.mp4",
+      "video_id": "goJVe230Ja4",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 5
+  "_voice_idx": 6
 }
