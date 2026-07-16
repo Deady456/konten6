@@ -60,7 +60,22 @@ def upload_video(video_path: Path, title: str, description: str, tags: list[str]
     resp = None
     while resp is None:
         _, resp = req.next_chunk()
-    return resp["id"]
+        
+    video_id = resp["id"]
+    try:
+        import subprocess
+        thumb_path = video_path.with_name("thumb_auto.jpg")
+        subprocess.run([
+            "ffmpeg", "-y", "-ss", "1.0", "-i", str(video_path),
+            "-vframes", "1", "-q:v", "2", str(thumb_path)
+        ], capture_output=True)
+        if thumb_path.exists():
+            thumb_media = MediaFileUpload(str(thumb_path), mimetype="image/jpeg")
+            yt.thumbnails().set(videoId=video_id, media_body=thumb_media).execute()
+    except Exception as e:
+        print(f"    [Warn] Gagal mengupload custom thumbnail: {e}")
+        
+    return video_id
 
 
 def delete_video(video_id: str):
