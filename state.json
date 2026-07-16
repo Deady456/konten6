@@ -9,7 +9,8 @@
     "kekuatan-mimpi",
     "psikologi-mengabaikan",
     "psikologi-kebiasaan-malam",
-    "psikologi-emosi-dan-motivasi"
+    "psikologi-emosi-dan-motivasi",
+    "psikologi-kecerdasan-emosional"
   ],
   "published": [
     {
@@ -112,7 +113,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260716_070200_psikologi-emosi-dan-motivasi/final.mp4",
       "video_id": "goJVe230Ja4",
       "publish_at": null
+    },
+    {
+      "ts": "20260716_155650",
+      "topic": "psikologi-kecerdasan-emosional",
+      "title": "Mengenal Kecerdasan Emosional: Kunci Sukses di Dunia Kerja",
+      "path": "/home/runner/work/konten6/konten6/output/20260716_155650_psikologi-kecerdasan-emosional/final.mp4",
+      "video_id": "iIdUzlhHYkk",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 6
+  "_voice_idx": 7
 }
