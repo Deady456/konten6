@@ -3,7 +3,7 @@ audience: "orang dewasa Indonesia yang ingin memahami cara kerja otak dan pikira
 language: id
 
 script:
-  model: gemini-1.5-flash
+  model: llama-3.3-70b-versatile
   target_seconds: 80
   words_per_second: 2.5
 
