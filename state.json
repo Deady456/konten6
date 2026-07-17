@@ -10,7 +10,9 @@
     "psikologi-mengabaikan",
     "psikologi-kebiasaan-malam",
     "psikologi-emosi-dan-motivasi",
-    "psikologi-kecerdasan-emosional"
+    "psikologi-kecerdasan-emosional",
+    "psikologi-penyesalan",
+    "psikologi-senyuman"
   ],
   "published": [
     {
@@ -121,7 +123,23 @@
       "path": "/home/runner/work/konten6/konten6/output/20260716_155650_psikologi-kecerdasan-emosional/final.mp4",
       "video_id": "iIdUzlhHYkk",
       "publish_at": null
+    },
+    {
+      "ts": "20260717_030953",
+      "topic": "psikologi-penyesalan",
+      "title": "Apa yang Terjadi di Otak Saat Kita Menyesal?",
+      "path": "/home/runner/work/konten6/konten6/output/20260717_030953_psikologi-penyesalan/final.mp4",
+      "video_id": "CL0fe_ic3U8",
+      "publish_at": null
+    },
+    {
+      "ts": "20260717_070228",
+      "topic": "psikologi-senyuman",
+      "title": "Mengapa Senyuman Bisa Mengubah Hidup Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260717_070228_psikologi-senyuman/final.mp4",
+      "video_id": "_aeGQE8ED7I",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 7
+  "_voice_idx": 9
 }
