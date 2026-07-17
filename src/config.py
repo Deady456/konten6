@@ -21,7 +21,8 @@ OUTPUT_DIR.mkdir(exist_ok=True)
 STATE_FILE = ROOT / "state.json"
 
 PEXELS_API_KEY = os.environ["PEXELS_API_KEY"]
-LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "groq")
+_cfg_model = CONFIG.get("script", {}).get("model", "")
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini" if "gemini" in _cfg_model.lower() else "groq")
 
 # Collect all Groq keys from multiple env vars
 _keys_str = os.environ.get("GROQ_API_KEY", "")
