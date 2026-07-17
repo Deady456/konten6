@@ -46,6 +46,7 @@ if LLM_PROVIDER == "groq":
     FALLBACK_API_KEY = os.environ.get("FALLBACK_API_KEY", GROQ_API_KEYS[-1] if len(GROQ_API_KEYS) > 1 else "")
 elif LLM_PROVIDER == "gemini":
     LLM_API_KEY = os.environ["GEMINI_API_KEY"]
+    LLM_API_KEYS = [LLM_API_KEY]
     LLM_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/openai/"
     LLM_MODEL = CONFIG.get("script", {}).get("model", "models/gemini-2.5-flash")
     FALLBACK_API_KEY = os.environ.get("FALLBACK_API_KEY", "")
