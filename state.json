@@ -15,7 +15,8 @@
     "psikologi-senyuman",
     "psikologi-pengaruh-lingkungan",
     "psikologi-memori-foto",
-    "psikologi-mengenali-diri"
+    "psikologi-mengenali-diri",
+    "psikologi-kepribadian-dan-musik"
   ],
   "published": [
     {
@@ -170,7 +171,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260718_170840",
+      "topic": "psikologi-kepribadian-dan-musik",
+      "title": "Apa Yang Musik Favoritmu Katakan Tentangmu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260718_170840_psikologi-kepribadian-dan-musik/final.mp4",
+      "video_id": "hvffYkUqdrA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 12
+  "_voice_idx": 13
 }
