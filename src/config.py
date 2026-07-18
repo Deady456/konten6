@@ -27,10 +27,9 @@ LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "gemini" if "gemini" in _cfg_model
 # Collect all Groq keys from multiple env vars
 _keys_str = os.environ.get("GROQ_API_KEY", "")
 _groq_keys = [k.strip() for k in _keys_str.split(",") if k.strip()]
-for suffix in ("_2", "_3", "_4", "_5"):
-    k = os.environ.get(f"GROQ_API_KEY{suffix}", "")
-    if k.strip():
-        _groq_keys.append(k.strip())
+for _k, _v in sorted(os.environ.items()):
+    if _k.startswith("GROQ_API_KEY_") and _v.strip():
+        _groq_keys.append(_v.strip())
 
 GROQ_API_KEYS = _groq_keys
 GROQ_BASE_URL = "https://api.groq.com/openai/v1"
