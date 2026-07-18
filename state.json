@@ -16,7 +16,8 @@
     "psikologi-pengaruh-lingkungan",
     "psikologi-memori-foto",
     "psikologi-mengenali-diri",
-    "psikologi-kepribadian-dan-musik"
+    "psikologi-kepribadian-dan-musik",
+    "psikologi-sikap-mental"
   ],
   "published": [
     {
@@ -181,7 +182,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260718_230146",
+      "topic": "psikologi-sikap-mental",
+      "title": "5 Sikap Mental Yang Membuat Otak Lebih Cerdas",
+      "path": "/home/runner/work/konten6/konten6/output/20260718_230146_psikologi-sikap-mental/final.mp4",
+      "video_id": "Fc8bUU2t7U4",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 13
+  "_voice_idx": 14
 }
