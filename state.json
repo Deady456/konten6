@@ -13,7 +13,8 @@
     "psikologi-kecerdasan-emosional",
     "psikologi-penyesalan",
     "psikologi-senyuman",
-    "psikologi-pengaruh-lingkungan"
+    "psikologi-pengaruh-lingkungan",
+    "psikologi-memori-foto"
   ],
   "published": [
     {
@@ -148,7 +149,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260717_183635_psikologi-pengaruh-lingkungan/final.mp4",
       "video_id": "LmRPjpDwZ_I",
       "publish_at": null
+    },
+    {
+      "ts": "20260718_092256",
+      "topic": "psikologi-memori-foto",
+      "title": "Foto Menguak Rahasia Otak Anda",
+      "path": "/home/runner/work/konten6/konten6/output/20260718_092256_psikologi-memori-foto/final.mp4",
+      "video_id": "tEoOanvAFZY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 10
+  "_voice_idx": 11
 }
