@@ -14,7 +14,8 @@
     "psikologi-penyesalan",
     "psikologi-senyuman",
     "psikologi-pengaruh-lingkungan",
-    "psikologi-memori-foto"
+    "psikologi-memori-foto",
+    "psikologi-mengenali-diri"
   ],
   "published": [
     {
@@ -159,7 +160,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260718_150200",
+      "topic": "psikologi-mengenali-diri",
+      "title": "Mengenal Diri Sendiri: 5 Cara Otak Mencegah Kita Mengenal Diri Sebenarnya",
+      "path": "/home/runner/work/konten6/konten6/output/20260718_150200_psikologi-mengenali-diri/final.mp4",
+      "video_id": "fDMIMxM6Viw",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 11
+  "_voice_idx": 12
 }
