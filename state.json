@@ -17,7 +17,8 @@
     "psikologi-memori-foto",
     "psikologi-mengenali-diri",
     "psikologi-kepribadian-dan-musik",
-    "psikologi-sikap-mental"
+    "psikologi-sikap-mental",
+    "psikologi-kerja-otak-saat-tidur"
   ],
   "published": [
     {
@@ -192,7 +193,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260719_070224",
+      "topic": "psikologi-kerja-otak-saat-tidur",
+      "title": "Apa yang Terjadi di Otak Saat Kamu Tidur?",
+      "path": "/home/runner/work/konten6/konten6/output/20260719_070224_psikologi-kerja-otak-saat-tidur/final.mp4",
+      "video_id": "UpdwmuA1gyE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 14
+  "_voice_idx": 15
 }
