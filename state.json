@@ -18,7 +18,8 @@
     "psikologi-mengenali-diri",
     "psikologi-kepribadian-dan-musik",
     "psikologi-sikap-mental",
-    "psikologi-kerja-otak-saat-tidur"
+    "psikologi-kerja-otak-saat-tidur",
+    "psikologi-sikap-terhadap-kegagalan"
   ],
   "published": [
     {
@@ -203,7 +204,15 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260719_085454",
+      "topic": "psikologi-sikap-terhadap-kegagalan",
+      "title": "Mengapa Kita Takut Gagal? Rahasia Otak Manusia",
+      "path": "/home/runner/work/konten6/konten6/output/20260719_085454_psikologi-sikap-terhadap-kegagalan/final.mp4",
+      "video_id": "spL8BjnVGoY",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 15
+  "_voice_idx": 17
 }
