@@ -20,7 +20,8 @@
     "psikologi-sikap-mental",
     "psikologi-kerja-otak-saat-tidur",
     "psikologi-sikap-terhadap-kegagalan",
-    "psikologi-emosi-dan-reaksi"
+    "psikologi-emosi-dan-reaksi",
+    "psikologi-sinkronisasi-otak"
   ],
   "published": [
     {
@@ -221,7 +222,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260719_140759_psikologi-emosi-dan-reaksi/final.mp4",
       "video_id": "D8E4gDqkfNk",
       "publish_at": null
+    },
+    {
+      "ts": "20260719_150253",
+      "topic": "psikologi-sinkronisasi-otak",
+      "title": "Benarkah Otak Kanan dan Kiri Bisa Sinkron?",
+      "path": "/home/runner/work/konten6/konten6/output/20260719_150253_psikologi-sinkronisasi-otak/final.mp4",
+      "video_id": "ax6AYahiRhc",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 19
+  "_voice_idx": 21
 }
