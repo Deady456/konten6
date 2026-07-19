@@ -19,7 +19,8 @@
     "psikologi-kepribadian-dan-musik",
     "psikologi-sikap-mental",
     "psikologi-kerja-otak-saat-tidur",
-    "psikologi-sikap-terhadap-kegagalan"
+    "psikologi-sikap-terhadap-kegagalan",
+    "psikologi-emosi-dan-reaksi"
   ],
   "published": [
     {
@@ -212,7 +213,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260719_085454_psikologi-sikap-terhadap-kegagalan/final.mp4",
       "video_id": "spL8BjnVGoY",
       "publish_at": null
+    },
+    {
+      "ts": "20260719_140759",
+      "topic": "psikologi-emosi-dan-reaksi",
+      "title": "Mengapa Kita Merasa Gugup Saat Berbohong?",
+      "path": "/home/runner/work/konten6/konten6/output/20260719_140759_psikologi-emosi-dan-reaksi/final.mp4",
+      "video_id": "D8E4gDqkfNk",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 17
+  "_voice_idx": 19
 }
