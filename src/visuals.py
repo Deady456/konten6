@@ -2,7 +2,7 @@ import random
 from pathlib import Path
 import time
 import requests
-from .config import PEXELS_API_KEY
+from .config import PEXELS_API_KEYS
 import subprocess
 
 API = "https://api.pexels.com/videos/search"
@@ -18,7 +18,7 @@ _VARIATIONS = [
 def search_vertical(query: str, min_duration: float = 3.0, result_index: int = 0) -> str | None:
     r = requests.get(
         API,
-        headers={"Authorization": PEXELS_API_KEY},
+        headers={"Authorization": random.choice(PEXELS_API_KEYS)},
         params={"query": query, "orientation": "portrait", "per_page": 15, "size": "medium"},
         timeout=30,
     )
