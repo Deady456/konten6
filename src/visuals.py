@@ -3,6 +3,7 @@ from pathlib import Path
 import time
 import requests
 from .config import PEXELS_API_KEY
+import subprocess
 
 API = "https://api.pexels.com/videos/search"
 
@@ -70,7 +71,22 @@ def fetch_for_scenes(scenes: list[dict], out_dir: Path, clips_per_scene: int = 2
             if url is None:
                 url = search_vertical("abstract background")
             if url is None:
-                raise RuntimeError(f"No Pexels result for scene {i}: {q}")
+                # Fallback: Pollinations AI image looped into a short clip
+                try:
+                    from . import visuals_ai
+                    img = out_dir / f"scene_{i:02d}_{j:02d}.jpg"
+                    visuals_ai.generate(prompt=f"{q} cinematic", out_path=img)
+                    clip = out_dir / f"scene_{i:02d}_{j:02d}.mp4"
+                    subprocess.run([
+                        "ffmpeg", "-y", "-loop", "1", "-i", str(img), "-t", "6",
+                        "-vf", "scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920",
+                        "-c:v", "libx264", "-pix_fmt", "yuv420p", str(clip)
+                    ], check=True, capture_output=True)
+                    paths.append(clip)
+                    print(f"      pollinations fallback used")
+                    continue
+                except Exception as e:
+                    raise RuntimeError(f"No Pexels/Pollinations result for scene {i}: {q} ({e}")
             paths.append(download(url, out_dir / f"scene_{i:02d}_{j:02d}.mp4"))
             print(f"      downloaded ({time.time()-t0:.0f}s)")
     return paths
