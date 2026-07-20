@@ -22,7 +22,8 @@
     "psikologi-sikap-terhadap-kegagalan",
     "psikologi-emosi-dan-reaksi",
     "psikologi-sinkronisasi-otak",
-    "psikologi-perhatian"
+    "psikologi-perhatian",
+    "psikologi-kreativitas-dan-flow"
   ],
   "published": [
     {
@@ -239,7 +240,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260719_230310_psikologi-perhatian/final.mp4",
       "video_id": "2GtgqiK47Z8",
       "publish_at": null
+    },
+    {
+      "ts": "20260720_070340",
+      "topic": "psikologi-kreativitas-dan-flow",
+      "title": "Rahasia Otak Kreatif: Mengenal Konsep Flow",
+      "path": "/home/runner/work/konten6/konten6/output/20260720_070340_psikologi-kreativitas-dan-flow/final.mp4",
+      "video_id": "jH0aPQQ88Mk",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 23
+  "_voice_idx": 25
 }
