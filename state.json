@@ -24,7 +24,8 @@
     "psikologi-sinkronisasi-otak",
     "psikologi-perhatian",
     "psikologi-kreativitas-dan-flow",
-    "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut"
+    "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut",
+    "psikologi-lupa"
   ],
   "published": [
     {
@@ -259,7 +260,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260720_230128",
+      "topic": "psikologi-lupa",
+      "title": "5 Alasan Mengapa Otak Kita Mudah Lupa",
+      "path": "/home/runner/work/konten6/konten6/output/20260720_230128_psikologi-lupa/final.mp4",
+      "video_id": "InvXJWxtLV4",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 26
+  "_voice_idx": 27
 }
