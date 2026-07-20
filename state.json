@@ -23,7 +23,8 @@
     "psikologi-emosi-dan-reaksi",
     "psikologi-sinkronisasi-otak",
     "psikologi-perhatian",
-    "psikologi-kreativitas-dan-flow"
+    "psikologi-kreativitas-dan-flow",
+    "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut"
   ],
   "published": [
     {
@@ -248,7 +249,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260720_070340_psikologi-kreativitas-dan-flow/final.mp4",
       "video_id": "jH0aPQQ88Mk",
       "publish_at": null
+    },
+    {
+      "ts": "20260720_150250",
+      "topic": "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut",
+      "title": "Apa yang Terjadi di Otak Saat Kita Merasa Takut?",
+      "path": "/home/runner/work/konten6/konten6/output/20260720_150250_psikologi-kebiasaan-otak-saat-mengalami-rasa-takut/final.mp4",
+      "video_id": "_Ge7iwcfT9E",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 25
+  "_voice_idx": 26
 }
