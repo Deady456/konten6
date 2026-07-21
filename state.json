@@ -27,7 +27,8 @@
     "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut",
     "psikologi-lupa",
     "psikologi-ilusi-otak",
-    "psikologi-kekuatan-penundaan"
+    "psikologi-kekuatan-penundaan",
+    "psikologi-kecocokan-nama-dan-kepribadian"
   ],
   "published": [
     {
@@ -292,7 +293,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260721_230203",
+      "topic": "psikologi-kecocokan-nama-dan-kepribadian",
+      "title": "Apa Nama Anda Mempengaruhi Kepribadian Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260721_230203_psikologi-kecocokan-nama-dan-kepribadian/final.mp4",
+      "video_id": "WV8R9PUB4HE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 29
+  "_voice_idx": 30
 }
