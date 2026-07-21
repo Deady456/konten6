@@ -25,7 +25,8 @@
     "psikologi-perhatian",
     "psikologi-kreativitas-dan-flow",
     "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut",
-    "psikologi-lupa"
+    "psikologi-lupa",
+    "psikologi-ilusi-otak"
   ],
   "published": [
     {
@@ -270,7 +271,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260721_070205",
+      "topic": "psikologi-ilusi-otak",
+      "title": "5 Ilusi Otak yang Mengubah Persepsi Anda",
+      "path": "/home/runner/work/konten6/konten6/output/20260721_070205_psikologi-ilusi-otak/final.mp4",
+      "video_id": "3qSRMuQlYQA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 27
+  "_voice_idx": 28
 }
