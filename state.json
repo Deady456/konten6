@@ -26,7 +26,8 @@
     "psikologi-kreativitas-dan-flow",
     "psikologi-kebiasaan-otak-saat-mengalami-rasa-takut",
     "psikologi-lupa",
-    "psikologi-ilusi-otak"
+    "psikologi-ilusi-otak",
+    "psikologi-kekuatan-penundaan"
   ],
   "published": [
     {
@@ -281,7 +282,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260721_150132",
+      "topic": "psikologi-kekuatan-penundaan",
+      "title": "Mengapa Otak Kita Suka Menunda-Nunda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260721_150132_psikologi-kekuatan-penundaan/final.mp4",
+      "video_id": "1QbFkRbD_Nc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 28
+  "_voice_idx": 29
 }
