@@ -30,7 +30,8 @@
     "psikologi-kekuatan-penundaan",
     "psikologi-kecocokan-nama-dan-kepribadian",
     "psikologi-kebiasaan-otak-saat-mendengar-musik",
-    "psikologi-kekuatan-visualisasi"
+    "psikologi-kekuatan-visualisasi",
+    "psikologi-otak-kanan-dan-otak-kiri"
   ],
   "published": [
     {
@@ -325,7 +326,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_230133",
+      "topic": "psikologi-otak-kanan-dan-otak-kiri",
+      "title": "Apa Yang Terjadi Jika Otak Kanan dan Otak Kiri Bekerja Bersama?",
+      "path": "/home/runner/work/konten6/konten6/output/20260722_230133_psikologi-otak-kanan-dan-otak-kiri/final.mp4",
+      "video_id": "HqflmLOancE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 32
+  "_voice_idx": 33
 }
