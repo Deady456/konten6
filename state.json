@@ -28,7 +28,8 @@
     "psikologi-lupa",
     "psikologi-ilusi-otak",
     "psikologi-kekuatan-penundaan",
-    "psikologi-kecocokan-nama-dan-kepribadian"
+    "psikologi-kecocokan-nama-dan-kepribadian",
+    "psikologi-kebiasaan-otak-saat-mendengar-musik"
   ],
   "published": [
     {
@@ -303,7 +304,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_070133",
+      "topic": "psikologi-kebiasaan-otak-saat-mendengar-musik",
+      "title": "Apa yang Terjadi di Otak Saat Mendengar Lagu Favorit?",
+      "path": "/home/runner/work/konten6/konten6/output/20260722_070133_psikologi-kebiasaan-otak-saat-mendengar-musik/final.mp4",
+      "video_id": "tIDb38F_X9c",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 30
+  "_voice_idx": 31
 }
