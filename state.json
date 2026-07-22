@@ -29,7 +29,8 @@
     "psikologi-ilusi-otak",
     "psikologi-kekuatan-penundaan",
     "psikologi-kecocokan-nama-dan-kepribadian",
-    "psikologi-kebiasaan-otak-saat-mendengar-musik"
+    "psikologi-kebiasaan-otak-saat-mendengar-musik",
+    "psikologi-kekuatan-visualisasi"
   ],
   "published": [
     {
@@ -314,7 +315,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260722_150153",
+      "topic": "psikologi-kekuatan-visualisasi",
+      "title": "Menggunakan Visualisasi untuk Mengontrol Emosi",
+      "path": "/home/runner/work/konten6/konten6/output/20260722_150153_psikologi-kekuatan-visualisasi/final.mp4",
+      "video_id": "ulECnR-yBf8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 31
+  "_voice_idx": 32
 }
