@@ -31,7 +31,8 @@
     "psikologi-kecocokan-nama-dan-kepribadian",
     "psikologi-kebiasaan-otak-saat-mendengar-musik",
     "psikologi-kekuatan-visualisasi",
-    "psikologi-otak-kanan-dan-otak-kiri"
+    "psikologi-otak-kanan-dan-otak-kiri",
+    "psikologi-mengenal-diri-lewat-gerakan-mata"
   ],
   "published": [
     {
@@ -336,7 +337,15 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260723_070258",
+      "topic": "psikologi-mengenal-diri-lewat-gerakan-mata",
+      "title": "Rahasia Gerakan Mata Anda: Apa yang Dikatakan Otak Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260723_070258_psikologi-mengenal-diri-lewat-gerakan-mata/final.mp4",
+      "video_id": "Hni7zUH8nu4",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 33
+  "_voice_idx": 35
 }
