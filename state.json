@@ -33,7 +33,8 @@
     "psikologi-kekuatan-visualisasi",
     "psikologi-otak-kanan-dan-otak-kiri",
     "psikologi-mengenal-diri-lewat-gerakan-mata",
-    "psikologi-pengaruh-suar"
+    "psikologi-pengaruh-suar",
+    "psikologi-kekuatan-ritme"
   ],
   "published": [
     {
@@ -356,7 +357,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260723_230331",
+      "topic": "psikologi-kekuatan-ritme",
+      "title": "Mengapa Irama Musik Bisa Mengubah Mood Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260723_230331_psikologi-kekuatan-ritme/final.mp4",
+      "video_id": "XZlBjLx-5MQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 36
+  "_voice_idx": 37
 }
