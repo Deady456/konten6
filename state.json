@@ -32,7 +32,8 @@
     "psikologi-kebiasaan-otak-saat-mendengar-musik",
     "psikologi-kekuatan-visualisasi",
     "psikologi-otak-kanan-dan-otak-kiri",
-    "psikologi-mengenal-diri-lewat-gerakan-mata"
+    "psikologi-mengenal-diri-lewat-gerakan-mata",
+    "psikologi-pengaruh-suar"
   ],
   "published": [
     {
@@ -345,7 +346,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260723_070258_psikologi-mengenal-diri-lewat-gerakan-mata/final.mp4",
       "video_id": "Hni7zUH8nu4",
       "publish_at": null
+    },
+    {
+      "ts": "20260723_150142",
+      "topic": "psikologi-pengaruh-suar",
+      "title": "Apa yang Otak Anda Lakukan Saat Mendengar Suara Alam?",
+      "path": "/home/runner/work/konten6/konten6/output/20260723_150142_psikologi-pengaruh-suar/final.mp4",
+      "video_id": "D7aeX6kPxdU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 35
+  "_voice_idx": 36
 }
