@@ -34,7 +34,8 @@
     "psikologi-otak-kanan-dan-otak-kiri",
     "psikologi-mengenal-diri-lewat-gerakan-mata",
     "psikologi-pengaruh-suar",
-    "psikologi-kekuatan-ritme"
+    "psikologi-kekuatan-ritme",
+    "psikologi-kebiasaan-otak-saat-mengalami-keraguan"
   ],
   "published": [
     {
@@ -367,7 +368,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_070351",
+      "topic": "psikologi-kebiasaan-otak-saat-mengalami-keraguan",
+      "title": "Apa yang Terjadi di Otak Saat Anda Ragu-Ragu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260724_070351_psikologi-kebiasaan-otak-saat-mengalami-keraguan/final.mp4",
+      "video_id": "Eohm44dOhR4",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 37
+  "_voice_idx": 38
 }
