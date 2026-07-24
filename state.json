@@ -35,7 +35,8 @@
     "psikologi-mengenal-diri-lewat-gerakan-mata",
     "psikologi-pengaruh-suar",
     "psikologi-kekuatan-ritme",
-    "psikologi-kebiasaan-otak-saat-mengalami-keraguan"
+    "psikologi-kebiasaan-otak-saat-mengalami-keraguan",
+    "psikologi-kekuatan-asosiasi"
   ],
   "published": [
     {
@@ -378,7 +379,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_150321",
+      "topic": "psikologi-kekuatan-asosiasi",
+      "title": "Mengapa Otak Anda Mengaitkan Warna Merah dengan Bahaya?",
+      "path": "/home/runner/work/konten6/konten6/output/20260724_150321_psikologi-kekuatan-asosiasi/final.mp4",
+      "video_id": "0nAqk1_Veos",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 38
+  "_voice_idx": 39
 }
