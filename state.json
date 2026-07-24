@@ -36,7 +36,8 @@
     "psikologi-pengaruh-suar",
     "psikologi-kekuatan-ritme",
     "psikologi-kebiasaan-otak-saat-mengalami-keraguan",
-    "psikologi-kekuatan-asosiasi"
+    "psikologi-kekuatan-asosiasi",
+    "psikologi-efek-priming"
   ],
   "published": [
     {
@@ -389,7 +390,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260724_230254",
+      "topic": "psikologi-efek-priming",
+      "title": "Bagaimana Priming Mengendalikan Pikiran dan Perilaku Kita?",
+      "path": "/home/runner/work/konten6/konten6/output/20260724_230254_psikologi-efek-priming/final.mp4",
+      "video_id": "Cbstu9IUnPw",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 39
+  "_voice_idx": 40
 }
