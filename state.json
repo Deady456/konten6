@@ -39,7 +39,8 @@
     "psikologi-kekuatan-asosiasi",
     "psikologi-efek-priming",
     "psikologi-kekuatan-pengulangan",
-    "psikologi-efek-deja-vu"
+    "psikologi-efek-deja-vu",
+    "psikologi-neuroplastisitas"
   ],
   "published": [
     {
@@ -422,7 +423,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_230330",
+      "topic": "psikologi-neuroplastisitas",
+      "title": "Bagaimana Otak Anda Berubah Saat Anda Belajar Hal Baru?",
+      "path": "/home/runner/work/konten6/konten6/output/20260725_230330_psikologi-neuroplastisitas/final.mp4",
+      "video_id": "Phrm4VmKdbI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 42
+  "_voice_idx": 43
 }
