@@ -38,7 +38,8 @@
     "psikologi-kebiasaan-otak-saat-mengalami-keraguan",
     "psikologi-kekuatan-asosiasi",
     "psikologi-efek-priming",
-    "psikologi-kekuatan-pengulangan"
+    "psikologi-kekuatan-pengulangan",
+    "psikologi-efek-deja-vu"
   ],
   "published": [
     {
@@ -411,7 +412,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_150323",
+      "topic": "psikologi-efek-deja-vu",
+      "title": "Mengenal Deja Vu: Fenomena Psikologi yang Bikin Penasaran",
+      "path": "/home/runner/work/konten6/konten6/output/20260725_150323_psikologi-efek-deja-vu/final.mp4",
+      "video_id": "U9MWesQPTxk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 41
+  "_voice_idx": 42
 }
