@@ -37,7 +37,8 @@
     "psikologi-kekuatan-ritme",
     "psikologi-kebiasaan-otak-saat-mengalami-keraguan",
     "psikologi-kekuatan-asosiasi",
-    "psikologi-efek-priming"
+    "psikologi-efek-priming",
+    "psikologi-kekuatan-pengulangan"
   ],
   "published": [
     {
@@ -400,7 +401,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260725_070326",
+      "topic": "psikologi-kekuatan-pengulangan",
+      "title": "Mengapa Otak Anda Suka Mengulangi Kesalahan? Fakta Psikologi",
+      "path": "/home/runner/work/konten6/konten6/output/20260725_070326_psikologi-kekuatan-pengulangan/final.mp4",
+      "video_id": "wlWI8-RdCCQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 40
+  "_voice_idx": 41
 }
