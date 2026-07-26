@@ -42,7 +42,8 @@
     "psikologi-efek-deja-vu",
     "psikologi-neuroplastisitas",
     "psikologi-pengaruh-warna-pada-emosi",
-    "psikologi-proses-pengambilan-keputusan"
+    "psikologi-proses-pengambilan-keputusan",
+    "psikologi-kecenderungan-otak-mengingat-kejadian-pahit"
   ],
   "published": [
     {
@@ -455,7 +456,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_230239",
+      "topic": "psikologi-kecenderungan-otak-mengingat-kejadian-pahit",
+      "title": "Mengapa Otak Lebih Ingat Kejadian Pahit?",
+      "path": "/home/runner/work/konten6/konten6/output/20260726_230239_psikologi-kecenderungan-otak-mengingat-kejadian-pahit/final.mp4",
+      "video_id": "zpHcGNhmc_k",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 45
+  "_voice_idx": 46
 }
