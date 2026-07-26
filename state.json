@@ -41,7 +41,8 @@
     "psikologi-kekuatan-pengulangan",
     "psikologi-efek-deja-vu",
     "psikologi-neuroplastisitas",
-    "psikologi-pengaruh-warna-pada-emosi"
+    "psikologi-pengaruh-warna-pada-emosi",
+    "psikologi-proses-pengambilan-keputusan"
   ],
   "published": [
     {
@@ -444,7 +445,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_150206",
+      "topic": "psikologi-proses-pengambilan-keputusan",
+      "title": "Rahasia Otak Saat Mengambil Keputusan, Apakah Anda Tahu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260726_150206_psikologi-proses-pengambilan-keputusan/final.mp4",
+      "video_id": "a1bObti4rxU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 44
+  "_voice_idx": 45
 }
