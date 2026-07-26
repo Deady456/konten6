@@ -40,7 +40,8 @@
     "psikologi-efek-priming",
     "psikologi-kekuatan-pengulangan",
     "psikologi-efek-deja-vu",
-    "psikologi-neuroplastisitas"
+    "psikologi-neuroplastisitas",
+    "psikologi-pengaruh-warna-pada-emosi"
   ],
   "published": [
     {
@@ -433,7 +434,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260726_070144",
+      "topic": "psikologi-pengaruh-warna-pada-emosi",
+      "title": "Bagaimana Warna Mempengaruhi Emosi Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260726_070144_psikologi-pengaruh-warna-pada-emosi/final.mp4",
+      "video_id": "Q2lgMAXH0X0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 43
+  "_voice_idx": 44
 }
