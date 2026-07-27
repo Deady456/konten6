@@ -43,7 +43,8 @@
     "psikologi-neuroplastisitas",
     "psikologi-pengaruh-warna-pada-emosi",
     "psikologi-proses-pengambilan-keputusan",
-    "psikologi-kecenderungan-otak-mengingat-kejadian-pahit"
+    "psikologi-kecenderungan-otak-mengingat-kejadian-pahit",
+    "psikologi-kekuatan-mimikri"
   ],
   "published": [
     {
@@ -466,7 +467,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_070311",
+      "topic": "psikologi-kekuatan-mimikri",
+      "title": "Mengapa Otak Kita Mengikuti Ekspresi Orang Lain?",
+      "path": "/home/runner/work/konten6/konten6/output/20260727_070311_psikologi-kekuatan-mimikri/final.mp4",
+      "video_id": "aSpPL5AQ-2o",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 46
+  "_voice_idx": 47
 }
