@@ -44,7 +44,8 @@
     "psikologi-pengaruh-warna-pada-emosi",
     "psikologi-proses-pengambilan-keputusan",
     "psikologi-kecenderungan-otak-mengingat-kejadian-pahit",
-    "psikologi-kekuatan-mimikri"
+    "psikologi-kekuatan-mimikri",
+    "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran"
   ],
   "published": [
     {
@@ -477,7 +478,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_150139",
+      "topic": "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran",
+      "title": "Bagaimana Emosi Mempengaruhi Cara Kamu Belajar",
+      "path": "/home/runner/work/konten6/konten6/output/20260727_150139_psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran/final.mp4",
+      "video_id": "lW7gIoa2Gd8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 47
+  "_voice_idx": 48
 }
