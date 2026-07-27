@@ -45,7 +45,8 @@
     "psikologi-proses-pengambilan-keputusan",
     "psikologi-kecenderungan-otak-mengingat-kejadian-pahit",
     "psikologi-kekuatan-mimikri",
-    "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran"
+    "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran",
+    "psikologi-pengaruh-temperatur-lingkungan"
   ],
   "published": [
     {
@@ -488,7 +489,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260727_230339",
+      "topic": "psikologi-pengaruh-temperatur-lingkungan",
+      "title": "Apa yang Terjadi di Otak Anda Saat Suhu Lingkungan Berubah?",
+      "path": "/home/runner/work/konten6/konten6/output/20260727_230339_psikologi-pengaruh-temperatur-lingkungan/final.mp4",
+      "video_id": "g1nHGimT-xQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 48
+  "_voice_idx": 49
 }
