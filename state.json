@@ -46,7 +46,8 @@
     "psikologi-kecenderungan-otak-mengingat-kejadian-pahit",
     "psikologi-kekuatan-mimikri",
     "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran",
-    "psikologi-pengaruh-temperatur-lingkungan"
+    "psikologi-pengaruh-temperatur-lingkungan",
+    "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek"
   ],
   "published": [
     {
@@ -499,7 +500,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_070330",
+      "topic": "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek",
+      "title": "Apa yang Terjadi Saat Otak Fokus Pada Satu Hal?",
+      "path": "/home/runner/work/konten6/konten6/output/20260728_070330_psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek/final.mp4",
+      "video_id": "jx_6QLyTxOk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 49
+  "_voice_idx": 50
 }
