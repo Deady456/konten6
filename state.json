@@ -47,7 +47,8 @@
     "psikologi-kekuatan-mimikri",
     "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran",
     "psikologi-pengaruh-temperatur-lingkungan",
-    "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek"
+    "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek",
+    "psikologi-efek-mirror"
   ],
   "published": [
     {
@@ -510,7 +511,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_150216",
+      "topic": "psikologi-efek-mirror",
+      "title": "Bahaya Efek Mirror: Mengapa Kita Meniru Perilaku Orang Lain Tanpa Sadar",
+      "path": "/home/runner/work/konten6/konten6/output/20260728_150216_psikologi-efek-mirror/final.mp4",
+      "video_id": "79WXF3v_w4w",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 50
+  "_voice_idx": 51
 }
