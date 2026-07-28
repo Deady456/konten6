@@ -48,7 +48,8 @@
     "psikologi-otak-dan-peran-emosi-dalam-proses-pembelajaran",
     "psikologi-pengaruh-temperatur-lingkungan",
     "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek",
-    "psikologi-efek-mirror"
+    "psikologi-efek-mirror",
+    "psikologi-keunikan-otak-saat-mengalami-rasa-syukur"
   ],
   "published": [
     {
@@ -521,7 +522,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260728_230135",
+      "topic": "psikologi-keunikan-otak-saat-mengalami-rasa-syukur",
+      "title": "Apa yang Terjadi di Otak Saat Kita Merasakan Rasa Syukur?",
+      "path": "/home/runner/work/konten6/konten6/output/20260728_230135_psikologi-keunikan-otak-saat-mengalami-rasa-syukur/final.mp4",
+      "video_id": "bkh_V9Jop9c",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 51
+  "_voice_idx": 52
 }
