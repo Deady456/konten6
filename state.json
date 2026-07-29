@@ -51,7 +51,8 @@
     "psikologi-efek-mirror",
     "psikologi-keunikan-otak-saat-mengalami-rasa-syukur",
     "psikologi-kekuatan-senyap",
-    "psikologi-fragmenasi-otak"
+    "psikologi-fragmenasi-otak",
+    "psikologi-sandiwara-otak"
   ],
   "published": [
     {
@@ -554,7 +555,15 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_230431",
+      "topic": "psikologi-sandiwara-otak",
+      "title": "Mengapa Otak Kita Suka Membuat Cerita Sendiri?",
+      "path": "/home/runner/work/konten6/konten6/output/20260729_230431_psikologi-sandiwara-otak/final.mp4",
+      "video_id": "uzD9tDCa6mA",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 54
+  "_voice_idx": 56
 }
