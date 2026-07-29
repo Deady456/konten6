@@ -50,7 +50,8 @@
     "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek",
     "psikologi-efek-mirror",
     "psikologi-keunikan-otak-saat-mengalami-rasa-syukur",
-    "psikologi-kekuatan-senyap"
+    "psikologi-kekuatan-senyap",
+    "psikologi-fragmenasi-otak"
   ],
   "published": [
     {
@@ -543,7 +544,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_150149",
+      "topic": "psikologi-fragmenasi-otak",
+      "title": "Fakta Menarik: Bagaimana Otak Mengolah Informasi Berlebihan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260729_150149_psikologi-fragmenasi-otak/final.mp4",
+      "video_id": "Uja4clvVblQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 53
+  "_voice_idx": 54
 }
