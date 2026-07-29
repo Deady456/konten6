@@ -49,7 +49,8 @@
     "psikologi-pengaruh-temperatur-lingkungan",
     "psikologi-kekuatan-pemusatan-perhatian-pada-satu-objek",
     "psikologi-efek-mirror",
-    "psikologi-keunikan-otak-saat-mengalami-rasa-syukur"
+    "psikologi-keunikan-otak-saat-mengalami-rasa-syukur",
+    "psikologi-kekuatan-senyap"
   ],
   "published": [
     {
@@ -532,7 +533,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260729_070220",
+      "topic": "psikologi-kekuatan-senyap",
+      "title": "Apa yang Terjadi Ketika Otak Anda Dalam Keadaan Senyap?",
+      "path": "/home/runner/work/konten6/konten6/output/20260729_070220_psikologi-kekuatan-senyap/final.mp4",
+      "video_id": "iaP83g2HcE8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 52
+  "_voice_idx": 53
 }
