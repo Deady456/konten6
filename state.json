@@ -53,7 +53,8 @@
     "psikologi-kekuatan-senyap",
     "psikologi-fragmenasi-otak",
     "psikologi-sandiwara-otak",
-    "psikologi-kesadaran-mimpi"
+    "psikologi-kesadaran-mimpi",
+    "psikologi-sinkronisasi-otak"
   ],
   "published": [
     {
@@ -574,7 +575,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260730_150134",
+      "topic": "psikologi-sinkronisasi-otak",
+      "title": "Mengapa Otak Kita Sinkronkan Aktivitasnya dengan Orang Lain?",
+      "path": "/home/runner/work/konten6/konten6/output/20260730_150134_psikologi-sinkronisasi-otak/final.mp4",
+      "video_id": "0XthUepTGfk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 57
+  "_voice_idx": 58
 }
