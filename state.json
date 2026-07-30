@@ -54,7 +54,8 @@
     "psikologi-fragmenasi-otak",
     "psikologi-sandiwara-otak",
     "psikologi-kesadaran-mimpi",
-    "psikologi-sinkronisasi-otak"
+    "psikologi-sinkronisasi-otak",
+    "psikologi-kekuatan-penulisan-memoar"
   ],
   "published": [
     {
@@ -585,7 +586,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260730_230212",
+      "topic": "psikologi-kekuatan-penulisan-memoar",
+      "title": "Apa yang Terjadi di Otak Saat Menulis Pengalaman Hidup?",
+      "path": "/home/runner/work/konten6/konten6/output/20260730_230212_psikologi-kekuatan-penulisan-memoar/final.mp4",
+      "video_id": "8nIHzv3jvTo",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 58
+  "_voice_idx": 59
 }
