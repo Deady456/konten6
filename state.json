@@ -52,7 +52,8 @@
     "psikologi-keunikan-otak-saat-mengalami-rasa-syukur",
     "psikologi-kekuatan-senyap",
     "psikologi-fragmenasi-otak",
-    "psikologi-sandiwara-otak"
+    "psikologi-sandiwara-otak",
+    "psikologi-kesadaran-mimpi"
   ],
   "published": [
     {
@@ -563,7 +564,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260729_230431_psikologi-sandiwara-otak/final.mp4",
       "video_id": "uzD9tDCa6mA",
       "publish_at": null
+    },
+    {
+      "ts": "20260730_070247",
+      "topic": "psikologi-kesadaran-mimpi",
+      "title": "Mengungkap Rahasia Otak Saat Mimpi: Apa yang Terjadi?",
+      "path": "/home/runner/work/konten6/konten6/output/20260730_070247_psikologi-kesadaran-mimpi/final.mp4",
+      "video_id": "gT_o-5ICQlA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 56
+  "_voice_idx": 57
 }
