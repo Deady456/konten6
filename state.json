@@ -56,7 +56,8 @@
     "psikologi-kesadaran-mimpi",
     "psikologi-sinkronisasi-otak",
     "psikologi-kekuatan-penulisan-memoar",
-    "psikologi-pengaruh-prioritas"
+    "psikologi-pengaruh-prioritas",
+    "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman"
   ],
   "published": [
     {
@@ -607,7 +608,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_150323",
+      "topic": "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman",
+      "title": "Apa yang Terjadi di Otak Saat Mengalami Rasa Kangen Kampung Halaman?",
+      "path": "/home/runner/work/konten6/konten6/output/20260731_150323_psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman/final.mp4",
+      "video_id": "W0rV8TqKJM0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 60
+  "_voice_idx": 61
 }
