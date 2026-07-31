@@ -57,7 +57,8 @@
     "psikologi-sinkronisasi-otak",
     "psikologi-kekuatan-penulisan-memoar",
     "psikologi-pengaruh-prioritas",
-    "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman"
+    "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman",
+    "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan"
   ],
   "published": [
     {
@@ -618,7 +619,15 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_230309",
+      "topic": "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan",
+      "title": "Rahasia Otak Saat Menghadapi Kesalahan: Apa yang Terjadi?",
+      "path": "/home/runner/work/konten6/konten6/output/20260731_230309_psikologi-kebiasaan-otak-saat-menghadapi-kesalahan/final.mp4",
+      "video_id": "sGOtl4q5WLg",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 61
+  "_voice_idx": 62
 }
