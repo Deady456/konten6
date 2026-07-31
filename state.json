@@ -55,7 +55,8 @@
     "psikologi-sandiwara-otak",
     "psikologi-kesadaran-mimpi",
     "psikologi-sinkronisasi-otak",
-    "psikologi-kekuatan-penulisan-memoar"
+    "psikologi-kekuatan-penulisan-memoar",
+    "psikologi-pengaruh-prioritas"
   ],
   "published": [
     {
@@ -596,7 +597,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260731_070224",
+      "topic": "psikologi-pengaruh-prioritas",
+      "title": "Mengapa Prioritas Mengubah Cara Otak Bekerja?",
+      "path": "/home/runner/work/konten6/konten6/output/20260731_070224_psikologi-pengaruh-prioritas/final.mp4",
+      "video_id": "S7BZ3sZGo3A",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 59
+  "_voice_idx": 60
 }
