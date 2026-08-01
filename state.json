@@ -60,7 +60,8 @@
     "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman",
     "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan",
     "psikologi-ilmu-behind-ilmu-penipuan",
-    "psikologi-efek-ikatan-visual"
+    "psikologi-efek-ikatan-visual",
+    "psikologi-kekuatan-visualisasi-masa-depan"
   ],
   "published": [
     {
@@ -649,7 +650,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260801_230214",
+      "topic": "psikologi-kekuatan-visualisasi-masa-depan",
+      "title": "Mengubah Masa Depan dengan Kekuatan Visualisasi",
+      "path": "/home/runner/work/konten6/konten6/output/20260801_230214_psikologi-kekuatan-visualisasi-masa-depan/final.mp4",
+      "video_id": "MiKgtZl9FXI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 64
+  "_voice_idx": 65
 }
