@@ -58,7 +58,8 @@
     "psikologi-kekuatan-penulisan-memoar",
     "psikologi-pengaruh-prioritas",
     "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman",
-    "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan"
+    "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan",
+    "psikologi-ilmu-behind-ilmu-penipuan"
   ],
   "published": [
     {
@@ -627,7 +628,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260731_230309_psikologi-kebiasaan-otak-saat-menghadapi-kesalahan/final.mp4",
       "video_id": "sGOtl4q5WLg",
       "publish_at": null
+    },
+    {
+      "ts": "20260801_070145",
+      "topic": "psikologi-ilmu-behind-ilmu-penipuan",
+      "title": "Trik Otak Penipu: Bagaimana Mereka Mengelabui Kita?",
+      "path": "/home/runner/work/konten6/konten6/output/20260801_070145_psikologi-ilmu-behind-ilmu-penipuan/final.mp4",
+      "video_id": "Nzvc55FDwmM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 62
+  "_voice_idx": 63
 }
