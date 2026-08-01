@@ -59,7 +59,8 @@
     "psikologi-pengaruh-prioritas",
     "psikologi-keunikan-otak-saat-mengalami-emosi-kampung-halaman",
     "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan",
-    "psikologi-ilmu-behind-ilmu-penipuan"
+    "psikologi-ilmu-behind-ilmu-penipuan",
+    "psikologi-efek-ikatan-visual"
   ],
   "published": [
     {
@@ -638,7 +639,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260801_150401",
+      "topic": "psikologi-efek-ikatan-visual",
+      "title": "Mengapa Otak Lebih Suka Mengingat Wajah Daripada Nama?",
+      "path": "/home/runner/work/konten6/konten6/output/20260801_150401_psikologi-efek-ikatan-visual/final.mp4",
+      "video_id": "OVx4ePydw60",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 63
+  "_voice_idx": 64
 }
