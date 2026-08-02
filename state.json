@@ -62,7 +62,8 @@
     "psikologi-ilmu-behind-ilmu-penipuan",
     "psikologi-efek-ikatan-visual",
     "psikologi-kekuatan-visualisasi-masa-depan",
-    "psikologi-otak-dan-fragmenasi-pengalaman"
+    "psikologi-otak-dan-fragmenasi-pengalaman",
+    "psikologi-kekuatan-otak-saat-mengalami-nostalgia"
   ],
   "published": [
     {
@@ -671,7 +672,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_150214",
+      "topic": "psikologi-kekuatan-otak-saat-mengalami-nostalgia",
+      "title": "Rahasia Otak Saat Mengingat Masa Lalu, Apa Yang Terjadi?",
+      "path": "/home/runner/work/konten6/konten6/output/20260802_150214_psikologi-kekuatan-otak-saat-mengalami-nostalgia/final.mp4",
+      "video_id": "4uaoOmVa900",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 66
+  "_voice_idx": 67
 }
