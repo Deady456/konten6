@@ -61,7 +61,8 @@
     "psikologi-kebiasaan-otak-saat-menghadapi-kesalahan",
     "psikologi-ilmu-behind-ilmu-penipuan",
     "psikologi-efek-ikatan-visual",
-    "psikologi-kekuatan-visualisasi-masa-depan"
+    "psikologi-kekuatan-visualisasi-masa-depan",
+    "psikologi-otak-dan-fragmenasi-pengalaman"
   ],
   "published": [
     {
@@ -660,7 +661,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_070134",
+      "topic": "psikologi-otak-dan-fragmenasi-pengalaman",
+      "title": "Mengapa Otak Kita Suka Mengingat Kenangan Palsu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260802_070134_psikologi-otak-dan-fragmenasi-pengalaman/final.mp4",
+      "video_id": "yWS-uOMBfko",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 65
+  "_voice_idx": 66
 }
