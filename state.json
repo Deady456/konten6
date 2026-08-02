@@ -63,7 +63,8 @@
     "psikologi-efek-ikatan-visual",
     "psikologi-kekuatan-visualisasi-masa-depan",
     "psikologi-otak-dan-fragmenasi-pengalaman",
-    "psikologi-kekuatan-otak-saat-mengalami-nostalgia"
+    "psikologi-kekuatan-otak-saat-mengalami-nostalgia",
+    "psikologi-otak-dan-konsep-waktu"
   ],
   "published": [
     {
@@ -682,7 +683,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260802_230311",
+      "topic": "psikologi-otak-dan-konsep-waktu",
+      "title": "Mengapa Otak Kita Selalu Mengabaikan Masa Depan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260802_230311_psikologi-otak-dan-konsep-waktu/final.mp4",
+      "video_id": "Te5wuTHiE9U",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 67
+  "_voice_idx": 68
 }
