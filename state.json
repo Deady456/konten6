@@ -64,7 +64,8 @@
     "psikologi-kekuatan-visualisasi-masa-depan",
     "psikologi-otak-dan-fragmenasi-pengalaman",
     "psikologi-kekuatan-otak-saat-mengalami-nostalgia",
-    "psikologi-otak-dan-konsep-waktu"
+    "psikologi-otak-dan-konsep-waktu",
+    "psikologi-keunikan-otak-saat-mengalami-ekspektasi"
   ],
   "published": [
     {
@@ -693,7 +694,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260803_070144",
+      "topic": "psikologi-keunikan-otak-saat-mengalami-ekspektasi",
+      "title": "Apa yang Terjadi di Otak Saat Kita Mengharapkan Sesuatu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260803_070144_psikologi-keunikan-otak-saat-mengalami-ekspektasi/final.mp4",
+      "video_id": "gO4vev-gYTQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 68
+  "_voice_idx": 69
 }
