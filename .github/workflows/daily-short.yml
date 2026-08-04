@@ -84,13 +84,3 @@ jobs:
             git commit -m "auto: update state.json"
             git push
           fi
-
-      - name: Commit refreshed token (if changed)
-        run: |
-          if git diff --quiet token_serenitymind.json 2>/dev/null; then
-            echo "Token unchanged"
-          else
-            git add token_serenitymind.json
-            git commit -m "auto: refresh YouTube token"
-            git push
-          fi
