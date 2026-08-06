@@ -66,7 +66,8 @@
     "psikologi-kekuatan-otak-saat-mengalami-nostalgia",
     "psikologi-otak-dan-konsep-waktu",
     "psikologi-keunikan-otak-saat-mengalami-ekspektasi",
-    "psikologi-kekuatan-otak-saat-menghadapi-keragaman"
+    "psikologi-kekuatan-otak-saat-menghadapi-keragaman",
+    "fenomena-baader-meinhof"
   ],
   "published": [
     {
@@ -715,7 +716,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260806_123410",
+      "topic": "fenomena-baader-meinhof",
+      "title": "Mengapa Kita Sering Mengalami Fenomena Baader Meinhof?",
+      "path": "/home/runner/work/konten6/konten6/output/20260806_123410_fenomena-baader-meinhof/final.mp4",
+      "video_id": "TylGKvjGiRQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 70
+  "_voice_idx": 71
 }
