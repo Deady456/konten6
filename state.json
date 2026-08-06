@@ -65,7 +65,8 @@
     "psikologi-otak-dan-fragmenasi-pengalaman",
     "psikologi-kekuatan-otak-saat-mengalami-nostalgia",
     "psikologi-otak-dan-konsep-waktu",
-    "psikologi-keunikan-otak-saat-mengalami-ekspektasi"
+    "psikologi-keunikan-otak-saat-mengalami-ekspektasi",
+    "psikologi-kekuatan-otak-saat-menghadapi-keragaman"
   ],
   "published": [
     {
@@ -704,7 +705,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260806_023548",
+      "topic": "psikologi-kekuatan-otak-saat-menghadapi-keragaman",
+      "title": "Mengapa Otak Kita Lebih Suka Menghindari Perbedaan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260806_023548_psikologi-kekuatan-otak-saat-menghadapi-keragaman/final.mp4",
+      "video_id": "jlGUrAa_KU4",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 69
+  "_voice_idx": 70
 }
