@@ -67,7 +67,8 @@
     "psikologi-otak-dan-konsep-waktu",
     "psikologi-keunikan-otak-saat-mengalami-ekspektasi",
     "psikologi-kekuatan-otak-saat-menghadapi-keragaman",
-    "fenomena-baader-meinhof"
+    "fenomena-baader-meinhof",
+    "psikologi-keunikan-otak-saat-mengalami-sensasi-takut"
   ],
   "published": [
     {
@@ -726,7 +727,15 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260807_031437",
+      "topic": "psikologi-keunikan-otak-saat-mengalami-sensasi-takut",
+      "title": "Mengapa Kita Menyukai Film Horor?",
+      "path": "/home/runner/work/konten6/konten6/output/20260807_031437_psikologi-keunikan-otak-saat-mengalami-sensasi-takut/final.mp4",
+      "video_id": "Bp1tRR2kbNY",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 71
+  "_voice_idx": 73
 }
