@@ -68,7 +68,8 @@
     "psikologi-keunikan-otak-saat-mengalami-ekspektasi",
     "psikologi-kekuatan-otak-saat-menghadapi-keragaman",
     "fenomena-baader-meinhof",
-    "psikologi-keunikan-otak-saat-mengalami-sensasi-takut"
+    "psikologi-keunikan-otak-saat-mengalami-sensasi-takut",
+    "psikologi-otak-dan-efek-sonik"
   ],
   "published": [
     {
@@ -735,7 +736,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260807_031437_psikologi-keunikan-otak-saat-mengalami-sensasi-takut/final.mp4",
       "video_id": "Bp1tRR2kbNY",
       "publish_at": null
+    },
+    {
+      "ts": "20260807_033236",
+      "topic": "psikologi-otak-dan-efek-sonik",
+      "title": "Apa yang Terjadi di Otak Saat Mendengar Suara yang Sama Berkali-Kali?",
+      "path": "/home/runner/work/konten6/konten6/output/20260807_033236_psikologi-otak-dan-efek-sonik/final.mp4",
+      "video_id": "5XfBZFvZE3U",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 73
+  "_voice_idx": 75
 }
