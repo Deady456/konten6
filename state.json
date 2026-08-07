@@ -69,7 +69,8 @@
     "psikologi-kekuatan-otak-saat-menghadapi-keragaman",
     "fenomena-baader-meinhof",
     "psikologi-keunikan-otak-saat-mengalami-sensasi-takut",
-    "psikologi-otak-dan-efek-sonik"
+    "psikologi-otak-dan-efek-sonik",
+    "psikologi-otak-dan-dampak-ruang-lingkungan"
   ],
   "published": [
     {
@@ -744,7 +745,15 @@
       "path": "/home/runner/work/konten6/konten6/output/20260807_033236_psikologi-otak-dan-efek-sonik/final.mp4",
       "video_id": "5XfBZFvZE3U",
       "publish_at": null
+    },
+    {
+      "ts": "20260807_103428",
+      "topic": "psikologi-otak-dan-dampak-ruang-lingkungan",
+      "title": "Apa yang Terjadi Ketika Otak Anda Mengalami Perubahan Ruang?",
+      "path": "/home/runner/work/konten6/konten6/output/20260807_103428_psikologi-otak-dan-dampak-ruang-lingkungan/final.mp4",
+      "video_id": "HR3HPMaTbSY",
+      "publish_at": null
     }
   ],
-  "_voice_idx": 75
+  "_voice_idx": 77
 }
