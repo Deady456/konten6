@@ -70,7 +70,8 @@
     "fenomena-baader-meinhof",
     "psikologi-keunikan-otak-saat-mengalami-sensasi-takut",
     "psikologi-otak-dan-efek-sonik",
-    "psikologi-otak-dan-dampak-ruang-lingkungan"
+    "psikologi-otak-dan-dampak-ruang-lingkungan",
+    "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation"
   ],
   "published": [
     {
@@ -753,7 +754,17 @@
       "path": "/home/runner/work/konten6/konten6/output/20260807_103428_psikologi-otak-dan-dampak-ruang-lingkungan/final.mp4",
       "video_id": "HR3HPMaTbSY",
       "publish_at": null
+    },
+    {
+      "ts": "20260808_094649",
+      "topic": "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation",
+      "title": "Apa yang Terjadi di Otak Saat Kita Mengalami Kehampaan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260808_094649_psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-de/final.mp4",
+      "video_id": "1K3rjILwfQ0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 77
+  "_voice_idx": 78
 }
