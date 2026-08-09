@@ -71,7 +71,8 @@
     "psikologi-keunikan-otak-saat-mengalami-sensasi-takut",
     "psikologi-otak-dan-efek-sonik",
     "psikologi-otak-dan-dampak-ruang-lingkungan",
-    "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation"
+    "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation",
+    "psikologi-otak-dan-fragmenasi-identitas"
   ],
   "published": [
     {
@@ -764,7 +765,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260809_123124",
+      "topic": "psikologi-otak-dan-fragmenasi-identitas",
+      "title": "Otak Bisa Palsu! Ini Cara Kerja Identitas Fiktif di Otak",
+      "path": "/home/runner/work/konten6/konten6/output/20260809_123124_psikologi-otak-dan-fragmenasi-identitas/final.mp4",
+      "video_id": "yDo2nlUEwHc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 78
+  "_voice_idx": 79
 }
