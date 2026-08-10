@@ -73,7 +73,8 @@
     "psikologi-otak-dan-dampak-ruang-lingkungan",
     "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation",
     "psikologi-otak-dan-fragmenasi-identitas",
-    "psikologi-ilmu-dibalik-skenario-terburuk"
+    "psikologi-ilmu-dibalik-skenario-terburuk",
+    "psikologi-otak-dan-dampak-pengulangan-frasa"
   ],
   "published": [
     {
@@ -786,7 +787,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260810_223327",
+      "topic": "psikologi-otak-dan-dampak-pengulangan-frasa",
+      "title": "Mengapa Otak Kita Suka Mengulang Frasa yang Sama Berulang Kali?",
+      "path": "/home/runner/work/konten6/konten6/output/20260810_223327_psikologi-otak-dan-dampak-pengulangan-frasa/final.mp4",
+      "video_id": "X-4WdpW1fbg",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 80
+  "_voice_idx": 81
 }
