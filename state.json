@@ -72,7 +72,8 @@
     "psikologi-otak-dan-efek-sonik",
     "psikologi-otak-dan-dampak-ruang-lingkungan",
     "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation",
-    "psikologi-otak-dan-fragmenasi-identitas"
+    "psikologi-otak-dan-fragmenasi-identitas",
+    "psikologi-ilmu-dibalik-skenario-terburuk"
   ],
   "published": [
     {
@@ -775,7 +776,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260810_031645",
+      "topic": "psikologi-ilmu-dibalik-skenario-terburuk",
+      "title": "Apa yang Terjadi di Otak Saat Anda Membayangkan Skenario Terburuk?",
+      "path": "/home/runner/work/konten6/konten6/output/20260810_031645_psikologi-ilmu-dibalik-skenario-terburuk/final.mp4",
+      "video_id": "9aKQwlA4jj0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 79
+  "_voice_idx": 80
 }
