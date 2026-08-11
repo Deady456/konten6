@@ -74,7 +74,8 @@
     "psikologi-kekuatan-otak-saat-mengalami-pengalaman-sensory-deprivation",
     "psikologi-otak-dan-fragmenasi-identitas",
     "psikologi-ilmu-dibalik-skenario-terburuk",
-    "psikologi-otak-dan-dampak-pengulangan-frasa"
+    "psikologi-otak-dan-dampak-pengulangan-frasa",
+    "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi"
   ],
   "published": [
     {
@@ -797,7 +798,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260811_070443",
+      "topic": "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi",
+      "title": "Musik Yang Dipersonalisasi Bisa Mengubah Cara Kerja Otak Anda",
+      "path": "/home/runner/work/konten6/konten6/output/20260811_070443_psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi/final.mp4",
+      "video_id": "AQBDjUh9Bpw",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 81
+  "_voice_idx": 82
 }
