@@ -76,7 +76,8 @@
     "psikologi-ilmu-dibalik-skenario-terburuk",
     "psikologi-otak-dan-dampak-pengulangan-frasa",
     "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi",
-    "psikologi-dampak-otak-saat-mengalami-perubahan-musim"
+    "psikologi-dampak-otak-saat-mengalami-perubahan-musim",
+    "psikologi-keunikan-otak-saat-mengalami-flow"
   ],
   "published": [
     {
@@ -819,7 +820,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260812_162005",
+      "topic": "psikologi-keunikan-otak-saat-mengalami-flow",
+      "title": "Apa itu Flow? Rahasia Otak Saat Mengalami Keesaan",
+      "path": "/home/runner/work/konten6/konten6/output/20260812_162005_psikologi-keunikan-otak-saat-mengalami-flow/final.mp4",
+      "video_id": "zsoLtTlxIlA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 83
+  "_voice_idx": 84
 }
