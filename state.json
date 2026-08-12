@@ -75,7 +75,8 @@
     "psikologi-otak-dan-fragmenasi-identitas",
     "psikologi-ilmu-dibalik-skenario-terburuk",
     "psikologi-otak-dan-dampak-pengulangan-frasa",
-    "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi"
+    "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi",
+    "psikologi-dampak-otak-saat-mengalami-perubahan-musim"
   ],
   "published": [
     {
@@ -808,7 +809,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260812_121845",
+      "topic": "psikologi-dampak-otak-saat-mengalami-perubahan-musim",
+      "title": "Apa yang Terjadi di Otak Saat Musim Berubah?",
+      "path": "/home/runner/work/konten6/konten6/output/20260812_121845_psikologi-dampak-otak-saat-mengalami-perubahan-musim/final.mp4",
+      "video_id": "7PDeLEGBgKo",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 82
+  "_voice_idx": 83
 }
