@@ -77,7 +77,8 @@
     "psikologi-otak-dan-dampak-pengulangan-frasa",
     "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi",
     "psikologi-dampak-otak-saat-mengalami-perubahan-musim",
-    "psikologi-keunikan-otak-saat-mengalami-flow"
+    "psikologi-keunikan-otak-saat-mengalami-flow",
+    "psikologi-efek-dejavu"
   ],
   "published": [
     {
@@ -830,7 +831,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260813_001657",
+      "topic": "psikologi-efek-dejavu",
+      "title": "Apa yang Terjadi di Otak Saat Mengalami Dejavu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260813_001657_psikologi-efek-dejavu/final.mp4",
+      "video_id": "huWDYO24UxI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 84
+  "_voice_idx": 85
 }
