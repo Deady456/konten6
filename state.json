@@ -78,7 +78,8 @@
     "psikologi-otak-dan-efek-dari-musik-yang-dipersonalisasi",
     "psikologi-dampak-otak-saat-mengalami-perubahan-musim",
     "psikologi-keunikan-otak-saat-mengalami-flow",
-    "psikologi-efek-dejavu"
+    "psikologi-efek-dejavu",
+    "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru"
   ],
   "published": [
     {
@@ -841,7 +842,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260813_121814",
+      "topic": "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru",
+      "title": "Otak Bisa Berubah! Seperti Apa Proses Belajar Bahasa Baru Mengubah Otak?",
+      "path": "/home/runner/work/konten6/konten6/output/20260813_121814_psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru/final.mp4",
+      "video_id": "r3knV_t88AE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 85
+  "_voice_idx": 86
 }
