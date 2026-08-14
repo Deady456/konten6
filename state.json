@@ -79,7 +79,8 @@
     "psikologi-dampak-otak-saat-mengalami-perubahan-musim",
     "psikologi-keunikan-otak-saat-mengalami-flow",
     "psikologi-efek-dejavu",
-    "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru"
+    "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru",
+    "psikologi-otak-dan-efek-mikro-ekspresi"
   ],
   "published": [
     {
@@ -852,7 +853,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260814_001656",
+      "topic": "psikologi-otak-dan-efek-mikro-ekspresi",
+      "title": "Ternyata Otak Bisa Membaca Emosi dalam 1/25 Detik!",
+      "path": "/home/runner/work/konten6/konten6/output/20260814_001656_psikologi-otak-dan-efek-mikro-ekspresi/final.mp4",
+      "video_id": "Og7ZpUjC77s",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 86
+  "_voice_idx": 87
 }
