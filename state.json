@@ -80,7 +80,8 @@
     "psikologi-keunikan-otak-saat-mengalami-flow",
     "psikologi-efek-dejavu",
     "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru",
-    "psikologi-otak-dan-efek-mikro-ekspresi"
+    "psikologi-otak-dan-efek-mikro-ekspresi",
+    "psikologi-otak-dan-efek-sinkronisasi-massa"
   ],
   "published": [
     {
@@ -863,7 +864,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260814_121717",
+      "topic": "psikologi-otak-dan-efek-sinkronisasi-massa",
+      "title": "Mengapa Kerumunan Bisa Mempengaruhi Otak Anda?",
+      "path": "/home/runner/work/konten6/konten6/output/20260814_121717_psikologi-otak-dan-efek-sinkronisasi-massa/final.mp4",
+      "video_id": "7-hBQprBEvU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 87
+  "_voice_idx": 88
 }
