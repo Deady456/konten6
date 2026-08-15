@@ -81,7 +81,8 @@
     "psikologi-efek-dejavu",
     "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru",
     "psikologi-otak-dan-efek-mikro-ekspresi",
-    "psikologi-otak-dan-efek-sinkronisasi-massa"
+    "psikologi-otak-dan-efek-sinkronisasi-massa",
+    "psikologi-kekuatan-asosiasi-otak"
   ],
   "published": [
     {
@@ -874,7 +875,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260815_001740",
+      "topic": "psikologi-kekuatan-asosiasi-otak",
+      "title": "Mengenal Asosiasi Otak: Bagaimana Pikiran Anda Membuat Koneksi",
+      "path": "/home/runner/work/konten6/konten6/output/20260815_001740_psikologi-kekuatan-asosiasi-otak/final.mp4",
+      "video_id": "A3X2NiXDveE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 88
+  "_voice_idx": 89
 }
