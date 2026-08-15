@@ -82,7 +82,8 @@
     "psikologi-neuroplastisitas-otak-saat-belajar-bahasa-baru",
     "psikologi-otak-dan-efek-mikro-ekspresi",
     "psikologi-otak-dan-efek-sinkronisasi-massa",
-    "psikologi-kekuatan-asosiasi-otak"
+    "psikologi-kekuatan-asosiasi-otak",
+    "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut"
   ],
   "published": [
     {
@@ -885,7 +886,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260815_121704",
+      "topic": "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut",
+      "title": "Bagaimana Otak Mengolah Kejutan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260815_121704_psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut/final.mp4",
+      "video_id": "Sm4nzkvC8IQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 89
+  "_voice_idx": 90
 }
