@@ -85,7 +85,8 @@
     "psikologi-kekuatan-asosiasi-otak",
     "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut",
     "psikologi-konsekuensi-otak-saat-mengalami-keterasingan",
-    "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur"
+    "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur",
+    "kasus-pembunuhan-ika-salsabiela-rais"
   ],
   "published": [
     {
@@ -918,7 +919,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260816_182227",
+      "topic": "kasus-pembunuhan-ika-salsabiela-rais",
+      "title": "Misteri Pembunuhan Mahasiswa UGM 1999 yang Kembali Terbuka: Fakta Baru & DNA",
+      "path": "/home/runner/work/konten6/konten6/output/20260816_182227_kasus-pembunuhan-ika-salsabiela-rais/final.mp4",
+      "video_id": "MMS0olD2zEU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 92
+  "_voice_idx": 93
 }
