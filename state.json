@@ -83,7 +83,8 @@
     "psikologi-otak-dan-efek-mikro-ekspresi",
     "psikologi-otak-dan-efek-sinkronisasi-massa",
     "psikologi-kekuatan-asosiasi-otak",
-    "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut"
+    "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut",
+    "psikologi-konsekuensi-otak-saat-mengalami-keterasingan"
   ],
   "published": [
     {
@@ -896,7 +897,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260816_001649",
+      "topic": "psikologi-konsekuensi-otak-saat-mengalami-keterasingan",
+      "title": "Mengapa Keterasingan Bisa Mengubah Cara Kerja Otakmu?",
+      "path": "/home/runner/work/konten6/konten6/output/20260816_001649_psikologi-konsekuensi-otak-saat-mengalami-keterasingan/final.mp4",
+      "video_id": "8SvQ_J9gDGE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 90
+  "_voice_idx": 91
 }
