@@ -3,7 +3,7 @@ audience: "orang dewasa Indonesia yang tertarik dengan true crime lokal dan seja
 language: id
 
 script:
-  model: qwen-3.6-27b
+  model: openai/gpt-oss-120b
   target_seconds: 80
   words_per_second: 2.5
 
