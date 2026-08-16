@@ -1,9 +1,9 @@
-niche: "fakta psikologi dan otak yang bikin penasaran (bias kognitif, perilaku manusia, trik otak, psikologi warna, body language, kebiasaan aneh, fakta psikologi tersembunyi, cara kerja memori, emosi, motivasi, self-improvement)"
-audience: "orang dewasa Indonesia yang ingin memahami cara kerja otak dan pikiran manusia, suka fakta psikologi dan self-improvement"
+niche: "kasus kriminal LOKAL Indonesia, dan alur cerita kejahatan nyata kontroversial yang terjadi di Indonesia dengan bahasa sensor algospeak"
+audience: "orang dewasa Indonesia yang tertarik dengan true crime lokal dan sejarah kriminal Indonesia"
 language: id
 
 script:
-  model: llama-3.3-70b-versatile
+  model: qwen-3.6-27b
   target_seconds: 80
   words_per_second: 2.5
 
@@ -45,7 +45,7 @@ upload:
   category_id: "27"
   made_for_kids: false
   channel: "serenitymind"
-  default_tags: ["fakta psikologi", "psikologi", "fakta otak", "bias kognitif", "perilaku manusia", "self improvement", "mindset", "ilmu psikologi", "trik otak", "kebiasaan", "emosi", "motivasi"]
+  default_tags: ["kasus lokal", "true crime indonesia", "kasus kriminal", "alibi", "alugoro", "alur cerita", "kriminal indonesia", "kasus misteri", "berita viral"]
 
 
 
