@@ -84,7 +84,8 @@
     "psikologi-otak-dan-efek-sinkronisasi-massa",
     "psikologi-kekuatan-asosiasi-otak",
     "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut",
-    "psikologi-konsekuensi-otak-saat-mengalami-keterasingan"
+    "psikologi-konsekuensi-otak-saat-mengalami-keterasingan",
+    "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur"
   ],
   "published": [
     {
@@ -907,7 +908,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260816_121740",
+      "topic": "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur",
+      "title": "Apa Yang Terjadi Pada Otak Saat Membentuk Kebiasaan Baru?",
+      "path": "/home/runner/work/konten6/konten6/output/20260816_121740_psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur/final.mp4",
+      "video_id": "80aMU8-t1Jc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 91
+  "_voice_idx": 92
 }
