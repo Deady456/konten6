@@ -87,7 +87,8 @@
     "psikologi-konsekuensi-otak-saat-mengalami-keterasingan",
     "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur",
     "kasus-pembunuhan-ika-salsabiela-rais",
-    "kasus-pembunuhan-angeline-2015"
+    "kasus-pembunuhan-angeline-2015",
+    "kasus-penipuan-beasiswa-palsu-ui-2022"
   ],
   "published": [
     {
@@ -940,7 +941,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260817_121734",
+      "topic": "kasus-penipuan-beasiswa-palsu-ui-2022",
+      "title": "Terungkap! Skema Penipuan Beasiswa Palsu yang Menipu 150 Mahasiswa UI \u2013 Cerita Kriminal Nyata 2022",
+      "path": "/home/runner/work/konten6/konten6/output/20260817_121734_kasus-penipuan-beasiswa-palsu-ui-2022/final.mp4",
+      "video_id": "6GrbQEzIMKU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 94
+  "_voice_idx": 95
 }
