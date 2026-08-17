@@ -86,7 +86,8 @@
     "psikologi-kekuatan-otak-saat-mengalami-sensasi-terkejut",
     "psikologi-konsekuensi-otak-saat-mengalami-keterasingan",
     "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur",
-    "kasus-pembunuhan-ika-salsabiela-rais"
+    "kasus-pembunuhan-ika-salsabiela-rais",
+    "kasus-pembunuhan-angeline-2015"
   ],
   "published": [
     {
@@ -929,7 +930,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260817_001745",
+      "topic": "kasus-pembunuhan-angeline-2015",
+      "title": "Kasus Pembunuhan Angeline 2015: Dari Penemuan Mayat Hingga Putusan Kontroversial di Surabaya",
+      "path": "/home/runner/work/konten6/konten6/output/20260817_001745_kasus-pembunuhan-angeline-2015/final.mp4",
+      "video_id": "TwBfH3oR9fc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 93
+  "_voice_idx": 94
 }
