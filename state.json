@@ -89,7 +89,8 @@
     "kasus-pembunuhan-ika-salsabiela-rais",
     "kasus-pembunuhan-angeline-2015",
     "kasus-penipuan-beasiswa-palsu-ui-2022",
-    "kasus-kripto-kios-2022"
+    "kasus-kripto-kios-2022",
+    "kasus-p2p-penipuan-2023"
   ],
   "published": [
     {
@@ -962,7 +963,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260818_122327",
+      "topic": "kasus-p2p-penipuan-2023",
+      "title": "Miliaran Rupiah Dicuri: Jaringan P2P Online Ilegal yang Tertangkap KPK 2023",
+      "path": "/home/runner/work/konten6/konten6/output/20260818_122327_kasus-p2p-penipuan-2023/final.mp4",
+      "video_id": "-J7NEO_zx6k",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 96
+  "_voice_idx": 97
 }
