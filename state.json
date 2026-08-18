@@ -90,7 +90,8 @@
     "kasus-pembunuhan-angeline-2015",
     "kasus-penipuan-beasiswa-palsu-ui-2022",
     "kasus-kripto-kios-2022",
-    "kasus-p2p-penipuan-2023"
+    "kasus-p2p-penipuan-2023",
+    "kasus-wayan-mirna-salihin"
   ],
   "published": [
     {
@@ -973,7 +974,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260818_224642",
+      "topic": "kasus-wayan-mirna-salihin",
+      "title": "Misteri Kopi Beracun di Kafe Bali: Kasus Wayan Mirna Salihin yang Mengejutkan",
+      "path": "C:\\Users\\Administrator\\Desktop\\patch_temp2\\konten6\\output\\20260818_224642_kasus-wayan-mirna-salihin\\final.mp4",
+      "video_id": null,
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 100
+  "_voice_idx": 101
 }
