@@ -88,7 +88,8 @@
     "psikologi-efek-pembentukan-kebiasaan-berdasarkan-umur",
     "kasus-pembunuhan-ika-salsabiela-rais",
     "kasus-pembunuhan-angeline-2015",
-    "kasus-penipuan-beasiswa-palsu-ui-2022"
+    "kasus-penipuan-beasiswa-palsu-ui-2022",
+    "kasus-kripto-kios-2022"
   ],
   "published": [
     {
@@ -951,7 +952,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260818_002025",
+      "topic": "kasus-kripto-kios-2022",
+      "title": "Skandal Kios Kripto 2022: 1,2 Triliun Rupiah Menghilang dalam Satu Bulan",
+      "path": "/home/runner/work/konten6/konten6/output/20260818_002025_kasus-kripto-kios-2022/final.mp4",
+      "video_id": "QYjDlHa1bD0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 95
+  "_voice_idx": 96
 }
