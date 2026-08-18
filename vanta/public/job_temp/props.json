@@ -1,5 +1,5 @@
 {
-  "title": "KOPI BERACUN",
+  "title": "MISTERI DINI",
   "voice_audio": "job_temp/voice.mp3",
   "broll": [
     "job_temp/vid_0.mp4",
@@ -8,18 +8,41 @@
     "job_temp/vid_3.mp4",
     "job_temp/vid_4.mp4",
     "job_temp/vid_5.mp4",
-    "job_temp/vid_6.mp4"
+    "job_temp/vid_6.mp4",
+    "job_temp/vid_7.mp4",
+    "job_temp/vid_8.mp4",
+    "job_temp/vid_9.mp4",
+    "job_temp/vid_10.mp4",
+    "job_temp/vid_11.mp4",
+    "job_temp/vid_12.mp4",
+    "job_temp/vid_13.mp4",
+    "job_temp/vid_14.mp4",
+    "job_temp/vid_15.mp4",
+    "job_temp/vid_16.mp4",
+    "job_temp/vid_17.mp4",
+    "job_temp/vid_18.mp4",
+    "job_temp/vid_19.mp4",
+    "job_temp/vid_20.mp4",
+    "job_temp/vid_21.mp4",
+    "job_temp/vid_22.mp4",
+    "job_temp/vid_23.mp4",
+    "job_temp/vid_24.mp4",
+    "job_temp/vid_25.mp4",
+    "job_temp/vid_26.mp4",
+    "job_temp/vid_27.mp4",
+    "job_temp/vid_28.mp4",
+    "job_temp/vid_29.mp4"
   ],
   "words": [
     {
-      "word": "KOPI",
+      "word": " Mr.",
       "start": 0.0,
-      "end": 0.48
+      "end": 0.52
     },
     {
-      "word": "BERACUN",
-      "start": 0.48,
-      "end": 1.02
+      "word": " Idini,",
+      "start": 0.54,
+      "end": 1.06
     },
     {
       "word": "...",
@@ -27,795 +50,1080 @@
       "end": 2.26
     },
     {
-      "word": "Satu",
+      "word": "Malam",
       "start": 2.26,
-      "end": 2.6
-    },
-    {
-      "word": "tegukan",
-      "start": 2.6,
-      "end": 3.06
-    },
-    {
-      "word": "kopi,",
-      "start": 3.52,
-      "end": 3.72
-    },
-    {
-      "word": " nyawalannya",
-      "start": 3.72,
-      "end": 4.18
-    },
-    {
-      "word": "lenyap",
-      "start": 4.18,
-      "end": 4.42
-    },
-    {
-      "word": "dalam",
-      "start": 4.42,
-      "end": 4.76
-    },
-    {
-      "word": "hitungan",
-      "start": 4.76,
-      "end": 5.12
-    },
-    {
-      "word": "detik,",
-      "start": 5.5,
-      "end": 5.78
-    },
-    {
-      "word": "misteri",
-      "start": 5.78,
-      "end": 5.92
+      "end": 2.44
     },
     {
       "word": "kelam",
-      "start": 5.92,
-      "end": 6.26
-    },
-    {
-      "word": "bermula",
-      "start": 6.26,
-      "end": 6.42
+      "start": 2.44,
+      "end": 2.56
     },
     {
       "word": "di",
-      "start": 6.42,
-      "end": 6.62
+      "start": 2.56,
+      "end": 2.84
     },
     {
-      "word": "kafe",
-      "start": 6.62,
+      "word": "Jember,",
+      "start": 3.34,
+      "end": 3.6
+    },
+    {
+      "word": " ternyakan",
+      "start": 3.6,
+      "end": 3.9
+    },
+    {
+      "word": " memachasuni,",
+      "start": 3.9,
+      "end": 4.6
+    },
+    {
+      "word": " Dini",
+      "start": 5.06,
+      "end": 5.36
+    },
+    {
+      "word": " Hariati,",
+      "start": 5.36,
+      "end": 5.82
+    },
+    {
+      "word": " Mahasih",
+      "start": 6.38,
+      "end": 6.7
+    },
+    {
+      "word": " Sui",
+      "start": 6.7,
       "end": 6.92
     },
     {
-      "word": "Kuta,",
-      "start": 7.42,
-      "end": 7.9
+      "word": " Berusia",
+      "start": 6.92,
+      "end": 7.28
     },
     {
-      "word": "Bali.",
-      "start": 8.7,
-      "end": 9.1
+      "word": " 23,",
+      "start": 7.28,
+      "end": 7.8
     },
     {
-      "word": "Saat",
-      "start": 9.1,
+      "word": " di",
+      "start": 8.44,
+      "end": 8.52
+    },
+    {
+      "word": " temukan",
+      "start": 8.52,
+      "end": 8.8
+    },
+    {
+      "word": " tak",
+      "start": 8.8,
+      "end": 9.02
+    },
+    {
+      "word": " bernyawah",
+      "start": 9.02,
       "end": 9.4
     },
     {
-      "word": "itu,",
-      "start": 9.94,
-      "end": 10.14
+      "word": " di",
+      "start": 9.4,
+      "end": 9.54
     },
     {
-      "word": "ramai",
-      "start": 10.14,
-      "end": 10.54
+      "word": " rumah",
+      "start": 9.54,
+      "end": 9.68
     },
     {
-      "word": " ternyata",
-      "start": 10.54,
-      "end": 10.8
+      "word": " kosnya.",
+      "start": 9.68,
+      "end": 10.18
     },
     {
-      "word": "tak",
-      "start": 10.8,
-      "end": 11.12
+      "word": " Polisi",
+      "start": 11.0,
+      "end": 11.5
     },
     {
-      "word": "menyadari",
-      "start": 11.12,
-      "end": 11.44
+      "word": " setempat",
+      "start": 11.5,
+      "end": 11.9
     },
     {
-      "word": "bahaya",
-      "start": 11.44,
-      "end": 11.68
-    },
-    {
-      "word": "yang",
-      "start": 11.68,
+      "word": " segera",
+      "start": 11.9,
       "end": 12.14
     },
     {
-      "word": "mengintai.",
-      "start": 13.1,
-      "end": 13.52
+      "word": " mengamankan",
+      "start": 12.14,
+      "end": 12.6
     },
     {
-      "word": "...",
-      "start": 14.06,
-      "end": 14.32
+      "word": " TKP,",
+      "start": 12.6,
+      "end": 13.08
     },
     {
-      "word": "Korban,",
-      "start": 14.32,
-      "end": 14.56
+      "word": " menemukan",
+      "start": 13.48,
+      "end": 13.88
     },
     {
-      "word": "Wayan",
-      "start": 14.56,
-      "end": 15.1
+      "word": " jujak",
+      "start": 13.88,
+      "end": 14.24
     },
     {
-      "word": "Mirna",
-      "start": 15.5,
-      "end": 15.74
+      "word": " sepatu",
+      "start": 14.24,
+      "end": 14.54
     },
     {
-      "word": "Salihin,",
-      "start": 15.74,
-      "end": 16.26
+      "word": " berukuran",
+      "start": 14.54,
+      "end": 14.9
     },
     {
-      "word": "seorang",
-      "start": 16.26,
-      "end": 16.52
+      "word": " 24",
+      "start": 14.9,
+      "end": 15.2
     },
     {
       "word": " dan",
-      "start": 16.52,
-      "end": 16.64
+      "start": 15.2,
+      "end": 15.62
     },
     {
-      "word": " pasar,",
-      "start": 16.64,
+      "word": " secara",
+      "start": 15.62,
+      "end": 15.86
+    },
+    {
+      "word": " kain",
+      "start": 15.86,
+      "end": 16.12
+    },
+    {
+      "word": " merah",
+      "start": 16.12,
+      "end": 16.36
+    },
+    {
+      "word": " yang",
+      "start": 16.36,
+      "end": 16.52
+    },
+    {
+      "word": " menempel",
+      "start": 16.52,
+      "end": 16.84
+    },
+    {
+      "word": " pada",
+      "start": 16.84,
       "end": 17.08
     },
     {
-      "word": "asal",
-      "start": 17.5,
-      "end": 17.74
+      "word": " gagang",
+      "start": 17.08,
+      "end": 17.4
     },
     {
-      "word": "Denpasar,",
-      "start": 17.74,
-      "end": 18.02
+      "word": " pintu,",
+      "start": 17.4,
+      "end": 17.8
     },
     {
-      "word": "menelan",
-      "start": 18.02,
-      "end": 18.42
+      "word": " serta",
+      "start": 18.36,
+      "end": 18.56
     },
     {
-      "word": "minuman",
-      "start": 18.42,
-      "end": 18.72
+      "word": " aroma",
+      "start": 18.56,
+      "end": 18.76
     },
     {
-      "word": "berwarna",
-      "start": 18.72,
-      "end": 18.86
-    },
-    {
-      "word": "putih",
-      "start": 18.86,
+      "word": " bensin",
+      "start": 18.76,
       "end": 19.18
     },
     {
-      "word": "yang",
+      "word": " yang",
       "start": 19.18,
-      "end": 19.6
+      "end": 19.34
     },
     {
-      "word": " sian",
-      "start": 19.6,
-      "end": 19.88
+      "word": " menyengat",
+      "start": 19.34,
+      "end": 19.64
     },
     {
-      "word": " hidah",
-      "start": 19.88,
-      "end": 20.04
+      "word": " menandakan",
+      "start": 19.64,
+      "end": 20.02
     },
     {
-      "word": "mengandung",
-      "start": 20.04,
-      "end": 20.5
+      "word": " upaya",
+      "start": 20.02,
+      "end": 20.4
     },
     {
-      "word": "sianida",
-      "start": 21.34,
-      "end": 21.82
+      "word": " menghilangkan",
+      "start": 20.4,
+      "end": 20.96
     },
     {
-      "word": "beracun.",
-      "start": 21.82,
-      "end": 22.12
+      "word": " bukti.",
+      "start": 20.96,
+      "end": 21.4
     },
     {
-      "word": "Kejadian",
-      "start": 22.12,
-      "end": 22.46
+      "word": " Saksi",
+      "start": 22.28,
+      "end": 22.72
     },
     {
-      "word": "itu",
-      "start": 22.46,
-      "end": 22.76
+      "word": " tetangga",
+      "start": 22.72,
+      "end": 23.0
     },
     {
-      "word": "terjadi",
-      "start": 22.76,
-      "end": 22.94
+      "word": " melaporkan",
+      "start": 23.0,
+      "end": 23.42
     },
     {
-      "word": "pada",
-      "start": 22.94,
-      "end": 23.28
+      "word": " melihat",
+      "start": 23.42,
+      "end": 23.66
     },
     {
-      "word": "sore",
-      "start": 23.78,
+      "word": " seorang",
+      "start": 23.66,
       "end": 23.96
     },
     {
-      "word": "hari,",
+      "word": " pria",
       "start": 23.96,
-      "end": 24.3
+      "end": 24.2
     },
     {
-      "word": "tepat",
-      "start": 24.3,
-      "end": 24.48
+      "word": " bertopi",
+      "start": 24.2,
+      "end": 24.56
+    },
+    {
+      "word": " hitam",
+      "start": 24.56,
+      "end": 24.78
+    },
+    {
+      "word": " melintasih",
+      "start": 24.78,
+      "end": 25.22
+    },
+    {
+      "word": " lorong",
+      "start": 25.22,
+      "end": 25.44
+    },
+    {
+      "word": " pada",
+      "start": 25.44,
+      "end": 25.66
+    },
+    {
+      "word": " pukul",
+      "start": 25.66,
+      "end": 25.96
     },
     {
       "word": " 12",
-      "start": 24.48,
-      "end": 24.76
+      "start": 25.96,
+      "end": 26.24
     },
     {
-      "word": "dua",
-      "start": 24.76,
-      "end": 25.32
-    },
-    {
-      "word": " Pertugas",
-      "start": 26.18,
+      "word": " lewat,",
+      "start": 26.24,
       "end": 26.6
     },
     {
-      "word": "malam.",
+      "word": " namun",
       "start": 26.6,
-      "end": 26.9
+      "end": 27.32
     },
     {
-      "word": "...",
-      "start": 26.9,
-      "end": 27.22
+      "word": " wajahnya",
+      "start": 27.32,
+      "end": 27.78
     },
     {
-      "word": "Petugas",
-      "start": 27.22,
-      "end": 27.46
+      "word": " tertutup",
+      "start": 27.78,
+      "end": 28.18
     },
     {
-      "word": " satu",
-      "start": 27.46,
-      "end": 27.66
+      "word": " oleh",
+      "start": 28.18,
+      "end": 28.3
     },
     {
-      "word": " buhnya,",
-      "start": 27.66,
-      "end": 28.16
+      "word": " topi",
+      "start": 28.3,
+      "end": 28.66
     },
     {
-      "word": "segera",
-      "start": 28.16,
-      "end": 28.9
+      "word": " dan",
+      "start": 28.66,
+      "end": 29.3
     },
     {
-      "word": "memeriksa",
-      "start": 28.9,
-      "end": 29.26
+      "word": " dia",
+      "start": 29.3,
+      "end": 29.48
     },
     {
-      "word": "tubuhnya,",
-      "start": 29.26,
-      "end": 29.66
+      "word": " juga",
+      "start": 29.48,
+      "end": 29.7
     },
     {
-      "word": "menemukan",
-      "start": 29.66,
-      "end": 29.78
+      "word": " membawa",
+      "start": 29.7,
+      "end": 29.98
     },
     {
-      "word": "gejala",
-      "start": 29.78,
-      "end": 30.08
+      "word": " tas",
+      "start": 29.98,
+      "end": 30.16
     },
     {
-      "word": "keracunan",
+      "word": " kulit",
+      "start": 30.16,
+      "end": 30.4
+    },
+    {
+      "word": " hitam",
+      "start": 30.4,
+      "end": 30.68
+    },
+    {
+      "word": " yang",
       "start": 30.68,
-      "end": 31.16
+      "end": 30.8
     },
     {
-      "word": "yang",
-      "start": 31.16,
-      "end": 31.62
+      "word": " berisi",
+      "start": 30.8,
+      "end": 31.04
     },
     {
-      "word": "parah;",
-      "start": 31.62,
-      "end": 32.28
+      "word": " botol",
+      "start": 31.04,
+      "end": 31.3
     },
     {
-      "word": "laboratorium",
-      "start": 32.28,
-      "end": 32.76
+      "word": " cairan",
+      "start": 31.3,
+      "end": 31.68
     },
     {
-      "word": " sian",
-      "start": 32.76,
-      "end": 33.02
+      "word": " tak",
+      "start": 31.68,
+      "end": 31.82
     },
     {
-      "word": " hidah",
-      "start": 33.02,
-      "end": 33.22
+      "word": " di",
+      "start": 31.82,
+      "end": 31.94
     },
     {
-      "word": "mengkonfirmasi",
-      "start": 33.22,
-      "end": 33.46
+      "word": " kenal.",
+      "start": 31.94,
+      "end": 32.34
     },
     {
-      "word": "keberadaan",
-      "start": 33.46,
+      "word": " Penyelidikan",
+      "start": 33.1,
       "end": 33.7
     },
     {
-      "word": "sianida",
+      "word": " mengarah",
       "start": 33.7,
-      "end": 34.12
+      "end": 34.0
     },
     {
-      "word": "dalam",
-      "start": 35.1,
-      "end": 35.48
+      "word": " pada",
+      "start": 34.0,
+      "end": 34.22
     },
     {
-      "word": "kopi",
-      "start": 35.48,
-      "end": 35.66
+      "word": " pacar",
+      "start": 34.22,
+      "end": 34.5
     },
     {
-      "word": "tersebut.",
-      "start": 35.66,
-      "end": 36.08
+      "word": " Dini,",
+      "start": 34.5,
+      "end": 34.8
     },
     {
-      "word": "Hasil",
-      "start": 36.08,
-      "end": 36.38
+      "word": " Rudi,",
+      "start": 35.32,
+      "end": 35.78
     },
     {
-      "word": "ini",
-      "start": 36.38,
-      "end": 36.66
+      "word": " yang",
+      "start": 36.1,
+      "end": 36.28
     },
     {
-      "word": "mengguncang",
-      "start": 37.12,
-      "end": 37.62
+      "word": " baru",
+      "start": 36.28,
+      "end": 36.44
     },
     {
-      "word": " kresahan",
-      "start": 37.62,
-      "end": 37.96
+      "word": " saja",
+      "start": 36.44,
+      "end": 36.7
     },
     {
-      "word": "kota,",
-      "start": 37.96,
-      "end": 38.46
+      "word": " kembali",
+      "start": 36.7,
+      "end": 37.02
     },
     {
-      "word": "memicu",
-      "start": 39.32,
-      "end": 39.82
+      "word": " dari",
+      "start": 37.02,
+      "end": 37.2
     },
     {
-      "word": "keresahan",
-      "start": 39.82,
+      "word": " perjalanan",
+      "start": 37.2,
+      "end": 37.66
+    },
+    {
+      "word": " kesurabaya",
+      "start": 37.66,
+      "end": 38.2
+    },
+    {
+      "word": " dan",
+      "start": 38.2,
+      "end": 38.4
+    },
+    {
+      "word": " diketahui",
+      "start": 38.4,
+      "end": 38.88
+    },
+    {
+      "word": " memiliki",
+      "start": 38.88,
+      "end": 39.18
+    },
+    {
+      "word": " catatan",
+      "start": 39.18,
+      "end": 39.56
+    },
+    {
+      "word": " perselisahan",
+      "start": 39.56,
       "end": 40.14
     },
     {
-      "word": "publik.",
+      "word": " dengan",
       "start": 40.14,
-      "end": 40.38
+      "end": 40.34
     },
     {
-      "word": "...",
-      "start": 40.38,
-      "end": 40.9
+      "word": " korban.",
+      "start": 40.34,
+      "end": 40.72
     },
     {
-      "word": "Penyelidikan",
-      "start": 40.9,
-      "end": 41.28
+      "word": " Namun,",
+      "start": 41.3,
+      "end": 41.52
     },
     {
-      "word": "mengarah",
-      "start": 41.74,
-      "end": 42.02
+      "word": " yang",
+      "start": 41.62,
+      "end": 41.66
     },
     {
-      "word": "pada",
-      "start": 42.02,
-      "end": 42.34
+      "word": " mengakuti",
+      "start": 41.66,
+      "end": 41.96
     },
     {
-      "word": "Nofriansyah",
-      "start": 42.88,
-      "end": 42.98
+      "word": " dahadir",
+      "start": 41.96,
+      "end": 42.38
     },
     {
-      "word": "Yusri,",
-      "start": 42.98,
-      "end": 43.44
+      "word": " pada",
+      "start": 42.38,
+      "end": 42.56
     },
     {
-      "word": "pacar",
-      "start": 43.44,
-      "end": 43.74
+      "word": " malam",
+      "start": 42.56,
+      "end": 42.74
     },
     {
-      "word": "korban,",
-      "start": 43.74,
-      "end": 43.88
+      "word": " itu,",
+      "start": 42.74,
+      "end": 43.08
     },
     {
-      "word": "yang",
-      "start": 43.88,
-      "end": 44.1
+      "word": "Jember,",
+      "start": 43.58,
+      "end": 43.84
     },
     {
-      "word": "diketahui",
-      "start": 44.1,
-      "end": 44.48
+      "word": " alibi",
+      "start": 43.84,
+      "end": 44.06
     },
     {
-      "word": " sakit",
-      "start": 44.48,
-      "end": 44.74
+      "word": " yang",
+      "start": 44.06,
+      "end": 44.18
     },
     {
-      "word": " jadian,",
-      "start": 44.74,
+      "word": " terbukti",
+      "start": 44.18,
+      "end": 44.52
+    },
+    {
+      "word": " palsu",
+      "start": 44.52,
+      "end": 44.9
+    },
+    {
+      "word": " melalui",
+      "start": 44.9,
       "end": 45.16
     },
     {
-      "word": "meja",
-      "start": 45.66,
-      "end": 45.96
+      "word": " rekaman",
+      "start": 45.16,
+      "end": 45.38
     },
     {
-      "word": "sebelah",
-      "start": 45.96,
-      "end": 46.32
+      "word": " CCTV",
+      "start": 45.38,
+      "end": 45.8
     },
     {
-      "word": "saat",
-      "start": 46.32,
-      "end": 46.72
+      "word": " yang",
+      "start": 45.8,
+      "end": 46.16
     },
     {
-      "word": "kejadian,",
-      "start": 46.72,
-      "end": 47.08
+      "word": " menampilkan",
+      "start": 46.16,
+      "end": 46.54
     },
     {
-      "word": " hancinta.",
-      "start": 47.08,
-      "end": 47.58
+      "word": " mobilnya",
+      "start": 46.54,
+      "end": 47.0
     },
     {
-      "word": "memiliki",
-      "start": 48.5,
-      "end": 49.0
+      "word": " di",
+      "start": 47.0,
+      "end": 47.12
     },
     {
-      "word": "riwayat",
-      "start": 49.0,
-      "end": 49.54
+      "word": " sekitar",
+      "start": 47.12,
+      "end": 47.42
     },
     {
-      "word": "perselisihan",
-      "start": 49.54,
-      "end": 49.72
+      "word": " lokasi.",
+      "start": 47.42,
+      "end": 47.88
     },
     {
-      "word": "cinta.",
-      "start": 49.72,
-      "end": 50.08
+      "word": " Bukti",
+      "start": 48.62,
+      "end": 49.26
     },
     {
-      "word": "Polisi",
-      "start": 50.08,
-      "end": 50.32
+      "word": " digital",
+      "start": 49.26,
+      "end": 49.62
+    },
+    {
+      "word": " mengungkap",
+      "start": 49.62,
+      "end": 49.96
+    },
+    {
+      "word": " pesansingkat",
+      "start": 49.96,
+      "end": 50.56
+    },
+    {
+      "word": " yang",
+      "start": 50.56,
+      "end": 50.68
+    },
+    {
+      "word": " mengancam,",
+      "start": 50.68,
+      "end": 51.2
+    },
+    {
+      "word": " di",
+      "start": 51.66,
+      "end": 51.7
+    },
+    {
+      "word": " mana",
+      "start": 51.7,
+      "end": 51.86
+    },
+    {
+      "word": " Rudi",
+      "start": 51.86,
+      "end": 52.1
+    },
+    {
+      "word": " menulis,",
+      "start": 52.1,
+      "end": 52.54
+    },
+    {
+      "word": " kita",
+      "start": 52.9,
+      "end": 53.08
+    },
+    {
+      "word": " selesai,",
+      "start": 53.08,
+      "end": 53.62
+    },
+    {
+      "word": " sebelum",
+      "start": 53.98,
+      "end": 54.24
+    },
+    {
+      "word": " malam",
+      "start": 54.24,
+      "end": 54.44
+    },
+    {
+      "word": " kejadian,",
+      "start": 54.44,
+      "end": 54.92
+    },
+    {
+      "word": " menggunakan",
+      "start": 55.44,
+      "end": 55.78
+    },
+    {
+      "word": " kode",
+      "start": 55.78,
+      "end": 56.12
+    },
+    {
+      "word": " yang",
+      "start": 56.12,
+      "end": 56.28
+    },
+    {
+      "word": " diinterpretasikan",
+      "start": 56.28,
+      "end": 57.02
+    },
+    {
+      "word": " sebagai",
+      "start": 57.02,
+      "end": 57.34
     },
     {
       "word": " TR",
-      "start": 50.32,
-      "end": 50.6
+      "start": 57.34,
+      "end": 57.72
     },
     {
-      "word": "-4GD",
-      "start": 50.6,
-      "end": 51.18
+      "word": "-4GD.",
+      "start": 57.72,
+      "end": 58.4
     },
     {
-      "word": "ia",
-      "start": 51.18,
-      "end": 51.54
+      "word": " Setelah",
+      "start": 59.52,
+      "end": 60.04
     },
     {
-      "word": "terlibat",
-      "start": 51.54,
-      "end": 51.92
+      "word": " digerahkan",
+      "start": 60.04,
+      "end": 60.44
     },
     {
-      "word": "dalam",
-      "start": 51.92,
-      "end": 52.18
+      "word": " tim",
+      "start": 60.44,
+      "end": 60.6
     },
     {
-      "word": "tr4gedi",
-      "start": 53.22,
-      "end": 53.54
+      "word": " forensik,",
+      "start": 60.6,
+      "end": 61.18
     },
     {
-      "word": "minuman",
-      "start": 53.54,
-      "end": 53.84
+      "word": " ditemukan",
+      "start": 61.5,
+      "end": 61.84
     },
     {
-      "word": "beracun",
-      "start": 53.84,
-      "end": 54.6
+      "word": " jujak",
+      "start": 61.84,
+      "end": 62.16
     },
     {
-      "word": "itu.",
-      "start": 54.6,
-      "end": 55.16
+      "word": " dari",
+      "start": 62.16,
+      "end": 62.3
     },
     {
-      "word": " menyapkan",
-      "start": 55.16,
-      "end": 55.6
+      "word": " hati",
+      "start": 62.3,
+      "end": 62.52
     },
     {
-      "word": "Bukti",
-      "start": 55.6,
-      "end": 55.98
+      "word": " PO",
+      "start": 62.52,
+      "end": 62.76
     },
     {
-      "word": "CCTV",
-      "start": 55.98,
-      "end": 56.74
+      "word": " pada",
+      "start": 62.76,
+      "end": 63.0
     },
     {
-      "word": " menyerakannya",
-      "start": 56.74,
-      "end": 57.28
-    },
-    {
-      "word": "Nofriansyah",
-      "start": 57.28,
-      "end": 57.5
-    },
-    {
-      "word": "menyiapkan",
-      "start": 57.5,
-      "end": 57.9
-    },
-    {
-      "word": " saksimata",
-      "start": 58.52,
-      "end": 58.94
-    },
-    {
-      "word": "menyerahkannya",
-      "start": 58.94,
-      "end": 59.26
-    },
-    {
-      "word": "kepada",
-      "start": 59.26,
-      "end": 59.68
-    },
-    {
-      "word": "Mirna;",
-      "start": 59.68,
-      "end": 60.18
-    },
-    {
-      "word": " Zatputih",
-      "start": 60.18,
-      "end": 60.74
-    },
-    {
-      "word": "mengaku",
-      "start": 60.74,
-      "end": 60.8
-    },
-    {
-      "word": "melihatnya",
-      "start": 60.8,
-      "end": 61.02
-    },
-    {
-      "word": "menambahkan",
-      "start": 61.02,
-      "end": 61.42
-    },
-    {
-      "word": "zat",
-      "start": 62.34,
-      "end": 62.72
-    },
-    {
-      "word": "putih",
-      "start": 62.72,
-      "end": 62.98
-    },
-    {
-      "word": "ke",
-      "start": 62.98,
+      "word": " jakat",
+      "start": 63.0,
       "end": 63.28
     },
     {
-      "word": "dalam",
+      "word": " Rudi",
       "start": 63.28,
       "end": 63.58
     },
     {
-      "word": "gelas.",
+      "word": " yang",
       "start": 63.58,
-      "end": 63.92
+      "end": 63.68
     },
     {
-      "word": "Rekaman",
-      "start": 63.92,
-      "end": 64.18
+      "word": " ternyata",
+      "start": 63.68,
+      "end": 63.9
     },
     {
-      "word": "itu",
-      "start": 64.18,
-      "end": 64.68
+      "word": " cocok",
+      "start": 63.9,
+      "end": 64.3
     },
     {
-      "word": "menjadi",
-      "start": 65.78,
-      "end": 66.1
+      "word": " dengan",
+      "start": 64.3,
+      "end": 64.54
     },
     {
-      "word": "kunci",
-      "start": 66.1,
-      "end": 66.72
+      "word": " hasil",
+      "start": 64.54,
+      "end": 64.86
     },
     {
-      "word": "utama",
-      "start": 67.2,
-      "end": 67.64
+      "word": " test",
+      "start": 64.86,
+      "end": 65.04
     },
     {
-      "word": "dalam",
-      "start": 67.64,
-      "end": 67.92
+      "word": " laboratorium",
+      "start": 65.04,
+      "end": 65.6
     },
     {
-      "word": "penyidikan.",
-      "start": 67.92,
-      "end": 68.38
+      "word": " korban,",
+      "start": 65.6,
+      "end": 66.0
     },
     {
-      "word": "...",
-      "start": 68.38,
-      "end": 68.6
+      "word": " serta",
+      "start": 66.6,
+      "end": 66.82
     },
     {
-      "word": "Setelah",
-      "start": 68.6,
-      "end": 68.86
+      "word": " analisi",
+      "start": 66.82,
+      "end": 67.14
     },
     {
-      "word": "penangkapan,",
-      "start": 68.86,
-      "end": 69.24
+      "word": " serat",
+      "start": 67.14,
+      "end": 67.38
     },
     {
-      "word": "Nofriansyah",
-      "start": 69.86,
-      "end": 70.06
+      "word": " pada",
+      "start": 67.38,
+      "end": 67.56
     },
     {
-      "word": "mengaku",
-      "start": 70.06,
-      "end": 70.36
+      "word": " jakat",
+      "start": 67.56,
+      "end": 67.84
     },
     {
-      "word": " mengsatulangkan",
-      "start": 70.36,
-      "end": 71.04
+      "word": " yang",
+      "start": 67.84,
+      "end": 67.98
     },
     {
-      "word": " ni",
-      "start": 71.04,
-      "end": 71.2
+      "word": " cocok",
+      "start": 67.98,
+      "end": 68.32
     },
     {
-      "word": "-4",
-      "start": 71.2,
-      "end": 71.38
+      "word": " dengan",
+      "start": 68.32,
+      "end": 68.54
     },
     {
-      "word": "karena",
-      "start": 71.38,
-      "end": 71.84
+      "word": " sample",
+      "start": 68.54,
+      "end": 68.84
     },
     {
-      "word": "emosi,",
-      "start": 71.84,
-      "end": 72.22
+      "word": " selimut",
+      "start": 68.84,
+      "end": 69.22
     },
     {
-      "word": "namun",
-      "start": 72.22,
-      "end": 72.58
+      "word": " yang",
+      "start": 69.22,
+      "end": 69.34
     },
     {
-      "word": "menolak",
-      "start": 73.44,
-      "end": 74.06
+      "word": " ditemukan",
+      "start": 69.34,
+      "end": 69.72
     },
     {
-      "word": "mengh1langkan",
-      "start": 74.06,
-      "end": 74.48
+      "word": " di",
+      "start": 69.72,
+      "end": 69.9
     },
     {
-      "word": "ny4wa",
-      "start": 74.48,
-      "end": 74.98
+      "word": " ruang",
+      "start": 69.9,
+      "end": 70.08
     },
     {
-      "word": "korban",
-      "start": 74.98,
-      "end": 75.14
+      "word": " tamu",
+      "start": 70.08,
+      "end": 70.32
     },
     {
-      "word": "secara",
-      "start": 75.14,
-      "end": 75.36
+      "word": " korban.",
+      "start": 70.32,
+      "end": 70.64
     },
     {
-      "word": "langsung.",
-      "start": 75.36,
-      "end": 75.72
+      "word": " Pengadilan",
+      "start": 71.66,
+      "end": 72.38
+    },
+    {
+      "word": " memutuskan",
+      "start": 72.38,
+      "end": 72.88
+    },
+    {
+      "word": " Rudi",
+      "start": 72.88,
+      "end": 73.18
+    },
+    {
+      "word": " bersalah",
+      "start": 73.18,
+      "end": 73.54
+    },
+    {
+      "word": " hatas",
+      "start": 73.54,
+      "end": 73.8
+    },
+    {
+      "word": " pembuluhan",
+      "start": 73.8,
+      "end": 74.2
+    },
+    {
+      "word": " berencana,",
+      "start": 74.2,
+      "end": 74.66
+    },
+    {
+      "word": " di",
+      "start": 75.28,
+      "end": 75.34
+    },
+    {
+      "word": " jatuhi",
+      "start": 75.34,
+      "end": 75.76
+    },
+    {
+      "word": " hukuman",
+      "start": 75.76,
+      "end": 76.02
+    },
+    {
+      "word": " penjara",
+      "start": 76.02,
+      "end": 76.36
+    },
+    {
+      "word": " seumur",
+      "start": 76.36,
+      "end": 76.72
+    },
+    {
+      "word": " hidup,",
+      "start": 76.72,
+      "end": 77.04
+    },
+    {
+      "word": " sementara",
+      "start": 77.54,
+      "end": 77.8
+    },
+    {
+      "word": " keluarga",
+      "start": 77.8,
+      "end": 78.18
+    },
+    {
+      "word": " Dini",
+      "start": 78.18,
+      "end": 78.44
+    },
+    {
+      "word": " masih",
+      "start": 78.44,
+      "end": 78.66
+    },
+    {
+      "word": " berduka",
+      "start": 78.66,
+      "end": 79.08
+    },
+    {
+      "word": " dalam",
+      "start": 79.08,
+      "end": 79.28
+    },
+    {
+      "word": " kepedahan",
+      "start": 79.28,
+      "end": 79.72
+    },
+    {
+      "word": " yang",
+      "start": 79.72,
+      "end": 79.92
+    },
+    {
+      "word": " tak",
+      "start": 79.92,
+      "end": 80.1
+    },
+    {
+      "word": " terobati.",
+      "start": 80.1,
+      "end": 80.56
+    },
+    {
+      "word": " Bagaimana",
+      "start": 81.78,
+      "end": 82.46
+    },
+    {
+      "word": " menurut",
+      "start": 82.46,
+      "end": 82.84
+    },
+    {
+      "word": " kalian?",
+      "start": 82.84,
+      "end": 83.08
+    },
+    {
+      "word": " Tulis",
+      "start": 84.22,
+      "end": 84.5
+    },
+    {
+      "word": " di",
+      "start": 84.5,
+      "end": 84.62
+    },
+    {
+      "word": " kolom",
+      "start": 84.62,
+      "end": 84.84
+    },
+    {
+      "word": " komentar",
+      "start": 84.84,
+      "end": 85.2
+    },
+    {
+      "word": " dan",
+      "start": 85.2,
+      "end": 85.46
+    },
+    {
+      "word": " subscribe",
+      "start": 85.46,
+      "end": 85.9
+    },
+    {
+      "word": " untuk",
+      "start": 85.9,
+      "end": 86.24
+    },
+    {
+      "word": " alur",
+      "start": 86.24,
+      "end": 86.5
+    },
+    {
+      "word": " kasus",
+      "start": 86.5,
+      "end": 86.76
+    },
+    {
+      "word": " lainnya.",
+      "start": 86.76,
+      "end": 87.2
     }
   ],
-  "durationInSeconds": 76.72
+  "durationInSeconds": 88.2
 }

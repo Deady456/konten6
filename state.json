@@ -91,7 +91,8 @@
     "kasus-penipuan-beasiswa-palsu-ui-2022",
     "kasus-kripto-kios-2022",
     "kasus-p2p-penipuan-2023",
-    "kasus-wayan-mirna-salihin"
+    "kasus-wayan-mirna-salihin",
+    "kasus pembunuhan Dini Haryati"
   ],
   "published": [
     {
@@ -984,7 +985,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260818_225822",
+      "topic": "kasus pembunuhan Dini Haryati",
+      "title": "Misteri Pembunuhan Dini Haryati: Jejak Kelam di Jember yang Tak Terpecahkan",
+      "path": "C:\\Users\\Administrator\\Desktop\\patch_temp2\\konten6\\output\\20260818_225822_kasus-pembunuhan-dini-haryati\\final.mp4",
+      "video_id": null,
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 101
+  "_voice_idx": 102
 }
