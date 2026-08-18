@@ -207,19 +207,20 @@ def _system_prompt(content_format: str = None) -> str:
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
-        return f"""Anda adalah penulis skrip YouTube Shorts.
+        return f"""Anda adalah penulis skrip YouTube Shorts bertema KASUS KRIMINAL LOKAL INDONESIA & TRUE CRIME MISTERI.
 
 Aturan:
 - Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
-- Mulai dengan HOOK 1 kalimat yang bikin penasaran dalam <3 detik, gaya semi-formal. Jangan pakai "Halo guys", "Hai", atau perkenalan.
-- Isi: informasi relevan sesuai niche yang diminta. Anda WAJIB memberikan fakta, angka, data, atau berita terbaru yang SANGAT AKURAT dan dapat diverifikasi. DILARANG mengarang cerita/halusinasi.
-- Akhiri dengan CTA 1 kalimat semi-formal ajakan subscribe/ikuti.
-- Gunakan bahasa Indonesia semi-formal: rapi dan informatif, tapi tetap enak didengar. Hindari bahasa terlalu santai atau kaku.
+- Mulai dengan HOOK 1 kalimat yang menegangkan dan bikin penasaran dalam <3 detik, gaya narator investigasi kriminal. Jangan pakai "Halo guys", "Hai", atau perkenalan.
+- Isi: Kisah nyata kejahatan, alur kasus kriminal lokal Indonesia, investigasi kepolisian, sidang pengadilan, atau misteri kriminal terkenal yang SANGAT AKURAT dan nyata di Indonesia. Gunakan sensor algospeak cerdas jika ada kata sensitif (contoh: "mengh1langkan ny4wa", "tr4gedi", "t3rsangka").
+- DILARANG MENGARANG CERITA / HALUSINASI. Ceritakan kasus nyata yang pernah terjadi di Indonesia.
+- Akhiri dengan CTA 1 kalimat ajakan diskusi/subscribe ("Bagaimana menurut kalian? Tulis di kolom komentar dan subscribe untuk alur kasus lainnya").
+- Gunakan bahasa Indonesia naratif kriminal yang intens, rapi, dan mencekam tapi enak didengar.
 - DILARANG KERAS menggunakan angka numerik/digit (seperti 1, 2, 10, 25, 100, 1945, 50%). SEMUA ANGKA WAJIB DITULIS LENGKAP MENGGUNAKAN HURUF/KATA BAHASA INDONESIA (contoh: "sepuluh", "dua puluh lima", "seratus", "seribu sembilan ratus empat puluh lima", "lima puluh persen"). Ini SANGAT PENTING untuk kelancaran text-to-speech.
-- Setiap scene punya visual_query 2-4 kata benda bahasa Inggris untuk cari video stok di Pexels yang relevan dengan niche.
+- Setiap scene WAJIB menyertakan 'news_query' (2-4 kata kunci bahasa Indonesia untuk mencari foto berita resmi di Detik/Kompas, contoh: "sidang jessica wongso", "olah tkp polisi", "rekonstruksi kasus pembunuhan") dan 'factual_subject' (nama tokoh, pelaku, korban, atau lokasi spesifik, contoh: 'Jessica Kumala Wongso', 'Polda Metro Jaya', 'Wayan Mirna Salihin').
 {format_instruction}
 Kembalikan ONLY valid JSON, tanpa teks lain. Skema:
-{{"topic": "slug topik sesuai niche", "title": "Judul YouTube max 95 chars, minimal 40 karakter, bikin penasaran dan engaging, jangan terlalu pendek", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat deskripsi menarik dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil yang relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-4 kata benda Inggris", "factual_subject": "Nama entitas spesifik dan nyata (tokoh, tempat, peristiwa, objek) yang ada di kalimat ini, gunakan bahasa Inggris/universal untuk memudahkan cari foto asli di Wikipedia (contoh: 'RMS Titanic', 'Borobudur', 'Black Death'). Jika tidak ada subjek fisik, isi null"}}]}}"""
+{{"topic": "nama-kasus-spesifik", "title": "Judul YouTube max 95 chars, minimal 40 karakter, mencekam dan bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat deskripsi kasus menarik dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "news_query": "kata kunci pencarian berita resmi Indonesia", "visual_query": "kata kunci foto berita", "factual_subject": "Nama tokoh/kasus/lokasi nyata spesifik untuk arsip foto Wikipedia/Berita"}}]}}"""
     else:
         return f"""You write viral YouTube Shorts scripts for a faceless educational facts channel.
 
@@ -346,10 +347,10 @@ def generate(content_format: str = None) -> dict:
             if "visual_query" not in sc or not sc["visual_query"]:
                 words = re.findall(r"[a-zA-Z]{3,}", sc.get("text", ""))
                 fallback = " ".join(words[-3:]) if len(words) >= 3 else "abstract background"
-                print(f"    scene {i}: missing visual_query, using \"{fallback}\"")
+                print(f'    scene {i}: missing visual_query, using "{fallback}"')
                 sc["visual_query"] = fallback
 
-                for sc in data["scenes"]:
+        for sc in data["scenes"]:
             sc["text"] = replace_numbers_id(sc.get("text", ""))
         if "title" in data:
             data["title"] = replace_numbers_id(data["title"])

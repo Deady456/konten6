@@ -2,8 +2,7 @@ import argparse
 import json
 import re
 import time
-from datetime import datetime
-from . import script, voice, captions, visuals, assemble, assemble_vanta, upload, state, visuals_ai
+from . import script, voice, captions, visuals, news_visuals, assemble, assemble_vanta, upload, state, visuals_ai
 from . import branding, review
 from .config import CONFIG, OUTPUT_DIR
 
@@ -72,10 +71,10 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True,
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
     # ============================================================
-    # Step 4: Fetch B-roll footage
+    # Step 4: Fetch real news portal photos & screenshots
     # ============================================================
-    _log("4/8 Fetching footage from Pexels")
-    scene_videos = visuals.fetch_all(data["scenes"], work / "broll")
+    _log("4/8 Fetching authentic photos & screenshots from Detik, Kompas, Wikipedia, and News Portals")
+    scene_videos = news_visuals.fetch_all(data["scenes"], work / "broll")
     _log(f"    {len(scene_videos)} clips ready")
 
     # ============================================================
