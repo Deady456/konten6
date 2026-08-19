@@ -92,7 +92,8 @@
     "kasus-kripto-kios-2022",
     "kasus-p2p-penipuan-2023",
     "kasus-wayan-mirna-salihin",
-    "kasus pembunuhan Dini Haryati"
+    "kasus pembunuhan Dini Haryati",
+    "kasus-penyekapan-pulomas-dua-ribu-enam-belas"
   ],
   "published": [
     {
@@ -995,7 +996,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260819_061145",
+      "topic": "kasus-penyekapan-pulomas-dua-ribu-enam-belas",
+      "title": "Misteri Penyekapan Tragis Pulomas: Terjebak dalam Ruang Sempit Kedap Udara",
+      "path": "/home/runner/work/konten6/konten6/output/20260819_061145_kasus-penyekapan-pulomas-dua-ribu-enam-belas/final.mp4",
+      "video_id": "jiAp4l-1ccg",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 102
+  "_voice_idx": 103
 }
