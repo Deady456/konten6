@@ -94,7 +94,8 @@
     "kasus-wayan-mirna-salihin",
     "kasus pembunuhan Dini Haryati",
     "kasus-penyekapan-pulomas-dua-ribu-enam-belas",
-    "kasus-pembunuhan-berantai-ryan-jombang"
+    "kasus-pembunuhan-berantai-ryan-jombang",
+    "kasus-serial-killer-wowon-bekasi-cianjur"
   ],
   "published": [
     {
@@ -1017,7 +1018,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260820_001809",
+      "topic": "kasus-serial-killer-wowon-bekasi-cianjur",
+      "title": "Misteri Pesugihan Maut Wowon Cs: Pembunuhan Berantai Sembilan Korban",
+      "path": "/home/runner/work/konten6/konten6/output/20260820_001809_kasus-serial-killer-wowon-bekasi-cianjur/final.mp4",
+      "video_id": "slPekE4_968",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 104
+  "_voice_idx": 105
 }
