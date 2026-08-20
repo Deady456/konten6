@@ -95,7 +95,8 @@
     "kasus pembunuhan Dini Haryati",
     "kasus-penyekapan-pulomas-dua-ribu-enam-belas",
     "kasus-pembunuhan-berantai-ryan-jombang",
-    "kasus-serial-killer-wowon-bekasi-cianjur"
+    "kasus-serial-killer-wowon-bekasi-cianjur",
+    "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas"
   ],
   "published": [
     {
@@ -1028,7 +1029,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260820_121652",
+      "topic": "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas",
+      "title": "Misteri Pembunuhan Keji Ade Sara: Tragedi Cinta Segitiga di Tol Cikunir",
+      "path": "/home/runner/work/konten6/konten6/output/20260820_121652_kasus-pembunuhan-ade-sara-dua-ribu-empat-belas/final.mp4",
+      "video_id": "1zgyOE2sD44",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 105
+  "_voice_idx": 106
 }
