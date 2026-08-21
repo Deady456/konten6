@@ -96,7 +96,8 @@
     "kasus-penyekapan-pulomas-dua-ribu-enam-belas",
     "kasus-pembunuhan-berantai-ryan-jombang",
     "kasus-serial-killer-wowon-bekasi-cianjur",
-    "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas"
+    "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas",
+    "kasus-pembunuhan-ibu-anak-subang"
   ],
   "published": [
     {
@@ -1039,7 +1040,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260821_001723",
+      "topic": "kasus-pembunuhan-ibu-anak-subang",
+      "title": "Misteri J4sad Ibu dan Anak di Bagasi Alphard Subang yang Menggegerkan",
+      "path": "/home/runner/work/konten6/konten6/output/20260821_001723_kasus-pembunuhan-ibu-anak-subang/final.mp4",
+      "video_id": "TtOXLfhp0Gg",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 106
+  "_voice_idx": 107
 }
