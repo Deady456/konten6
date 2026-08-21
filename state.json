@@ -97,7 +97,8 @@
     "kasus-pembunuhan-berantai-ryan-jombang",
     "kasus-serial-killer-wowon-bekasi-cianjur",
     "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas",
-    "kasus-pembunuhan-ibu-anak-subang"
+    "kasus-pembunuhan-ibu-anak-subang",
+    "kasus-dukun-as-ahmad-suradji"
   ],
   "published": [
     {
@@ -1050,7 +1051,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260821_121808",
+      "topic": "kasus-dukun-as-ahmad-suradji",
+      "title": "Misteri Dukun A S: Pembunuhan Berantai Empat Puluh Dua Wanita di Deli Serdang",
+      "path": "/home/runner/work/konten6/konten6/output/20260821_121808_kasus-dukun-as-ahmad-suradji/final.mp4",
+      "video_id": "nekuP4ryeC8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 107
+  "_voice_idx": 108
 }
