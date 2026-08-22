@@ -211,6 +211,7 @@ def _system_prompt(content_format: str = None) -> str:
 
 Aturan:
 - Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
+- RAHASIA RETENSI (SEAMLESS INFINITY LOOP): Kalimat terakhir pada scene penutup WAJIB dibuat menggantung atau menyatu mulus kembali ke kalimat HOOK pertama di scene 1 (retensi >100%).
 - Mulai dengan HOOK 1 kalimat yang menegangkan dan bikin penasaran dalam <3 detik, gaya narator investigasi kriminal. Jangan pakai "Halo guys", "Hai", atau perkenalan.
 - Isi: Kisah nyata kejahatan, alur kasus kriminal lokal Indonesia, investigasi kepolisian, sidang pengadilan, atau misteri kriminal terkenal yang SANGAT AKURAT dan nyata di Indonesia. Gunakan sensor algospeak cerdas jika ada kata sensitif (contoh: "mengh1langkan ny4wa", "tr4gedi", "t3rsangka").
 - DILARANG MENGARANG CERITA / HALUSINASI. Ceritakan kasus nyata yang pernah terjadi di Indonesia.
