@@ -98,7 +98,8 @@
     "kasus-serial-killer-wowon-bekasi-cianjur",
     "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas",
     "kasus-pembunuhan-ibu-anak-subang",
-    "kasus-dukun-as-ahmad-suradji"
+    "kasus-dukun-as-ahmad-suradji",
+    "kasus-jagal-tegalsari-astini-surabaya"
   ],
   "published": [
     {
@@ -1061,7 +1062,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260822_001654",
+      "topic": "kasus-jagal-tegalsari-astini-surabaya",
+      "title": "Misteri Jagal Tegalsari Surabaya: Ibu Rumah Tangga P3mbunuh Berantai",
+      "path": "/home/runner/work/konten6/konten6/output/20260822_001654_kasus-jagal-tegalsari-astini-surabaya/final.mp4",
+      "video_id": "pTsdGumLU74",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 108
+  "_voice_idx": 109
 }
