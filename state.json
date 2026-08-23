@@ -99,7 +99,8 @@
     "kasus-pembunuhan-ade-sara-dua-ribu-empat-belas",
     "kasus-pembunuhan-ibu-anak-subang",
     "kasus-dukun-as-ahmad-suradji",
-    "kasus-jagal-tegalsari-astini-surabaya"
+    "kasus-jagal-tegalsari-astini-surabaya",
+    "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas"
   ],
   "published": [
     {
@@ -1072,7 +1073,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260823_183843",
+      "topic": "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas",
+      "title": "Misteri Kelam Danau Kenanga UI: Siapa Pembunuh Akseyna Sebenarnya?",
+      "path": "/home/runner/work/konten6/konten6/output/20260823_183843_kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas/final.mp4",
+      "video_id": "PnF0UbmuYWs",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 109
+  "_voice_idx": 110
 }
