@@ -100,7 +100,8 @@
     "kasus-pembunuhan-ibu-anak-subang",
     "kasus-dukun-as-ahmad-suradji",
     "kasus-jagal-tegalsari-astini-surabaya",
-    "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas"
+    "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas",
+    "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas"
   ],
   "published": [
     {
@@ -1083,7 +1084,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260824_001654",
+      "topic": "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas",
+      "title": "Misteri Tragis Mess Tangerang: Kasus Cangkul Enno Farihah yang Menggempar Indonesia",
+      "path": "/home/runner/work/konten6/konten6/output/20260824_001654_kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas/final.mp4",
+      "video_id": "jH503Zh-GAc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 110
+  "_voice_idx": 111
 }
