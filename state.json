@@ -101,7 +101,8 @@
     "kasus-dukun-as-ahmad-suradji",
     "kasus-jagal-tegalsari-astini-surabaya",
     "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas",
-    "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas"
+    "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas",
+    "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh"
   ],
   "published": [
     {
@@ -1094,7 +1095,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260824_121651",
+      "topic": "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh",
+      "title": "Misteri Mutilasi Koper Kalibata City: Jebakan Aplikasi Kencan Berujung Maut",
+      "path": "/home/runner/work/konten6/konten6/output/20260824_121651_kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh/final.mp4",
+      "video_id": "6c_ObAc7XKc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 111
+  "_voice_idx": 112
 }
