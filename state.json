@@ -102,7 +102,8 @@
     "kasus-jagal-tegalsari-astini-surabaya",
     "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas",
     "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas",
-    "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh"
+    "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh",
+    "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga"
   ],
   "published": [
     {
@@ -1105,7 +1106,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260825_001712",
+      "topic": "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga",
+      "title": "Misteri Kebun Berdarah Banjarnegara: K3jahatan Keji Dukun Pengganda Uang Dua Ribu Dua Puluh Tiga",
+      "path": "/home/runner/work/konten6/konten6/output/20260825_001712_kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga/final.mp4",
+      "video_id": "vnLLTes79vk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 112
+  "_voice_idx": 113
 }
