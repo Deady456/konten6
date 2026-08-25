@@ -103,7 +103,8 @@
     "kasus-pembunuhan-akseyna-ui-dua-ribu-lima-belas",
     "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas",
     "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh",
-    "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga"
+    "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga",
+    "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas"
   ],
   "published": [
     {
@@ -1116,7 +1117,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260825_121739",
+      "topic": "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas",
+      "title": "Tragedi Terseret Lima Ratus Meter: Misteri Kematian Sisca Yofie Bandung",
+      "path": "/home/runner/work/konten6/konten6/output/20260825_121739_kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas/final.mp4",
+      "video_id": "Z0qlIxQcn9k",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 113
+  "_voice_idx": 114
 }
