@@ -105,7 +105,8 @@
     "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh",
     "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga",
     "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas",
-    "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga"
+    "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga",
+    "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas"
   ],
   "published": [
     {
@@ -1138,7 +1139,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260826_121757",
+      "topic": "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas",
+      "title": "Misteri Koper Hitam Blitar: Tragedi Guru Honorer Kediri",
+      "path": "/home/runner/work/konten6/konten6/output/20260826_121757_kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas/final.mp4",
+      "video_id": "Aqi4btiGVpY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 115
+  "_voice_idx": 116
 }
