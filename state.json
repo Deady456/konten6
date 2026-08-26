@@ -104,7 +104,8 @@
     "kasus-pembunuhan-enno-farihah-tangerang-dua-ribu-enam-belas",
     "kasus-mutilasi-kalibata-city-dua-ribu-dua-puluh",
     "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga",
-    "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas"
+    "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas",
+    "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga"
   ],
   "published": [
     {
@@ -1127,7 +1128,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260826_001648",
+      "topic": "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga",
+      "title": "Misteri Pembongkaran Makam dan Dapur Kelam Sumanto Purbalingga",
+      "path": "/home/runner/work/konten6/konten6/output/20260826_001648_kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga/final.mp4",
+      "video_id": "Vjyxe3o4xqk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 114
+  "_voice_idx": 115
 }
