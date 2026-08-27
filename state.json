@@ -107,7 +107,8 @@
     "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas",
     "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga",
     "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas",
-    "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas"
+    "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas",
+    "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas"
   ],
   "published": [
     {
@@ -1160,7 +1161,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260827_094025",
+      "topic": "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas",
+      "title": "Konspirasi Berdarah Istri Hakim: Sandiwara Maut Jurang Sawit",
+      "path": "/home/runner/work/konten6/konten6/output/20260827_094025_kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-be/final.mp4",
+      "video_id": "PgwA0KuQyio",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 117
+  "_voice_idx": 118
 }
