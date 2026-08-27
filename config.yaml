@@ -1,5 +1,5 @@
-niche: "kasus kriminal LOKAL Indonesia, dan alur cerita kejahatan nyata kontroversial yang terjadi di Indonesia dengan bahasa sensor algospeak"
-audience: "orang dewasa Indonesia yang tertarik dengan true crime lokal dan sejarah kriminal Indonesia"
+niche: "keajaiban alam liar, misteri laut dalam, hewan purba/ekstrim, dan fenomena alam paling mencengangkan di Bumi (deep sea creatures, extreme wildlife predators, megastorms, volcanic eruptions, bioluminescent nature, fenomena geologi unik)"
+audience: "penonton Indonesia yang penasaran dengan keajaiban alam, misteri laut dalam, hewan buas/unik, dan fenomena ekstrim planet Bumi"
 language: id
 
 script:
@@ -45,7 +45,7 @@ upload:
   category_id: "27"
   made_for_kids: false
   channel: "serenitymind"
-  default_tags: ["kasus lokal", "true crime indonesia", "kasus kriminal", "alibi", "alugoro", "alur cerita", "kriminal indonesia", "kasus misteri", "berita viral"]
+  default_tags: ["keajaiban alam", "laut dalam", "hewan purba", "predator alam", "fenomena ekstrim", "deep sea", "wildlife", "fakta sains", "fakta unik", "misteri bumi"]
 
 
 

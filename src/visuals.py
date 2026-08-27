@@ -21,16 +21,16 @@ HEADERS = {
 JUNK_WORDS = {"cartoon", "drawing", "illustration", "anime", "clipart", "vector", "meme", "banner", "ad"}
 
 GENERIC_NICHES = [
-    "dark mystery crime atmosphere",
-    "police investigation lights dramatic",
-    "dark atmospheric cinematic room",
-    "shadowy silhouette detective night",
-    "courtroom justice dramatic gavel",
-    "cctv surveillance footage night",
-    "dark alley rainy night cinematic",
-    "crime scene tape evidence macro",
-    "cinematic motion background dark",
-    "mysterious documents forensic archive",
+    "deep ocean blue water cinematic",
+    "wildlife animals nature cinematic",
+    "bioluminescent underwater creatures glowing",
+    "aerial view dramatic nature landscape",
+    "macro nature wildlife detailed 4k",
+    "volcano lava eruption dramatic smoke",
+    "supercell storm lightning dark clouds",
+    "tropical rainforest misty drone",
+    "giant predatory animal hunting slow motion",
+    "majestic waterfalls mountain cinematic",
 ]
 
 def probe_duration(path: Path) -> float:
@@ -52,10 +52,10 @@ def clean_query(q: str) -> str:
 
 
 def expand_queries(scene: dict) -> list[str]:
-    """Generate multiple tiered queries from scene data to guarantee fresh, distinct visual clips."""
+    """Generate strictly English tiered queries from scene data for maximum Pixabay search accuracy."""
     queries = []
     
-    # 1. Main visual query
+    # 1. Main visual query (Pure English stock search terms)
     vq = scene.get("visual_query", "")
     if vq:
         v_clean = clean_query(vq.strip())
@@ -74,31 +74,15 @@ def expand_queries(scene: dict) -> list[str]:
         elif len(v_words) == 1 and v_words[0] not in queries:
             queries.append(v_words[0])
 
-    # 2. Factual subject (if present)
+    # 2. Factual subject (Scientific / English entity name if present)
     factual = scene.get("factual_subject")
     if factual and isinstance(factual, str) and factual.lower() != "null":
         f_clean = clean_query(factual.strip())
         if f_clean and f_clean not in queries:
             queries.append(f_clean)
 
-    # 3. News query (if present)
-    nq = scene.get("news_query", "")
-    if nq:
-        n_clean = clean_query(nq.strip())
-        if n_clean and n_clean not in queries:
-            queries.append(n_clean)
-
-    # 4. Text/narration contextual keywords
-    text = scene.get("text", "")
-    if text:
-        text_words = [tw.strip(".,!?:;\"'").lower() for tw in text.split() if len(tw) > 3 and not tw.startswith("http")]
-        if len(text_words) >= 3:
-            kw_phrase = " ".join(text_words[:3])
-            if kw_phrase not in queries:
-                queries.append(kw_phrase)
-
-    # 5. Generic rich cinematic fallbacks
-    queries.extend([random.choice(GENERIC_NICHES), "dark cinematic abstract background"])
+    # 3. Rich English nature & wildlife fallbacks
+    queries.extend([random.choice(GENERIC_NICHES), random.choice(GENERIC_NICHES), "deep ocean nature cinematic 4k"])
     
     # Return unique, non-empty queries
     seen = set()
