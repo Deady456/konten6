@@ -108,7 +108,8 @@
     "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga",
     "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas",
     "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas",
-    "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas"
+    "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas",
+    "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan"
   ],
   "published": [
     {
@@ -1171,7 +1172,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260827_121828",
+      "topic": "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan",
+      "title": "KONSPIRASI ATAU CINTA SEGITIGA? SKANDAL KASUS ANTASARI AZHAR!",
+      "path": "/home/runner/work/konten6/konten6/output/20260827_121828_kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan/final.mp4",
+      "video_id": "jccVHZjNC10",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 118
+  "_voice_idx": 119
 }
