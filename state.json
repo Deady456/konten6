@@ -106,7 +106,8 @@
     "kasus-dukun-slamet-banjarnegara-dua-ribu-dua-puluh-tiga",
     "kasus-pembunuhan-sisca-yofie-bandung-dua-ribu-tiga-belas",
     "kasus-kanibal-sumanto-purbalingga-dua-ribu-tiga",
-    "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas"
+    "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas",
+    "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas"
   ],
   "published": [
     {
@@ -1149,7 +1150,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260827_001659",
+      "topic": "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas",
+      "title": "Misteri Mutil4si Kasir Minimarket Musi Banyuasin: Tr4gedi Relasi B3r4cun!",
+      "path": "/home/runner/work/konten6/konten6/output/20260827_001659_kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas/final.mp4",
+      "video_id": "MFmsBQ4pK90",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 116
+  "_voice_idx": 117
 }
