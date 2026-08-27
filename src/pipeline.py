@@ -71,8 +71,8 @@ def run_once(publish_at: str | None = None, upload_to_youtube: bool = True,
     words = captions.transcribe_words(voice_mp3, original_text=data["full_text"])
     _log(f"    {len(words)} words in {time.time()-t0:.1f}s")
 
-    _log("4/8 Fetching authentic photos & generating dynamic news clips")
-    scene_videos = news_visuals.fetch_all(data["scenes"], work / "broll", words=words, voice_audio=voice_mp3)
+    _log("4/8 Fetching diverse HD stock footage from Pixabay")
+    scene_videos = visuals.fetch_all(data["scenes"], work / "broll", words=words, voice_audio=voice_mp3)
     _log(f"    {len(scene_videos)} dynamic clips ready (covering full video)")
 
     # ============================================================

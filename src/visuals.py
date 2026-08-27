@@ -8,10 +8,10 @@ import subprocess
 from pathlib import Path
 from urllib.parse import quote
 from PIL import Image, ImageDraw, ImageFont, ImageEnhance
-from .config import PEXELS_API_KEYS, CONFIG, ROOT
+from .config import PIXABAY_API_KEY, PEXELS_API_KEYS, CONFIG, ROOT
 
 PEXELS_API = "https://api.pexels.com/videos/search"
-PIXABAY_KEY = os.environ.get("PIXABAY_API_KEY", "56548904-dc4e2edcecb81ed1b459a2379")
+PIXABAY_KEY = PIXABAY_API_KEY or os.environ.get("PIXABAY_API_KEY", "56548904-dc4e2edcecb81ed1b459a2379")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -21,14 +21,16 @@ HEADERS = {
 JUNK_WORDS = {"cartoon", "drawing", "illustration", "anime", "clipart", "vector", "meme", "banner", "ad"}
 
 GENERIC_NICHES = [
-    "cinematic motion background",
-    "futuristic technology digital",
-    "nature landscape dramatic",
-    "abstract light movement",
-    "macro science detailed",
-    "dark atmospheric cinematic",
-    "aerial view cinematic",
-    "neon abstract motion",
+    "dark mystery crime atmosphere",
+    "police investigation lights dramatic",
+    "dark atmospheric cinematic room",
+    "shadowy silhouette detective night",
+    "courtroom justice dramatic gavel",
+    "cctv surveillance footage night",
+    "dark alley rainy night cinematic",
+    "crime scene tape evidence macro",
+    "cinematic motion background dark",
+    "mysterious documents forensic archive",
 ]
 
 def probe_duration(path: Path) -> float:
@@ -53,21 +55,14 @@ def expand_queries(scene: dict) -> list[str]:
     """Generate multiple tiered queries from scene data to guarantee fresh, distinct visual clips."""
     queries = []
     
-    # 1. Factual subject (if present)
-    factual = scene.get("factual_subject")
-    if factual and isinstance(factual, str) and factual.lower() != "null":
-        f_clean = clean_query(factual.strip())
-        if f_clean and f_clean not in queries:
-            queries.append(f_clean)
-            
-    # 2. Main visual query
+    # 1. Main visual query
     vq = scene.get("visual_query", "")
     if vq:
         v_clean = clean_query(vq.strip())
         if v_clean and v_clean not in queries:
             queries.append(v_clean)
             
-        # 3. Keyword subsets from visual query
+        # Keyword subsets from visual query
         v_words = [w.strip().lower() for w in re.split(r'[,\s]+', vq) if w.strip() and w.lower() not in JUNK_WORDS and len(w) > 2]
         if len(v_words) >= 2:
             sub1 = " ".join(v_words[:2])
@@ -79,6 +74,20 @@ def expand_queries(scene: dict) -> list[str]:
         elif len(v_words) == 1 and v_words[0] not in queries:
             queries.append(v_words[0])
 
+    # 2. Factual subject (if present)
+    factual = scene.get("factual_subject")
+    if factual and isinstance(factual, str) and factual.lower() != "null":
+        f_clean = clean_query(factual.strip())
+        if f_clean and f_clean not in queries:
+            queries.append(f_clean)
+
+    # 3. News query (if present)
+    nq = scene.get("news_query", "")
+    if nq:
+        n_clean = clean_query(nq.strip())
+        if n_clean and n_clean not in queries:
+            queries.append(n_clean)
+
     # 4. Text/narration contextual keywords
     text = scene.get("text", "")
     if text:
@@ -89,7 +98,7 @@ def expand_queries(scene: dict) -> list[str]:
                 queries.append(kw_phrase)
 
     # 5. Generic rich cinematic fallbacks
-    queries.extend([random.choice(GENERIC_NICHES), "cinematic abstract background"])
+    queries.extend([random.choice(GENERIC_NICHES), "dark cinematic abstract background"])
     
     # Return unique, non-empty queries
     seen = set()
@@ -102,7 +111,56 @@ def expand_queries(scene: dict) -> list[str]:
     return result
 
 
+def search_pixabay_hd_video(query: str, min_duration: float = 3.0) -> list[str]:
+    """Primary visual source: Pixabay HD Videos."""
+    cq = clean_query(query)
+    found = []
+    try:
+        r = requests.get(
+            "https://pixabay.com/api/videos/",
+            params={"key": PIXABAY_KEY, "q": cq, "per_page": 30, "safesearch": "true", "video_type": "all"},
+            timeout=12,
+        )
+        if r.status_code == 200:
+            hits = r.json().get("hits", [])
+            for hit in hits:
+                if hit.get("duration", 0) < min_duration:
+                    continue
+                videos = hit.get("videos", {})
+                for vtype in ["large", "medium", "small"]:
+                    if vtype in videos and videos[vtype].get("url"):
+                        u = videos[vtype]["url"]
+                        if u not in found:
+                            found.append(u)
+                        break
+    except Exception as e:
+        print(f"      Pixabay video search error: {e}")
+    return found
+
+
+def search_pixabay_hd_photos(query: str) -> list[str]:
+    """Secondary visual source: Pixabay HD High-Res Photos."""
+    cq = clean_query(query)
+    found = []
+    try:
+        r = requests.get(
+            "https://pixabay.com/api/",
+            params={"key": PIXABAY_KEY, "q": cq, "image_type": "photo", "per_page": 30, "safesearch": "true"},
+            timeout=12,
+        )
+        if r.status_code == 200:
+            hits = r.json().get("hits", [])
+            for hit in hits:
+                img_url = hit.get("largeImageURL") or hit.get("fullHDURL") or hit.get("webformatURL")
+                if img_url and img_url not in found:
+                    found.append(img_url)
+    except Exception as e:
+        print(f"      Pixabay photo search error: {e}")
+    return found
+
+
 def search_pexels_hd_video(query: str, min_duration: float = 3.0) -> list[str]:
+    """Fallback visual source: Pexels HD Portrait Video."""
     cq = clean_query(query)
     found = []
     for key in PEXELS_API_KEYS:
@@ -136,33 +194,8 @@ def search_pexels_hd_video(query: str, min_duration: float = 3.0) -> list[str]:
     return found
 
 
-def search_pixabay_hd_video(query: str, min_duration: float = 3.0) -> list[str]:
-    cq = clean_query(query)
-    found = []
-    try:
-        r = requests.get(
-            "https://pixabay.com/api/videos/",
-            params={"key": PIXABAY_KEY, "q": cq, "per_page": 30, "safesearch": "true", "video_type": "film"},
-            timeout=12,
-        )
-        if r.status_code == 200:
-            hits = r.json().get("hits", [])
-            for hit in hits:
-                if hit.get("duration", 0) < min_duration:
-                    continue
-                videos = hit.get("videos", {})
-                for vtype in ["large", "medium", "small"]:
-                    if vtype in videos and videos[vtype].get("url"):
-                        u = videos[vtype]["url"]
-                        if u not in found:
-                            found.append(u)
-                        break
-    except Exception:
-        pass
-    return found
-
-
 def search_wikimedia_commons_hd(name: str) -> list[str]:
+    """Fallback archival real photo source."""
     encoded = quote(clean_query(name))
     url = f"https://commons.wikimedia.org/w/api.php?action=query&generator=search&gsrsearch={encoded}&gsrnamespace=6&gsrlimit=10&prop=imageinfo&iiprop=url|size|mime&format=json"
     results = []
@@ -283,7 +316,7 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
     video_pool = []
     clip_counter = 0
 
-    print(f"    [Curated Visuals] Fetching diverse HD stock footage for {len(scenes)} scenes ({total_audio_dur:.1f}s audio, max 2x repetition limit)...")
+    print(f"    [Pixabay Visuals] Fetching diverse HD stock footage for {len(scenes)} scenes ({total_audio_dur:.1f}s audio, max 2x repetition limit)...")
 
     for i, scene in enumerate(scenes):
         total_scene_dur = scene_durations[i]
@@ -297,14 +330,14 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
             out_clip_path = out_dir / f"clip_{clip_counter:03d}.mp4"
             clip_ready = False
 
-            # 1. Search Pexels HD Portrait Video (Aggressive query sweep)
+            # 1. Search Pixabay HD Motion Video (Primary Provider)
             for q in tiered_queries:
-                links = search_pexels_hd_video(q)
+                links = search_pixabay_hd_video(q)
                 candidate_links = [lnk for lnk in links if used_sources.get(lnk, 0) < 2]
                 candidate_links.sort(key=lambda lnk: (used_sources.get(lnk, 0), random.random()))
 
                 for link in candidate_links:
-                    temp_v = out_dir / f"raw_v_{clip_counter}.mp4"
+                    temp_v = out_dir / f"raw_pb_v_{clip_counter}.mp4"
                     if download_file(link, temp_v):
                         trim_video_clip(temp_v, out_clip_path, subclip_dur, w, h, fps)
                         if out_clip_path.exists() and out_clip_path.stat().st_size > 1000:
@@ -316,15 +349,33 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
                 if clip_ready:
                     break
 
-            # 2. Search Pixabay HD Motion Video (Aggressive query sweep)
+            # 2. Search Pixabay HD Photos (Ken Burns animated)
             if not clip_ready:
                 for q in tiered_queries:
-                    links = search_pixabay_hd_video(q)
+                    img_links = search_pixabay_hd_photos(q)
+                    candidate_img_links = [img_url for img_url in img_links if used_sources.get(img_url, 0) < 2]
+                    candidate_img_links.sort(key=lambda img_url: (used_sources.get(img_url, 0), random.random()))
+
+                    for img_url in candidate_img_links:
+                        temp_img = out_dir / f"raw_pb_img_{clip_counter}.jpg"
+                        if download_file(img_url, temp_img):
+                            convert_image_to_hd_clip(temp_img, out_clip_path, subclip_dur, w, h, fps, zoom_idx=clip_counter)
+                            if out_clip_path.exists() and out_clip_path.stat().st_size > 1000:
+                                used_sources[img_url] = used_sources.get(img_url, 0) + 1
+                                clip_ready = True
+                                break
+                    if clip_ready:
+                        break
+
+            # 3. Fallback: Search Pexels HD Portrait Video
+            if not clip_ready:
+                for q in tiered_queries:
+                    links = search_pexels_hd_video(q)
                     candidate_links = [lnk for lnk in links if used_sources.get(lnk, 0) < 2]
                     candidate_links.sort(key=lambda lnk: (used_sources.get(lnk, 0), random.random()))
 
                     for link in candidate_links:
-                        temp_v = out_dir / f"raw_pb_{clip_counter}.mp4"
+                        temp_v = out_dir / f"raw_px_{clip_counter}.mp4"
                         if download_file(link, temp_v):
                             trim_video_clip(temp_v, out_clip_path, subclip_dur, w, h, fps)
                             if out_clip_path.exists() and out_clip_path.stat().st_size > 1000:
@@ -336,7 +387,7 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
                     if clip_ready:
                         break
 
-            # 3. Search Wikimedia Commons Real Photo
+            # 4. Fallback: Search Wikimedia Commons Real Photo
             if not clip_ready:
                 for q in tiered_queries:
                     img_links = search_wikimedia_commons_hd(q)
@@ -354,7 +405,7 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
                     if clip_ready:
                         break
 
-            # 4. Failsafe: Pool Recycling (Max 2x per donor footage with alternating pan/zoom)
+            # 5. Failsafe: Pool Recycling (Max 2x per donor footage with alternating pan/zoom)
             if not clip_ready and video_pool:
                 valid_donors = [d for d in video_pool if donor_usage.get(d, 0) < 2]
                 if valid_donors:
@@ -377,7 +428,7 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
 
         print(f"    scene {i+1}/{len(scenes)}: {total_scene_dur:.1f}s -> {num_subclips} diverse HD clips ready")
 
-    print(f"    [Curated Visuals] All {len(all_clips)} HD clips fetched cleanly (Strict max 2x repetition).")
+    print(f"    [Pixabay Visuals] All {len(all_clips)} HD clips fetched cleanly (Strict max 2x repetition).")
     return all_clips
 
 

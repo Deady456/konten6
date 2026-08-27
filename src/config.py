@@ -32,6 +32,10 @@ PEXELS_API_KEYS = _pexels_keys if _pexels_keys else ["dummy_key"]
 import random
 random.shuffle(PEXELS_API_KEYS)
 
+_pixabay_keys = _get_keys("PIXABAY_API_KEY")
+PIXABAY_API_KEYS = _pixabay_keys if _pixabay_keys else ["56548904-dc4e2edcecb81ed1b459a2379"]
+PIXABAY_API_KEY = PIXABAY_API_KEYS[0]
+
 # 9Router AWS Configuration (Primary Gateway)
 NINEROUTER_API_KEYS = _get_keys("NINEROUTER_API_KEY") or _get_keys("NINEROUTER_KEY") or _get_keys("OMNIROUTE_API_KEY")
 if not NINEROUTER_API_KEYS:
