@@ -109,7 +109,8 @@
     "kasus-mutilasi-budi-hartanto-kediri-dua-ribu-sembilan-belas",
     "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas",
     "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas",
-    "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan"
+    "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan",
+    "fenomena-brinikel-pilar-es-pembunuh-antartika"
   ],
   "published": [
     {
@@ -1182,7 +1183,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260828_051550",
+      "topic": "fenomena-brinikel-pilar-es-pembunuh-antartika",
+      "title": "Misteri Pilar Es Pembunuh Di Dasar Samudra Antartika Yang Membekukan Kehidupan",
+      "path": "/home/runner/work/konten6/konten6/output/20260828_051550_fenomena-brinikel-pilar-es-pembunuh-antartika/final.mp4",
+      "video_id": "WhtxiN8LXAM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 119
+  "_voice_idx": 120
 }
