@@ -110,7 +110,8 @@
     "kasus-mutilasi-vera-oktaria-dua-ribu-sembilan-belas",
     "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas",
     "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan",
-    "fenomena-brinikel-pilar-es-pembunuh-antartika"
+    "fenomena-brinikel-pilar-es-pembunuh-antartika",
+    "ikan-barreleye-misteri-kepala-transparan-laut-dalam"
   ],
   "published": [
     {
@@ -1193,7 +1194,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260828_121747",
+      "topic": "ikan-barreleye-misteri-kepala-transparan-laut-dalam",
+      "title": "Misteri Ikan Kepala Transparan Laut Dalam Yang Memiliki Mata Hijau Berputar!",
+      "path": "/home/runner/work/konten6/konten6/output/20260828_121747_ikan-barreleye-misteri-kepala-transparan-laut-dalam/final.mp4",
+      "video_id": "Ke9mgVBMUJM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 120
+  "_voice_idx": 121
 }
