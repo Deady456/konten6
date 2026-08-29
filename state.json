@@ -111,7 +111,8 @@
     "kasus-pembunuhan-hakim-jamaluddin-medan-dua-ribu-sembilan-belas",
     "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan",
     "fenomena-brinikel-pilar-es-pembunuh-antartika",
-    "ikan-barreleye-misteri-kepala-transparan-laut-dalam"
+    "ikan-barreleye-misteri-kepala-transparan-laut-dalam",
+    "fenomena-petir-vulkanik-badai-kotor"
   ],
   "published": [
     {
@@ -1204,7 +1205,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260829_001639",
+      "topic": "fenomena-petir-vulkanik-badai-kotor",
+      "title": "Misteri Petir Vulkanik: Monster Kelistrikan Tersembunyi Perut Bumi!",
+      "path": "/home/runner/work/konten6/konten6/output/20260829_001639_fenomena-petir-vulkanik-badai-kotor/final.mp4",
+      "video_id": "GP-msPeBlnU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 121
+  "_voice_idx": 122
 }
