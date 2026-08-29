@@ -112,7 +112,8 @@
     "kasus-pembunuhan-nasrudin-zulkarnaen-dua-ribu-sembilan",
     "fenomena-brinikel-pilar-es-pembunuh-antartika",
     "ikan-barreleye-misteri-kepala-transparan-laut-dalam",
-    "fenomena-petir-vulkanik-badai-kotor"
+    "fenomena-petir-vulkanik-badai-kotor",
+    "hiu-greenland-pemburu-purba-samudra-arktik"
   ],
   "published": [
     {
@@ -1215,7 +1216,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260829_121643",
+      "topic": "hiu-greenland-pemburu-purba-samudra-arktik",
+      "title": "MONSTER PURBA BERMATA BUTA: HIDUP EMPAT RATUS TAHUN DI LAUTAN BUKAN MITOS!",
+      "path": "/home/runner/work/konten6/konten6/output/20260829_121643_hiu-greenland-pemburu-purba-samudra-arktik/final.mp4",
+      "video_id": "n8WdTniQWKs",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 122
+  "_voice_idx": 123
 }
