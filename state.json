@@ -113,7 +113,8 @@
     "fenomena-brinikel-pilar-es-pembunuh-antartika",
     "ikan-barreleye-misteri-kepala-transparan-laut-dalam",
     "fenomena-petir-vulkanik-badai-kotor",
-    "hiu-greenland-pemburu-purba-samudra-arktik"
+    "hiu-greenland-pemburu-purba-samudra-arktik",
+    "danau-natron-danau-pembeku-batu-tanzania"
   ],
   "published": [
     {
@@ -1226,7 +1227,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260830_001659",
+      "topic": "danau-natron-danau-pembeku-batu-tanzania",
+      "title": "Misteri Danau Natron: Perairan Mematikan yang Mengubah Hewan Menjadi Batu",
+      "path": "/home/runner/work/konten6/konten6/output/20260830_001659_danau-natron-danau-pembeku-batu-tanzania/final.mp4",
+      "video_id": "D_uAASOnooc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 123
+  "_voice_idx": 124
 }
