@@ -114,7 +114,8 @@
     "ikan-barreleye-misteri-kepala-transparan-laut-dalam",
     "fenomena-petir-vulkanik-badai-kotor",
     "hiu-greenland-pemburu-purba-samudra-arktik",
-    "danau-natron-danau-pembeku-batu-tanzania"
+    "danau-natron-danau-pembeku-batu-tanzania",
+    "petir-catatumbo-badai-petir-abadi-venezuela"
   ],
   "published": [
     {
@@ -1237,7 +1238,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260830_121642",
+      "topic": "petir-catatumbo-badai-petir-abadi-venezuela",
+      "title": "Misteri Badai Petir Abadi Catatumbo: Langit Menyala Tanpa Berhenti!",
+      "path": "/home/runner/work/konten6/konten6/output/20260830_121642_petir-catatumbo-badai-petir-abadi-venezuela/final.mp4",
+      "video_id": "GIv5-QkRJlA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 124
+  "_voice_idx": 125
 }
