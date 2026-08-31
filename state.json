@@ -116,7 +116,8 @@
     "hiu-greenland-pemburu-purba-samudra-arktik",
     "danau-natron-danau-pembeku-batu-tanzania",
     "petir-catatumbo-badai-petir-abadi-venezuela",
-    "udang-mantis-tinju-mematikan-samudra"
+    "udang-mantis-tinju-mematikan-samudra",
+    "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam"
   ],
   "published": [
     {
@@ -1259,7 +1260,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260831_121722",
+      "topic": "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam",
+      "title": "Misteri Ikan Belut Gulper: Monster Rahang Raksasa di Kegelapan Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260831_121722_ikan-belut-gulper-monster-mulut-raksasa-laut-dalam/final.mp4",
+      "video_id": "k2UPHhZheLk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 126
+  "_voice_idx": 127
 }
