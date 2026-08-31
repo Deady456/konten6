@@ -115,7 +115,8 @@
     "fenomena-petir-vulkanik-badai-kotor",
     "hiu-greenland-pemburu-purba-samudra-arktik",
     "danau-natron-danau-pembeku-batu-tanzania",
-    "petir-catatumbo-badai-petir-abadi-venezuela"
+    "petir-catatumbo-badai-petir-abadi-venezuela",
+    "udang-mantis-tinju-mematikan-samudra"
   ],
   "published": [
     {
@@ -1248,7 +1249,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260831_001714",
+      "topic": "udang-mantis-tinju-mematikan-samudra",
+      "title": "Pukulan Secepat Peluru! Monster Laut Ini Mampu Memecahkan Kaca Akuarium!",
+      "path": "/home/runner/work/konten6/konten6/output/20260831_001714_udang-mantis-tinju-mematikan-samudra/final.mp4",
+      "video_id": "2v028TVNnyI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 125
+  "_voice_idx": 126
 }
