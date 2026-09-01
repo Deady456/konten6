@@ -118,7 +118,8 @@
     "petir-catatumbo-badai-petir-abadi-venezuela",
     "udang-mantis-tinju-mematikan-samudra",
     "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam",
-    "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam"
+    "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam",
+    "hiu-jubah-purba-fosil-hidup-laut-dalam"
   ],
   "published": [
     {
@@ -1281,7 +1282,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260901_121647",
+      "topic": "hiu-jubah-purba-fosil-hidup-laut-dalam",
+      "title": "Monster Purba Tiga Ratus Gigi yang Berenang di Laut Dalam!",
+      "path": "/home/runner/work/konten6/konten6/output/20260901_121647_hiu-jubah-purba-fosil-hidup-laut-dalam/final.mp4",
+      "video_id": "MzRXJuIs7KU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 128
+  "_voice_idx": 129
 }
