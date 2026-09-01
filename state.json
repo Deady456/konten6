@@ -117,7 +117,8 @@
     "danau-natron-danau-pembeku-batu-tanzania",
     "petir-catatumbo-badai-petir-abadi-venezuela",
     "udang-mantis-tinju-mematikan-samudra",
-    "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam"
+    "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam",
+    "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam"
   ],
   "published": [
     {
@@ -1270,7 +1271,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260901_001646",
+      "topic": "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam",
+      "title": "Misteri Magnapinna: Monster Alien Berjari Delapan Meter di Dasar Lautan!",
+      "path": "/home/runner/work/konten6/konten6/output/20260901_001646_cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam/final.mp4",
+      "video_id": "nDrzqYQYTjs",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 127
+  "_voice_idx": 128
 }
