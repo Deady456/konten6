@@ -119,7 +119,8 @@
     "udang-mantis-tinju-mematikan-samudra",
     "ikan-belut-gulper-monster-mulut-raksasa-laut-dalam",
     "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam",
-    "hiu-jubah-purba-fosil-hidup-laut-dalam"
+    "hiu-jubah-purba-fosil-hidup-laut-dalam",
+    "cumi-cumi-vampir-vampyroteuthis-infernalis"
   ],
   "published": [
     {
@@ -1292,7 +1293,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260902_001716",
+      "topic": "cumi-cumi-vampir-vampyroteuthis-infernalis",
+      "title": "Misteri Cumi Cumi Vampir Penghuni Jurang Laut Abisal Paling Gelap",
+      "path": "/home/runner/work/konten6/konten6/output/20260902_001716_cumi-cumi-vampir-vampyroteuthis-infernalis/final.mp4",
+      "video_id": "5KPRr2Qz7ow",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 129
+  "_voice_idx": 130
 }
