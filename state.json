@@ -122,7 +122,8 @@
     "hiu-jubah-purba-fosil-hidup-laut-dalam",
     "cumi-cumi-vampir-vampyroteuthis-infernalis",
     "ubur-ubur-abadi-turritopsis-dohrnii",
-    "siphonofor-raksasa-organisme-terpanjang-laut-dalam"
+    "siphonofor-raksasa-organisme-terpanjang-laut-dalam",
+    "ikan-tripod-misteri-egrang-laut-dalam"
   ],
   "published": [
     {
@@ -1325,7 +1326,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260903_121831",
+      "topic": "ikan-tripod-misteri-egrang-laut-dalam",
+      "title": "Misteri Ikan Tripod: Monster Laut Dalam yang Berdiri di Kegelapan Abadi!",
+      "path": "/home/runner/work/konten6/konten6/output/20260903_121831_ikan-tripod-misteri-egrang-laut-dalam/final.mp4",
+      "video_id": "Ef-AXgKwGmg",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 132
+  "_voice_idx": 133
 }
