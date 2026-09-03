@@ -121,7 +121,8 @@
     "cumi-cumi-sirip-besar-magnapinna-misteri-laut-dalam",
     "hiu-jubah-purba-fosil-hidup-laut-dalam",
     "cumi-cumi-vampir-vampyroteuthis-infernalis",
-    "ubur-ubur-abadi-turritopsis-dohrnii"
+    "ubur-ubur-abadi-turritopsis-dohrnii",
+    "siphonofor-raksasa-organisme-terpanjang-laut-dalam"
   ],
   "published": [
     {
@@ -1314,7 +1315,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260903_001648",
+      "topic": "siphonofor-raksasa-organisme-terpanjang-laut-dalam",
+      "title": "Monster Terpanjang di Bumi Bukan Paus Biru! Misteri Sifonofor Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260903_001648_siphonofor-raksasa-organisme-terpanjang-laut-dalam/final.mp4",
+      "video_id": "pxcJT4SAKMQ",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 131
+  "_voice_idx": 132
 }
