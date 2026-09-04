@@ -124,7 +124,8 @@
     "ubur-ubur-abadi-turritopsis-dohrnii",
     "siphonofor-raksasa-organisme-terpanjang-laut-dalam",
     "ikan-tripod-misteri-egrang-laut-dalam",
-    "cacing-bobbit-pemburu-tersembunyi-dasar-laut"
+    "cacing-bobbit-pemburu-tersembunyi-dasar-laut",
+    "siput-besi-chrysomallon-squamiferum-monster-zirah-besi"
   ],
   "published": [
     {
@@ -1347,7 +1348,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260904_121705",
+      "topic": "siput-besi-chrysomallon-squamiferum-monster-zirah-besi",
+      "title": "MONSTER ZIRAH BESI! Hewan Terkuat yang Hidup di Air Mendidih Laut Dalam!",
+      "path": "/home/runner/work/konten6/konten6/output/20260904_121705_siput-besi-chrysomallon-squamiferum-monster-zirah-besi/final.mp4",
+      "video_id": "1m0z1_31gEc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 134
+  "_voice_idx": 135
 }
