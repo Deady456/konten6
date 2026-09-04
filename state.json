@@ -123,7 +123,8 @@
     "cumi-cumi-vampir-vampyroteuthis-infernalis",
     "ubur-ubur-abadi-turritopsis-dohrnii",
     "siphonofor-raksasa-organisme-terpanjang-laut-dalam",
-    "ikan-tripod-misteri-egrang-laut-dalam"
+    "ikan-tripod-misteri-egrang-laut-dalam",
+    "cacing-bobbit-pemburu-tersembunyi-dasar-laut"
   ],
   "published": [
     {
@@ -1336,7 +1337,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260904_002139",
+      "topic": "cacing-bobbit-pemburu-tersembunyi-dasar-laut",
+      "title": "MONSTER DI BALIK PASIR! Kecepatan Maut Cacing Bobbit Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260904_002139_cacing-bobbit-pemburu-tersembunyi-dasar-laut/final.mp4",
+      "video_id": "JzXuss1vyb0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 133
+  "_voice_idx": 134
 }
