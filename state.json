@@ -126,7 +126,8 @@
     "ikan-tripod-misteri-egrang-laut-dalam",
     "cacing-bobbit-pemburu-tersembunyi-dasar-laut",
     "siput-besi-chrysomallon-squamiferum-monster-zirah-besi",
-    "hiu-pemotong-kue-isistius-brasiliensis"
+    "hiu-pemotong-kue-isistius-brasiliensis",
+    "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea"
   ],
   "published": [
     {
@@ -1369,7 +1370,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260905_121712",
+      "topic": "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea",
+      "title": "Misteri Ubur Ubur Hantu Raksasa Penghuni Samudra Abisal Paling Mengerikan",
+      "path": "/home/runner/work/konten6/konten6/output/20260905_121712_ubur-ubur-hantu-raksasa-stygiomedusa-gigantea/final.mp4",
+      "video_id": "8rXeSy3UeBs",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 136
+  "_voice_idx": 137
 }
