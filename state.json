@@ -125,7 +125,8 @@
     "siphonofor-raksasa-organisme-terpanjang-laut-dalam",
     "ikan-tripod-misteri-egrang-laut-dalam",
     "cacing-bobbit-pemburu-tersembunyi-dasar-laut",
-    "siput-besi-chrysomallon-squamiferum-monster-zirah-besi"
+    "siput-besi-chrysomallon-squamiferum-monster-zirah-besi",
+    "hiu-pemotong-kue-isistius-brasiliensis"
   ],
   "published": [
     {
@@ -1358,7 +1359,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260905_001643",
+      "topic": "hiu-pemotong-kue-isistius-brasiliensis",
+      "title": "MONSTER KERDIL LAUT DALAM PENYOBEK KAPAL SELAM NUKLIR!",
+      "path": "/home/runner/work/konten6/konten6/output/20260905_001643_hiu-pemotong-kue-isistius-brasiliensis/final.mp4",
+      "video_id": "DOmi--dASNE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 135
+  "_voice_idx": 136
 }
