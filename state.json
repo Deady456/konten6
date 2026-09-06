@@ -128,7 +128,8 @@
     "siput-besi-chrysomallon-squamiferum-monster-zirah-besi",
     "hiu-pemotong-kue-isistius-brasiliensis",
     "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea",
-    "ikan-black-swallower-chiasmodon-niger"
+    "ikan-black-swallower-chiasmodon-niger",
+    "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam"
   ],
   "published": [
     {
@@ -1391,7 +1392,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260906_121658",
+      "topic": "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam",
+      "title": "Misteri Hiu Goblin: Monster Purba Bermulut Melontar Kedalaman Laut",
+      "path": "/home/runner/work/konten6/konten6/output/20260906_121658_hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam/final.mp4",
+      "video_id": "kXQZcEcg7BY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 138
+  "_voice_idx": 139
 }
