@@ -127,7 +127,8 @@
     "cacing-bobbit-pemburu-tersembunyi-dasar-laut",
     "siput-besi-chrysomallon-squamiferum-monster-zirah-besi",
     "hiu-pemotong-kue-isistius-brasiliensis",
-    "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea"
+    "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea",
+    "ikan-black-swallower-chiasmodon-niger"
   ],
   "published": [
     {
@@ -1380,7 +1381,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260906_001649",
+      "topic": "ikan-black-swallower-chiasmodon-niger",
+      "title": "Monster Laut Dalam Ini Sanggup Menelan Mangsa Dua Kali Ukuran Tubuhnya!",
+      "path": "/home/runner/work/konten6/konten6/output/20260906_001649_ikan-black-swallower-chiasmodon-niger/final.mp4",
+      "video_id": "HKhzQHKZ2n8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 137
+  "_voice_idx": 138
 }
