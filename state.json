@@ -129,7 +129,8 @@
     "hiu-pemotong-kue-isistius-brasiliensis",
     "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea",
     "ikan-black-swallower-chiasmodon-niger",
-    "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam"
+    "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam",
+    "kutu-laut-raksasa-bathynomus-giganteus"
   ],
   "published": [
     {
@@ -1402,7 +1403,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260907_001645",
+      "topic": "kutu-laut-raksasa-bathynomus-giganteus",
+      "title": "Misteri Kutu Laut Raksasa: Monster Berzirah Abisal Yang Mampu Berpuasa Lima Tahun",
+      "path": "/home/runner/work/konten6/konten6/output/20260907_001645_kutu-laut-raksasa-bathynomus-giganteus/final.mp4",
+      "video_id": "jo469EZHQ0s",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 139
+  "_voice_idx": 140
 }
