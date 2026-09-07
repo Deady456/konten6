@@ -130,7 +130,8 @@
     "ubur-ubur-hantu-raksasa-stygiomedusa-gigantea",
     "ikan-black-swallower-chiasmodon-niger",
     "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam",
-    "kutu-laut-raksasa-bathynomus-giganteus"
+    "kutu-laut-raksasa-bathynomus-giganteus",
+    "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam"
   ],
   "published": [
     {
@@ -1413,7 +1414,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260907_121645",
+      "topic": "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam",
+      "title": "Monster Laut Dalam Ini Punya Gigi Begitu Besar Hingga Otaknya Harus Diproteksi!",
+      "path": "/home/runner/work/konten6/konten6/output/20260907_121645_ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-d/final.mp4",
+      "video_id": "bDhqW4oJSkY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 140
+  "_voice_idx": 141
 }
