@@ -131,7 +131,8 @@
     "ikan-black-swallower-chiasmodon-niger",
     "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam",
     "kutu-laut-raksasa-bathynomus-giganteus",
-    "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam"
+    "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam",
+    "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam"
   ],
   "published": [
     {
@@ -1424,7 +1425,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260908_001655",
+      "topic": "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam",
+      "title": "MONSTER LAUT DALAM DENGAN RADAR CAHAYA MERAH RAHASIA UNTUK MEMBURU MANGSA!",
+      "path": "/home/runner/work/konten6/konten6/output/20260908_001655_ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahas/final.mp4",
+      "video_id": "txrfKv3IOSE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 141
+  "_voice_idx": 142
 }
