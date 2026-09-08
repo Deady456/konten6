@@ -132,7 +132,8 @@
     "hiu-goblin-mitsukurina-owstoni-monster-purba-laut-dalam",
     "kutu-laut-raksasa-bathynomus-giganteus",
     "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam",
-    "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam"
+    "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam",
+    "ubur-ubur-atolla-alarm-pencuri-laut-dalam"
   ],
   "published": [
     {
@@ -1435,7 +1436,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260908_121710",
+      "topic": "ubur-ubur-atolla-alarm-pencuri-laut-dalam",
+      "title": "Misteri Alarm Cahaya Laut Dalam! Strategi Monster Abisal Bertahan Hidup",
+      "path": "/home/runner/work/konten6/konten6/output/20260908_121710_ubur-ubur-atolla-alarm-pencuri-laut-dalam/final.mp4",
+      "video_id": "U57iee5hpdc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 142
+  "_voice_idx": 143
 }
