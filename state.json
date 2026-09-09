@@ -134,7 +134,8 @@
     "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam",
     "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam",
     "ubur-ubur-atolla-alarm-pencuri-laut-dalam",
-    "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent"
+    "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent",
+    "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra"
   ],
   "published": [
     {
@@ -1457,7 +1458,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260909_121817",
+      "topic": "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra",
+      "title": "Monster Mungil Pemakan Racun Maut Samudra! Naga Biru Lautan Glaucus Atlanticus",
+      "path": "/home/runner/work/konten6/konten6/output/20260909_121817_naga-biru-glaucus-atlanticus-pemangsa-racun-samudra/final.mp4",
+      "video_id": "283ZMykarOM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 144
+  "_voice_idx": 145
 }
