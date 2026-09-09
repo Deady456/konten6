@@ -133,7 +133,8 @@
     "kutu-laut-raksasa-bathynomus-giganteus",
     "ikan-taring-anoplogaster-cornuta-monster-gigi-raksasa-laut-dalam",
     "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam",
-    "ubur-ubur-atolla-alarm-pencuri-laut-dalam"
+    "ubur-ubur-atolla-alarm-pencuri-laut-dalam",
+    "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent"
   ],
   "published": [
     {
@@ -1446,7 +1447,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260909_001654",
+      "topic": "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent",
+      "title": "Monster Tanpa Mulut Pemburu Racun di Dasar Laut Dalam!",
+      "path": "/home/runner/work/konten6/konten6/output/20260909_001654_cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent/final.mp4",
+      "video_id": "d3lloRdBfYU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 143
+  "_voice_idx": 144
 }
