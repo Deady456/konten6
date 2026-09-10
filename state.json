@@ -135,7 +135,8 @@
     "ikan-stoplight-loosejaw-malacosteus-niger-senter-merah-rahasia-laut-dalam",
     "ubur-ubur-atolla-alarm-pencuri-laut-dalam",
     "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent",
-    "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra"
+    "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra",
+    "ikan-viper-laut-dalam-chauliodus-sloani"
   ],
   "published": [
     {
@@ -1468,7 +1469,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260910_001646",
+      "topic": "ikan-viper-laut-dalam-chauliodus-sloani",
+      "title": "Taring Transparan Raksasa! Misteri Ikan Viper Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260910_001646_ikan-viper-laut-dalam-chauliodus-sloani/final.mp4",
+      "video_id": "rP8fnv7ppG8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 145
+  "_voice_idx": 146
 }
