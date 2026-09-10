@@ -136,7 +136,8 @@
     "ubur-ubur-atolla-alarm-pencuri-laut-dalam",
     "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent",
     "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra",
-    "ikan-viper-laut-dalam-chauliodus-sloani"
+    "ikan-viper-laut-dalam-chauliodus-sloani",
+    "katak-kayu-alaska-rana-sylvatica-mati-suri-beku"
   ],
   "published": [
     {
@@ -1479,7 +1480,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260910_121646",
+      "topic": "katak-kayu-alaska-rana-sylvatica-mati-suri-beku",
+      "title": "Mati Suri Pembeku Es! Monster yang Bisa Bangkit dari Kematian!",
+      "path": "/home/runner/work/konten6/konten6/output/20260910_121646_katak-kayu-alaska-rana-sylvatica-mati-suri-beku/final.mp4",
+      "video_id": "BXaOxSHugR8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 146
+  "_voice_idx": 147
 }
