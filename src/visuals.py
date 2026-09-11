@@ -21,16 +21,16 @@ HEADERS = {
 JUNK_WORDS = {"cartoon", "drawing", "illustration", "anime", "clipart", "vector", "meme", "banner", "ad"}
 
 GENERIC_NICHES = [
-    "deep ocean blue water cinematic",
-    "wildlife animals nature cinematic",
-    "bioluminescent underwater creatures glowing",
-    "aerial view dramatic nature landscape",
-    "macro nature wildlife detailed 4k",
-    "volcano lava eruption dramatic smoke",
-    "supercell storm lightning dark clouds",
-    "tropical rainforest misty drone",
-    "giant predatory animal hunting slow motion",
-    "majestic waterfalls mountain cinematic",
+    "man running dark morning cinematic",
+    "workout gym focus intense",
+    "businessman city skyline thinking",
+    "mountain summit climbing victory",
+    "chess game strategy dramatic lighting",
+    "lone wolf snow cinematic",
+    "discipline working late night desk",
+    "boxing training punching bag",
+    "meditation focus peaceful mindset",
+    "walk in the rain determination",
 ]
 
 def probe_duration(path: Path) -> float:
@@ -81,8 +81,8 @@ def expand_queries(scene: dict) -> list[str]:
         if f_clean and f_clean not in queries:
             queries.append(f_clean)
 
-    # 3. Rich English nature & wildlife fallbacks
-    queries.extend([random.choice(GENERIC_NICHES), random.choice(GENERIC_NICHES), "deep ocean nature cinematic 4k"])
+    # 3. Rich English motivation & mindset fallbacks
+    queries.extend([random.choice(GENERIC_NICHES), random.choice(GENERIC_NICHES), "cinematic motivation mindset focus"])
     
     # Return unique, non-empty queries
     seen = set()

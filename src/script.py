@@ -41,6 +41,8 @@ def replace_numbers_id(text: str) -> str:
     return text
 
 
+import sys
+sys.stdout.reconfigure(encoding='utf-8', errors='replace')
 import json
 import re
 import time
@@ -207,21 +209,21 @@ def _system_prompt(content_format: str = None) -> str:
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
-        return f"""Anda adalah penulis skrip YouTube Shorts bertema KEAJAIBAN ALAM LIAR, MISTERI LAUT DALAM, & FENOMENA EKSTRIM BUMI.
+        return f"""Anda adalah penulis skrip YouTube Shorts bertema MOTIVASI HIDUP, DISIPLIN DIRI, STOIKISME, & PENGEMBANGAN DIRI (SELF-IMPROVEMENT).
 
 Aturan:
 - Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
 - RAHASIA RETENSI (SEAMLESS INFINITY LOOP): Kalimat terakhir pada scene penutup WAJIB dibuat menggantung atau menyatu mulus kembali ke kalimat HOOK pertama di scene 1 (retensi >100%).
-- Mulai dengan HOOK 1 kalimat yang memukau dan bikin merinding penasaran dalam <3 detik (contoh gaya narator dokumenter National Geographic / BBC Earth). Jangan pakai "Halo guys", "Hai", atau perkenalan.
-- Isi: Fakta-fakta sains alam liar, predator purba/buas, adaptasi monster laut dalam abisal (abyssal creatures), fenomena cuaca ekstrim (megastorms, supervolcano, volcanic lightning, bioluminescence), atau misteri geologi paling mencengangkan yang 100% AKURAT dan nyata di planet Bumi.
-- DILARANG MENGARANG CERITA / HALUSINASI. Sajikan fakta ilmiah yang spektakuler.
-- Akhiri dengan CTA 1 kalimat ajakan diskusi/subscribe ("Bagaimana menurut kalian? Tulis di kolom komentar dan subscribe untuk keajaiban alam lainnya!").
-- Gunakan bahasa Indonesia naratif yang megah, sinematik, seru, dan enak didengar.
-- DILARANG KERAS menggunakan angka numerik/digit (seperti 1, 2, 10, 25, 100, 1945, 50%). SEMUA ANGKA WAJIB DITULIS LENGKAP MENGGUNAKAN HURUF/KATA BAHASA INDONESIA (contoh: "sepuluh", "dua puluh lima", "seratus", "seribu sembilan ratus empat puluh lima", "lima puluh persen"). Ini SANGAT PENTING untuk kelancaran text-to-speech.
-- Setiap scene WAJIB menyertakan 'visual_query' (WAJIB 100% BAHASA INGGRIS MURNI, 2-3 kata benda/sifat spesifik untuk pencarian footage HD Pixabay, DILARANG bahasa Indonesia, contoh: "deep sea jellyfish glow", "great white shark swimming", "volcano lava eruption", "eagle hunting prey", "bioluminescent ocean night", "tornado lightning dramatic", "macro chameleon eye", "dense rainforest drone"), dan 'factual_subject' (nama ilmiah spesies/lokasi dalam bahasa Inggris/Latin, contoh: 'Giant Squid', 'Mariana Trench', 'Komodo Dragon', 'Anglerfish', 'Yellowstone Caldera').
+- Mulai dengan HOOK 1 kalimat yang menampar realitas (reality check) atau bikin merinding sadar dalam <3 detik. Jangan pakai "Halo guys", "Hai", atau basa-basi perkenalan. Langsung to the point!
+- Isi: Pesan motivasi yang berbobot, fakta psikologi ketabahan, prinsip stoikisme (kendali diri vs hal di luar kendali), cara menghancurkan rasa malas/prokrastinasi, rahasia konsistensi, atau pola pikir orang-orang tangguh.
+- DILARANG klise murahan atau toxic positivity yang bertele-tele. Sajikan wawasan tajam, realistis, dan membakar semangat tindakan nyata.
+- Akhiri dengan CTA 1 kalimat singkat dan berdampak ("Simpan video ini untuk pengingat saat kamu lelah, dan subscribe untuk terus upgrade dirimu.").
+- Gunakan bahasa Indonesia yang tegas, percaya diri, maskulin, elegan, dan menggerakkan jiwa pendengar.
+- DILARANG KERAS menggunakan angka numerik/digit (seperti 1, 2, 10, 25, 100, 1945, 50%). SEMUA ANGKA WAJIB DITULIS LENGKAP MENGGUNAKAN HURUF/KATA BAHASA INDONESIA (contoh: "sepuluh", "dua puluh lima", "seratus", "lima puluh persen"). Ini SANGAT PENTING untuk kelancaran text-to-speech.
+- Setiap scene WAJIB menyertakan 'visual_query' (WAJIB 100% BAHASA INGGRIS MURNI, 2-3 kata benda/sifat spesifik untuk pencarian footage HD sinematik di Pixabay/Pexels, DILARANG bahasa Indonesia, contoh: "man running dark morning", "workout gym focus", "businessman city skyline", "mountain summit climbing", "chess strategy dramatic", "lone wolf snow", "discipline desk study", "boxing punching bag", "walking rain alone"), dan 'factual_subject' (tokoh inspiratif / filosofi / konsep dalam bahasa Inggris jika ada, misal: 'Marcus Aurelius', 'Seneca', 'Discipline', 'Focus', 'Meditation', jika tidak ada isi null).
 {format_instruction}
 Kembalikan ONLY valid JSON, tanpa teks lain. Skema:
-{{"topic": "nama-topik-spesifik", "title": "Judul YouTube max 95 chars, minimal 40 karakter, spektakuler dan bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat deskripsi fakta alam spektakuler dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-3 pure English keywords for Pixabay video", "factual_subject": "Scientific or English name of species/place"}}]}}"""
+{{"topic": "nama-topik-spesifik", "title": "Judul YouTube max 95 chars, minimal 40 karakter, tajam, menggugah emosi dan bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat pesan motivasi mendalam dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-3 pure English keywords for Pixabay video", "factual_subject": "Historical figure or concept name in English or null"}}]}}"""
     else:
         return f"""You write viral YouTube Shorts scripts for a faceless educational facts channel.
 
