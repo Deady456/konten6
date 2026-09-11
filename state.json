@@ -137,7 +137,8 @@
     "cacing-tuba-raksasa-riftia-pachyptila-hydrothermal-vent",
     "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra",
     "ikan-viper-laut-dalam-chauliodus-sloani",
-    "katak-kayu-alaska-rana-sylvatica-mati-suri-beku"
+    "katak-kayu-alaska-rana-sylvatica-mati-suri-beku",
+    "ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam"
   ],
   "published": [
     {
@@ -1490,7 +1491,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260911_001736",
+      "topic": "ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam",
+      "title": "Misteri Ikan Dayung Raksasa: Monster Perak Pembawa Pertanda Gempa Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260911_001736_ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam/final.mp4",
+      "video_id": "bJVwEvBjEUE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 147
+  "_voice_idx": 148
 }
