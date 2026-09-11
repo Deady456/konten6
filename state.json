@@ -138,7 +138,8 @@
     "naga-biru-glaucus-atlanticus-pemangsa-racun-samudra",
     "ikan-viper-laut-dalam-chauliodus-sloani",
     "katak-kayu-alaska-rana-sylvatica-mati-suri-beku",
-    "ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam"
+    "ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam",
+    "cumi-cumi-kolosal-mesonychoteuthis-hamiltoni"
   ],
   "published": [
     {
@@ -1501,7 +1502,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260911_121857",
+      "topic": "cumi-cumi-kolosal-mesonychoteuthis-hamiltoni",
+      "title": "Monster Terbesar Samudra Antartika! Rahasia Cumi-Cumi Kolosal Laut Dalam",
+      "path": "/home/runner/work/konten6/konten6/output/20260911_121857_cumi-cumi-kolosal-mesonychoteuthis-hamiltoni/final.mp4",
+      "video_id": "Ts8nr3UpVfk",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 148
+  "_voice_idx": 149
 }
