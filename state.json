@@ -140,7 +140,8 @@
     "katak-kayu-alaska-rana-sylvatica-mati-suri-beku",
     "ikan-dayung-raksasa-regalecus-glesne-naga-laut-dalam",
     "cumi-cumi-kolosal-mesonychoteuthis-hamiltoni",
-    "dikotomi-kendali-stoikisme-mengalahkan-cemas-dan-malas"
+    "dikotomi-kendali-stoikisme-mengalahkan-cemas-dan-malas",
+    "penderitaan-sukarela-stoikisme-mental-baja"
   ],
   "published": [
     {
@@ -1523,7 +1524,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260912_121646",
+      "topic": "penderitaan-sukarela-stoikisme-mental-baja",
+      "title": "Rahasia Mental Baja Filsuf Stoik: Mengapa Kamu Harus Menyiksa Diri?",
+      "path": "/home/runner/work/konten6/konten6/output/20260912_121646_penderitaan-sukarela-stoikisme-mental-baja/final.mp4",
+      "video_id": "PlLUhR_szWE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 150
+  "_voice_idx": 151
 }
