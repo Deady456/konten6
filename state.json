@@ -142,7 +142,8 @@
     "cumi-cumi-kolosal-mesonychoteuthis-hamiltoni",
     "dikotomi-kendali-stoikisme-mengalahkan-cemas-dan-malas",
     "penderitaan-sukarela-stoikisme-mental-baja",
-    "amor-fati-mencintai-rasa-sakit-dan-kegagalan"
+    "amor-fati-mencintai-rasa-sakit-dan-kegagalan",
+    "memento-mori-kesadaran-waktu-dan-tindakan"
   ],
   "published": [
     {
@@ -1545,7 +1546,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260913_121645",
+      "topic": "memento-mori-kesadaran-waktu-dan-tindakan",
+      "title": "Memento Mori: Rahasia Stoik Menghancurkan Rasa Malas Seketika",
+      "path": "/home/runner/work/konten6/konten6/output/20260913_121645_memento-mori-kesadaran-waktu-dan-tindakan/final.mp4",
+      "video_id": "QA86MpAqP6A",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 152
+  "_voice_idx": 153
 }
