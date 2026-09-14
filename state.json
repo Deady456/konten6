@@ -144,7 +144,8 @@
     "penderitaan-sukarela-stoikisme-mental-baja",
     "amor-fati-mencintai-rasa-sakit-dan-kegagalan",
     "memento-mori-kesadaran-waktu-dan-tindakan",
-    "bekerja-dalam-diam-psikologi-pencapaian"
+    "bekerja-dalam-diam-psikologi-pencapaian",
+    "premeditatio-malorum-melatih-mental-terburuk"
   ],
   "published": [
     {
@@ -1567,7 +1568,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260914_121640",
+      "topic": "premeditatio-malorum-melatih-mental-terburuk",
+      "title": "Latih Mental Baja Dengan Premeditatio Malorum: Hancurkan Rasa Takut Dan Ragu",
+      "path": "/home/runner/work/konten6/konten6/output/20260914_121640_premeditatio-malorum-melatih-mental-terburuk/final.mp4",
+      "video_id": "XQUwcjboZ8k",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 154
+  "_voice_idx": 155
 }
