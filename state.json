@@ -146,7 +146,8 @@
     "memento-mori-kesadaran-waktu-dan-tindakan",
     "bekerja-dalam-diam-psikologi-pencapaian",
     "premeditatio-malorum-melatih-mental-terburuk",
-    "aturan-lima-detik-menghancurkan-penundaan"
+    "aturan-lima-detik-menghancurkan-penundaan",
+    "hambatan-adalah-jalan-kemajuan"
   ],
   "published": [
     {
@@ -1589,7 +1590,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260915_121711",
+      "topic": "hambatan-adalah-jalan-kemajuan",
+      "title": "Ubah Rintangan Menjadi Kekuatan! Rahasia Mental Baja Stoikisme",
+      "path": "/home/runner/work/konten6/konten6/output/20260915_121711_hambatan-adalah-jalan-kemajuan/final.mp4",
+      "video_id": "eugU8qJEqpw",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 156
+  "_voice_idx": 157
 }
