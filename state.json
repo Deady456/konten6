@@ -145,7 +145,8 @@
     "amor-fati-mencintai-rasa-sakit-dan-kegagalan",
     "memento-mori-kesadaran-waktu-dan-tindakan",
     "bekerja-dalam-diam-psikologi-pencapaian",
-    "premeditatio-malorum-melatih-mental-terburuk"
+    "premeditatio-malorum-melatih-mental-terburuk",
+    "aturan-lima-detik-menghancurkan-penundaan"
   ],
   "published": [
     {
@@ -1578,7 +1579,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260915_001648",
+      "topic": "aturan-lima-detik-menghancurkan-penundaan",
+      "title": "Cara Membunuh Rasa Malas dalam Lima Detik Sebelum Otakmu Menyerah",
+      "path": "/home/runner/work/konten6/konten6/output/20260915_001648_aturan-lima-detik-menghancurkan-penundaan/final.mp4",
+      "video_id": "WN0ts27qtcc",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 155
+  "_voice_idx": 156
 }
