@@ -147,7 +147,8 @@
     "bekerja-dalam-diam-psikologi-pencapaian",
     "premeditatio-malorum-melatih-mental-terburuk",
     "aturan-lima-detik-menghancurkan-penundaan",
-    "hambatan-adalah-jalan-kemajuan"
+    "hambatan-adalah-jalan-kemajuan",
+    "pilihan-rasa-sakit-disiplin-vs-penyesalan"
   ],
   "published": [
     {
@@ -1600,7 +1601,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260916_001639",
+      "topic": "pilihan-rasa-sakit-disiplin-vs-penyesalan",
+      "title": "PILIH RASA SAKITMU: Disiplin Hari Ini Atau Penyesalan Selamanya?",
+      "path": "/home/runner/work/konten6/konten6/output/20260916_001639_pilihan-rasa-sakit-disiplin-vs-penyesalan/final.mp4",
+      "video_id": "EkumkRqMXRE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 157
+  "_voice_idx": 158
 }
