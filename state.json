@@ -148,7 +148,8 @@
     "premeditatio-malorum-melatih-mental-terburuk",
     "aturan-lima-detik-menghancurkan-penundaan",
     "hambatan-adalah-jalan-kemajuan",
-    "pilihan-rasa-sakit-disiplin-vs-penyesalan"
+    "pilihan-rasa-sakit-disiplin-vs-penyesalan",
+    "locus-of-control-internal-berhenti-jadi-korban"
   ],
   "published": [
     {
@@ -1611,7 +1612,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260916_121703",
+      "topic": "locus-of-control-internal-berhenti-jadi-korban",
+      "title": "Berhenti Jadi Korban Keadaan! Rahasia Memegang Kendali Penuh Atas Nasibmu",
+      "path": "/home/runner/work/konten6/konten6/output/20260916_121703_locus-of-control-internal-berhenti-jadi-korban/final.mp4",
+      "video_id": "_U4JRsv70zY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 158
+  "_voice_idx": 159
 }
