@@ -150,7 +150,8 @@
     "hambatan-adalah-jalan-kemajuan",
     "pilihan-rasa-sakit-disiplin-vs-penyesalan",
     "locus-of-control-internal-berhenti-jadi-korban",
-    "mentalitas-anti-rapuh-antifragility"
+    "mentalitas-anti-rapuh-antifragility",
+    "jedah-stimulus-dan-respon-kunci-kendali-diri"
   ],
   "published": [
     {
@@ -1633,7 +1634,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260917_121721",
+      "topic": "jedah-stimulus-dan-respon-kunci-kendali-diri",
+      "title": "Atur Emosimu Sebelum Hancur: Rahasia Mental Anti Panik Viktor Frankl",
+      "path": "/home/runner/work/konten6/konten6/output/20260917_121721_jedah-stimulus-dan-respon-kunci-kendali-diri/final.mp4",
+      "video_id": "X6x40a79GbA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 160
+  "_voice_idx": 161
 }
