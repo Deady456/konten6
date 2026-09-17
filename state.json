@@ -149,7 +149,8 @@
     "aturan-lima-detik-menghancurkan-penundaan",
     "hambatan-adalah-jalan-kemajuan",
     "pilihan-rasa-sakit-disiplin-vs-penyesalan",
-    "locus-of-control-internal-berhenti-jadi-korban"
+    "locus-of-control-internal-berhenti-jadi-korban",
+    "mentalitas-anti-rapuh-antifragility"
   ],
   "published": [
     {
@@ -1622,7 +1623,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260917_001656",
+      "topic": "mentalitas-anti-rapuh-antifragility",
+      "title": "RAHASIA MENTAL BISA MENJADI LEBIH KUAT DARI RASA SAKIT DAN TEKANAN!",
+      "path": "/home/runner/work/konten6/konten6/output/20260917_001656_mentalitas-anti-rapuh-antifragility/final.mp4",
+      "video_id": "UTPNQkNXvEA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 159
+  "_voice_idx": 160
 }
