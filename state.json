@@ -151,7 +151,8 @@
     "pilihan-rasa-sakit-disiplin-vs-penyesalan",
     "locus-of-control-internal-berhenti-jadi-korban",
     "mentalitas-anti-rapuh-antifragility",
-    "jedah-stimulus-dan-respon-kunci-kendali-diri"
+    "jedah-stimulus-dan-respon-kunci-kendali-diri",
+    "prinsip-kebiasaan-mikro-kaizen-otak"
   ],
   "published": [
     {
@@ -1644,7 +1645,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260918_001644",
+      "topic": "prinsip-kebiasaan-mikro-kaizen-otak",
+      "title": "Cara Membodohi Otak Agar Berhenti Malas dengan Kebiasaan Mikro",
+      "path": "/home/runner/work/konten6/konten6/output/20260918_001644_prinsip-kebiasaan-mikro-kaizen-otak/final.mp4",
+      "video_id": "gB4G3vpVr4E",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 161
+  "_voice_idx": 162
 }
