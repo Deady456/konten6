@@ -153,7 +153,8 @@
     "mentalitas-anti-rapuh-antifragility",
     "jedah-stimulus-dan-respon-kunci-kendali-diri",
     "prinsip-kebiasaan-mikro-kaizen-otak",
-    "efek-sorotan-psikologi-berhenti-peduli-pikiran-orang"
+    "efek-sorotan-psikologi-berhenti-peduli-pikiran-orang",
+    "toleransi-rasa-bosan-kunci-keunggulan"
   ],
   "published": [
     {
@@ -1666,7 +1667,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260919_123110",
+      "topic": "toleransi-rasa-bosan-kunci-keunggulan",
+      "title": "Rahasia Orang Sukses: Kenapa Kamu Harus Belajar Menikmati Rasa Bosan?",
+      "path": "/home/runner/work/konten6/konten6/output/20260919_123110_toleransi-rasa-bosan-kunci-keunggulan/final.mp4",
+      "video_id": "jU76_D7ZGIo",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 163
+  "_voice_idx": 164
 }
