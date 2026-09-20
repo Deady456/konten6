@@ -155,7 +155,8 @@
     "prinsip-kebiasaan-mikro-kaizen-otak",
     "efek-sorotan-psikologi-berhenti-peduli-pikiran-orang",
     "toleransi-rasa-bosan-kunci-keunggulan",
-    "reset-dopamin-memutus-adiksi-kesenangan-murahan"
+    "reset-dopamin-memutus-adiksi-kesenangan-murahan",
+    "tanggung-jawab-mutlak-extreme-ownership-mental-juara"
   ],
   "published": [
     {
@@ -1688,7 +1689,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260920_123232",
+      "topic": "tanggung-jawab-mutlak-extreme-ownership-mental-juara",
+      "title": "Berhenti Menyalahkan Keadaan: Rahasia Mental Juara Tanggung Jawab Mutlak",
+      "path": "/home/runner/work/konten6/konten6/output/20260920_123232_tanggung-jawab-mutlak-extreme-ownership-mental-juara/final.mp4",
+      "video_id": "kOImDt3Av4Y",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 165
+  "_voice_idx": 166
 }
