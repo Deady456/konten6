@@ -154,7 +154,8 @@
     "jedah-stimulus-dan-respon-kunci-kendali-diri",
     "prinsip-kebiasaan-mikro-kaizen-otak",
     "efek-sorotan-psikologi-berhenti-peduli-pikiran-orang",
-    "toleransi-rasa-bosan-kunci-keunggulan"
+    "toleransi-rasa-bosan-kunci-keunggulan",
+    "reset-dopamin-memutus-adiksi-kesenangan-murahan"
   ],
   "published": [
     {
@@ -1677,7 +1678,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260920_003147",
+      "topic": "reset-dopamin-memutus-adiksi-kesenangan-murahan",
+      "title": "Cara Meriset Otak dan Membangun Disiplin Baja dari Candu Dopamin",
+      "path": "/home/runner/work/konten6/konten6/output/20260920_003147_reset-dopamin-memutus-adiksi-kesenangan-murahan/final.mp4",
+      "video_id": "Ca0hzVtLOME",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 164
+  "_voice_idx": 165
 }
