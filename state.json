@@ -156,7 +156,8 @@
     "efek-sorotan-psikologi-berhenti-peduli-pikiran-orang",
     "toleransi-rasa-bosan-kunci-keunggulan",
     "reset-dopamin-memutus-adiksi-kesenangan-murahan",
-    "tanggung-jawab-mutlak-extreme-ownership-mental-juara"
+    "tanggung-jawab-mutlak-extreme-ownership-mental-juara",
+    "komitmen-mutlak-membakar-jembatan-kembali"
   ],
   "published": [
     {
@@ -1699,7 +1700,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260921_003144",
+      "topic": "komitmen-mutlak-membakar-jembatan-kembali",
+      "title": "Rahasia Mental Baja: Kenapa Kamu Harus Membakar Rencana Cadanganmu!",
+      "path": "/home/runner/work/konten6/konten6/output/20260921_003144_komitmen-mutlak-membakar-jembatan-kembali/final.mp4",
+      "video_id": "8qh7nyK76A8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 166
+  "_voice_idx": 167
 }
