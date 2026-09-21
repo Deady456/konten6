@@ -157,7 +157,8 @@
     "toleransi-rasa-bosan-kunci-keunggulan",
     "reset-dopamin-memutus-adiksi-kesenangan-murahan",
     "tanggung-jawab-mutlak-extreme-ownership-mental-juara",
-    "komitmen-mutlak-membakar-jembatan-kembali"
+    "komitmen-mutlak-membakar-jembatan-kembali",
+    "ritual pagi stoik mengalahkan malas"
   ],
   "published": [
     {
@@ -1710,7 +1711,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260921_123256",
+      "topic": "ritual pagi stoik mengalahkan malas",
+      "title": "Bangun Pagi Tanpa Penundaan: Ritual Stoik yang Mengubah Hidupmu Selamanya",
+      "path": "/home/runner/work/konten6/konten6/output/20260921_123256_ritual-pagi-stoik-mengalahkan-malas/final.mp4",
+      "video_id": "n8DOeEiqLiE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 167
+  "_voice_idx": 168
 }
