@@ -159,7 +159,8 @@
     "tanggung-jawab-mutlak-extreme-ownership-mental-juara",
     "komitmen-mutlak-membakar-jembatan-kembali",
     "ritual pagi stoik mengalahkan malas",
-    "kekuatan-persepsi-kontrol-emosi"
+    "kekuatan-persepsi-kontrol-emosi",
+    "ataraxia-ketenangan-jiwa-bebas-opini"
   ],
   "published": [
     {
@@ -1732,7 +1733,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260922_123234",
+      "topic": "ataraxia-ketenangan-jiwa-bebas-opini",
+      "title": "Jangan Biarkan Pujian Membunuhmu: Rahasia Mental Baja Stoik",
+      "path": "/home/runner/work/konten6/konten6/output/20260922_123234_ataraxia-ketenangan-jiwa-bebas-opini/final.mp4",
+      "video_id": "jS0SVCgXP_8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 169
+  "_voice_idx": 170
 }
