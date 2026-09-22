@@ -158,7 +158,8 @@
     "reset-dopamin-memutus-adiksi-kesenangan-murahan",
     "tanggung-jawab-mutlak-extreme-ownership-mental-juara",
     "komitmen-mutlak-membakar-jembatan-kembali",
-    "ritual pagi stoik mengalahkan malas"
+    "ritual pagi stoik mengalahkan malas",
+    "kekuatan-persepsi-kontrol-emosi"
   ],
   "published": [
     {
@@ -1721,7 +1722,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260922_003148",
+      "topic": "kekuatan-persepsi-kontrol-emosi",
+      "title": "Mengapa Orang Tangguh Tidak Mudah Menyerah? Rahasia Kendali Pikiran!",
+      "path": "/home/runner/work/konten6/konten6/output/20260922_003148_kekuatan-persepsi-kontrol-emosi/final.mp4",
+      "video_id": "_3ZWWOXL0l8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 168
+  "_voice_idx": 169
 }
