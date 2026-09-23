@@ -160,7 +160,8 @@
     "komitmen-mutlak-membakar-jembatan-kembali",
     "ritual pagi stoik mengalahkan malas",
     "kekuatan-persepsi-kontrol-emosi",
-    "ataraxia-ketenangan-jiwa-bebas-opini"
+    "ataraxia-ketenangan-jiwa-bebas-opini",
+    "alarm-action-loop"
   ],
   "published": [
     {
@@ -1743,7 +1744,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260923_003104",
+      "topic": "alarm-action-loop",
+      "title": "Bangun, Hancurkan Penundaan: Rahasia Stoik Mengubah Alarm Menjadi Aksi Nyata",
+      "path": "/home/runner/work/konten6/konten6/output/20260923_003104_alarm-action-loop/final.mp4",
+      "video_id": "1-MN2iVDjOI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 170
+  "_voice_idx": 171
 }
