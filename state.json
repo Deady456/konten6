@@ -161,7 +161,8 @@
     "ritual pagi stoik mengalahkan malas",
     "kekuatan-persepsi-kontrol-emosi",
     "ataraxia-ketenangan-jiwa-bebas-opini",
-    "alarm-action-loop"
+    "alarm-action-loop",
+    "benteng-batin-inner-citadel-stoikisme"
   ],
   "published": [
     {
@@ -1754,7 +1755,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260923_123118",
+      "topic": "benteng-batin-inner-citadel-stoikisme",
+      "title": "Rahasia Mental Baja: Cara Membangun Benteng Batin yang Tak Tergoyahkan!",
+      "path": "/home/runner/work/konten6/konten6/output/20260923_123118_benteng-batin-inner-citadel-stoikisme/final.mp4",
+      "video_id": "EYM-rWUZ31E",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 171
+  "_voice_idx": 172
 }
