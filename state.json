@@ -162,7 +162,8 @@
     "kekuatan-persepsi-kontrol-emosi",
     "ataraxia-ketenangan-jiwa-bebas-opini",
     "alarm-action-loop",
-    "benteng-batin-inner-citadel-stoikisme"
+    "benteng-batin-inner-citadel-stoikisme",
+    "dokkodo-prinsip-kemandirian-musashi"
   ],
   "published": [
     {
@@ -1765,7 +1766,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260924_003130",
+      "topic": "dokkodo-prinsip-kemandirian-musashi",
+      "title": "Aturan Dokkodo: Rahasia Mental Baja Yang Tidak Pernah Kecewa",
+      "path": "/home/runner/work/konten6/konten6/output/20260924_003130_dokkodo-prinsip-kemandirian-musashi/final.mp4",
+      "video_id": "jhMrllOhpWA",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 172
+  "_voice_idx": 173
 }
