@@ -163,7 +163,8 @@
     "ataraxia-ketenangan-jiwa-bebas-opini",
     "alarm-action-loop",
     "benteng-batin-inner-citadel-stoikisme",
-    "dokkodo-prinsip-kemandirian-musashi"
+    "dokkodo-prinsip-kemandirian-musashi",
+    "aturan-empat-puluh-persen-batas-kemampuan"
   ],
   "published": [
     {
@@ -1776,7 +1777,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260924_123156",
+      "topic": "aturan-empat-puluh-persen-batas-kemampuan",
+      "title": "Batas Kemampuanmu Hanyalah Ilusi Otak! Rahasia Tembus Limit Diri",
+      "path": "/home/runner/work/konten6/konten6/output/20260924_123156_aturan-empat-puluh-persen-batas-kemampuan/final.mp4",
+      "video_id": "IimPYlgtMS0",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 173
+  "_voice_idx": 174
 }
