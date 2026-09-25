@@ -164,7 +164,8 @@
     "alarm-action-loop",
     "benteng-batin-inner-citadel-stoikisme",
     "dokkodo-prinsip-kemandirian-musashi",
-    "aturan-empat-puluh-persen-batas-kemampuan"
+    "aturan-empat-puluh-persen-batas-kemampuan",
+    "hukum-parkinson-menghancurkan-prokrastinasi"
   ],
   "published": [
     {
@@ -1787,7 +1788,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20260925_123219",
+      "topic": "hukum-parkinson-menghancurkan-prokrastinasi",
+      "title": "Rahasia Otak Fokus: Trik Memotong Waktu untuk Menghancurkan Kemalasan",
+      "path": "/home/runner/work/konten6/konten6/output/20260925_123219_hukum-parkinson-menghancurkan-prokrastinasi/final.mp4",
+      "video_id": "hz12u43mDwI",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 174
+  "_voice_idx": 175
 }
