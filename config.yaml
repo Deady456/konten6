@@ -1,10 +1,10 @@
-niche: "motivasi hidup, disiplin diri, pengembangan diri (self-improvement), stoikisme, kebiasaan orang sukses, psikologi ketabahan, dan membangun mentalitas juara (mindset)"
-audience: "anak muda dan orang dewasa Indonesia yang ingin berkembang, membangun disiplin, berhenti malas dan menunda, serta meraih kesuksesan hidup"
+niche: "psikologi gelap, hukum kekuasaan, stoikisme keras, dan rahasia mentalitas disiplin tanpa ampun (cara membaca pikiran orang, hukum manipulasi, menghentikan kemalasan secara brutal, dan membangun ketenangan dingin)"
+audience: "anak muda Indonesia yang ingin membangun mentalitas baja, disiplin tanpa kompromi, dan memahami psikologi manusia secara mendalam"
 language: id
 
 script:
   model: openai/gpt-oss-120b
-  target_seconds: 50
+  target_seconds: 40
   words_per_second: 2.5
 
 voice:
