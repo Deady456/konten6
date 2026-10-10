@@ -1,4 +1,13 @@
+#!/usr/bin/env python3
+"""
+voice.py - TTS Synthesis dengan hierarki provider:
+  1. ShellShock AWS google-tts/id  (GRATIS, unlimited, priority utama)
+  2. ElevenLabs                    (jika ELEVENLABS_API_KEYS tersedia)
+  3. Edge-TTS                      (last resort fallback, offline-capable)
+"""
+
 import re
+
 
 def num_to_words_id(n: int) -> str:
     if n == 0:
@@ -45,10 +54,24 @@ def replace_numbers_id(text: str) -> str:
 import asyncio
 import os
 import time
+import urllib.request
+import json
 from pathlib import Path
 import edge_tts
 from .config import CONFIG
-from elevenlabs.client import ElevenLabs
+try:
+    from elevenlabs.client import ElevenLabs
+    _ELEVENLABS_AVAILABLE = True
+except ImportError:
+    _ELEVENLABS_AVAILABLE = False
+
+
+# ============================================================
+# ShellShock AWS Constants
+# ============================================================
+SHELLSHOCK_AWS_BASE = "http://13.214.34.200:20128"
+SHELLSHOCK_AWS_KEY  = "sk-1f7d1788ce9c1aa7-qgi726-f1cb1818"
+SHELLSHOCK_TTS_MODEL = "google-tts/id"   # Gratis, unlimited, bahasa Indonesia
 
 
 # ============================================================
@@ -99,19 +122,30 @@ def _select_voice(voices: list[dict], strategy: str) -> dict:
 
 
 # ============================================================
-# TTS Synthesis
+# TTS Providers
 # ============================================================
 
-def _synth_edge(text: str, out_path: Path, v: dict) -> None:
-    async def _go():
-        com = edge_tts.Communicate(
-            text,
-            voice=v["voice"],
-            rate=v.get("rate", "+0%"),
-            pitch=v.get("pitch", "+0Hz"),
-        )
-        await com.save(str(out_path))
-    asyncio.run(_go())
+def _synth_shellshock_google_tts(text: str, out_path: Path) -> None:
+    """PRIMARY: ShellShock AWS google-tts/id — gratis, unlimited, bahasa Indonesia."""
+    payload = json.dumps({
+        "model": SHELLSHOCK_TTS_MODEL,
+        "input": text,
+        "voice": "id",
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        SHELLSHOCK_AWS_BASE + "/v1/audio/speech",
+        data=payload,
+        method="POST",
+        headers={
+            "Authorization": f"Bearer {SHELLSHOCK_AWS_KEY}",
+            "Content-Type": "application/json",
+        }
+    )
+    with urllib.request.urlopen(req, timeout=60) as r:
+        audio = r.read()
+    if len(audio) < 512:
+        raise RuntimeError(f"ShellShock google-tts returned too small audio: {len(audio)} bytes")
+    out_path.write_bytes(audio)
 
 
 def _synth_elevenlabs(text: str, out_path: Path, v: dict, api_key: str) -> None:
@@ -129,6 +163,17 @@ def _synth_elevenlabs(text: str, out_path: Path, v: dict, api_key: str) -> None:
                 f.write(chunk)
 
 
+def _synth_edge(text: str, out_path: Path, v: dict) -> None:
+    async def _go():
+        com = edge_tts.Communicate(
+            text,
+            voice=v["voice"],
+            rate=v.get("rate", "+0%"),
+            pitch=v.get("pitch", "+0Hz"),
+        )
+        await com.save(str(out_path))
+    asyncio.run(_go())
+
 
 def _speed_up(audio_path: Path, rate: float = 1.15):
     import subprocess
@@ -137,47 +182,55 @@ def _speed_up(audio_path: Path, rate: float = 1.15):
     tmp.replace(audio_path)
 
 
+# ============================================================
+# Main synth() — Provider waterfall
+# ============================================================
+
 def synth(text: str, out_path: Path) -> Path:
     text = replace_numbers_id(text)
     v = _get_voice_config()
-    voice_name = v.get("_voice_name", v["voice"])
+    voice_name = v.get("_voice_name", v.get("voice", "google-tts"))
     print(f"    voice: {voice_name}, {len(text)} chars")
 
     t0 = time.time()
-    provider = CONFIG.get("voice", {}).get("provider", "elevenlabs")
 
-    # ElevenLabs is PRIMARY - try all keys with retry
-    if provider == "elevenlabs":
-        keys_str = os.environ.get("ELEVENLABS_API_KEYS", "")
-        import re
-        keys = [k.strip() for k in re.split(r',|\n|\\n', keys_str) if k.strip()]
+    # ---- 1. ShellShock AWS google-tts/id (UTAMA - GRATIS) ----
+    try:
+        _synth_shellshock_google_tts(text, out_path)
+        print(f"    done in {time.time()-t0:.1f}s (shellshock aws google-tts/id)")
+        return out_path
+    except Exception as e:
+        print(f"    shellshock google-tts failed: {e} — trying next provider")
 
-        if keys:
-            for i, api_key in enumerate(keys):
-                for attempt in range(2):
-                    try:
-                        _synth_elevenlabs(text, out_path, v, api_key)
-                        print(f"    done in {time.time()-t0:.1f}s (elevenlabs key[{i}], attempt {attempt+1})")
-                        return out_path
-                    except Exception as e:
-                        err_msg = str(e).lower()
-                        if "rate" in err_msg or "limit" in err_msg or "429" in err_msg:
-                            print(f"    key[{i}] rate limited (attempt {attempt+1}), trying next")
-                            break
-                        elif "paid_plan_required" in err_msg or "402" in err_msg:
-                            print(f"    key[{i}] needs paid plan, trying next")
-                            break
-                        else:
-                            print(f"    key[{i}] error (attempt {attempt+1}): {e}")
-                            if attempt == 0:
-                                import time as _time
-                                _time.sleep(1)
-                            continue
-            print(f"    all {len(keys)} elevenlabs keys exhausted")
-        else:
-            print(f"    no elevenlabs keys found")
+    # ---- 2. ElevenLabs (jika ada key) ----
+    if _ELEVENLABS_AVAILABLE:
+        provider = CONFIG.get("voice", {}).get("provider", "elevenlabs")
+        if provider == "elevenlabs":
+            keys_str = os.environ.get("ELEVENLABS_API_KEYS", "")
+            keys = [k.strip() for k in re.split(r',|\n|\\n', keys_str) if k.strip()]
+            if keys:
+                for i, api_key in enumerate(keys):
+                    for attempt in range(2):
+                        try:
+                            _synth_elevenlabs(text, out_path, v, api_key)
+                            print(f"    done in {time.time()-t0:.1f}s (elevenlabs key[{i}], attempt {attempt+1})")
+                            return out_path
+                        except Exception as e:
+                            err_msg = str(e).lower()
+                            if "rate" in err_msg or "limit" in err_msg or "429" in err_msg:
+                                print(f"    key[{i}] rate limited (attempt {attempt+1}), trying next")
+                                break
+                            elif "paid_plan_required" in err_msg or "402" in err_msg:
+                                print(f"    key[{i}] needs paid plan, trying next")
+                                break
+                            else:
+                                print(f"    key[{i}] error (attempt {attempt+1}): {e}")
+                                if attempt == 0:
+                                    time.sleep(1)
+                                continue
+                print(f"    all {len(keys)} elevenlabs keys exhausted")
 
-    # Edge-TTS is LAST RESORT fallback only
+    # ---- 3. Edge-TTS (last resort) ----
     print(f"    falling back to edge-tts (last resort)")
     _synth_edge(text, out_path, v)
     if not out_path.exists() or out_path.stat().st_size < 1024:
@@ -187,4 +240,3 @@ def synth(text: str, out_path: Path) -> Path:
         )
     print(f"    done in {time.time()-t0:.1f}s (edge-tts fallback)")
     return out_path
-
