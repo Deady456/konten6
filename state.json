@@ -166,7 +166,8 @@
     "dokkodo-prinsip-kemandirian-musashi",
     "aturan-empat-puluh-persen-batas-kemampuan",
     "hukum-parkinson-menghancurkan-prokrastinasi",
-    "menembus batas mental dengan disiplin brutal"
+    "menembus batas mental dengan disiplin brutal",
+    "kontrol mental brutal"
   ],
   "published": [
     {
@@ -1809,7 +1810,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261011_121722",
+      "topic": "kontrol mental brutal",
+      "title": "Menguak Seni Mengendalikan Pikiran: Teknik Brutal Membongkar Manipulasi Mental",
+      "path": "/home/runner/work/konten6/konten6/output/20261011_121722_kontrol-mental-brutal/final.mp4",
+      "video_id": "uEUpnyiHcSo",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 176
+  "_voice_idx": 177
 }
