@@ -165,7 +165,8 @@
     "benteng-batin-inner-citadel-stoikisme",
     "dokkodo-prinsip-kemandirian-musashi",
     "aturan-empat-puluh-persen-batas-kemampuan",
-    "hukum-parkinson-menghancurkan-prokrastinasi"
+    "hukum-parkinson-menghancurkan-prokrastinasi",
+    "menembus batas mental dengan disiplin brutal"
   ],
   "published": [
     {
@@ -1798,7 +1799,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261011_001700",
+      "topic": "menembus batas mental dengan disiplin brutal",
+      "title": "Bagaimana Disiplin Brutal Mematahkan Zona Nyaman dan Membentuk Ketenangan Baja",
+      "path": "/home/runner/work/konten6/konten6/output/20261011_001700_menembus-batas-mental-dengan-disiplin-brutal/final.mp4",
+      "video_id": "cPm8_67tJ38",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 175
+  "_voice_idx": 176
 }
