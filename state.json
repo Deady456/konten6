@@ -167,7 +167,8 @@
     "aturan-empat-puluh-persen-batas-kemampuan",
     "hukum-parkinson-menghancurkan-prokrastinasi",
     "menembus batas mental dengan disiplin brutal",
-    "kontrol mental brutal"
+    "kontrol mental brutal",
+    "strategi-predator-mengalahkan-malas"
   ],
   "published": [
     {
@@ -1820,7 +1821,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261012_001648",
+      "topic": "strategi-predator-mengalahkan-malas",
+      "title": "Bagaimana Predator Mental Membunuh Rasa Malas dalam Detik",
+      "path": "/home/runner/work/konten6/konten6/output/20261012_001648_strategi-predator-mengalahkan-malas/final.mp4",
+      "video_id": "OpflhKRrNiE",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 177
+  "_voice_idx": 178
 }
