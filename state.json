@@ -168,7 +168,8 @@
     "hukum-parkinson-menghancurkan-prokrastinasi",
     "menembus batas mental dengan disiplin brutal",
     "kontrol mental brutal",
-    "strategi-predator-mengalahkan-malas"
+    "strategi-predator-mengalahkan-malas",
+    "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku"
   ],
   "published": [
     {
@@ -1831,7 +1832,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261012_121708",
+      "topic": "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku",
+      "title": "Bongkar Prokrastinasi: Cara Brutal Mengendalikan Otak dan Membangun Kekuatan Mental Baja",
+      "path": "/home/runner/work/konten6/konten6/output/20261012_121708_strategi-menghancurkan-prokrastinasi-dengan-aksi-beku/final.mp4",
+      "video_id": "oiquiDZhrX4",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 178
+  "_voice_idx": 179
 }
