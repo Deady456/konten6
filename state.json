@@ -170,7 +170,8 @@
     "kontrol mental brutal",
     "strategi-predator-mengalahkan-malas",
     "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku",
-    "visualisasi-membekukan-prokrastinasi"
+    "visualisasi-membekukan-prokrastinasi",
+    "Strategi Bayangan Pengendalian Pikiran"
   ],
   "published": [
     {
@@ -1853,7 +1854,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261013_121723",
+      "topic": "Strategi Bayangan Pengendalian Pikiran",
+      "title": "Bayangan Psikologi: Cara Brutal Menguasai Pikiran Tanpa Menjadi Korban",
+      "path": "/home/runner/work/konten6/konten6/output/20261013_121723_strategi-bayangan-pengendalian-pikiran/final.mp4",
+      "video_id": "dOC3J7CjS04",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 180
+  "_voice_idx": 181
 }
