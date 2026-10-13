@@ -169,7 +169,8 @@
     "menembus batas mental dengan disiplin brutal",
     "kontrol mental brutal",
     "strategi-predator-mengalahkan-malas",
-    "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku"
+    "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku",
+    "visualisasi-membekukan-prokrastinasi"
   ],
   "published": [
     {
@@ -1842,7 +1843,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261013_001736",
+      "topic": "visualisasi-membekukan-prokrastinasi",
+      "title": "Rahasia Visualisasi Diri yang Membekukan Prokrastinasi dalam Sekejap",
+      "path": "/home/runner/work/konten6/konten6/output/20261013_001736_visualisasi-membekukan-prokrastinasi/final.mp4",
+      "video_id": "69MlgRk5ze8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 179
+  "_voice_idx": 180
 }
