@@ -171,7 +171,8 @@
     "strategi-predator-mengalahkan-malas",
     "strategi-menghancurkan-prokrastinasi-dengan-aksi-beku",
     "visualisasi-membekukan-prokrastinasi",
-    "Strategi Bayangan Pengendalian Pikiran"
+    "Strategi Bayangan Pengendalian Pikiran",
+    "strategi menaklukkan alarm mental prokrastinasi"
   ],
   "published": [
     {
@@ -1864,7 +1865,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261014_001710",
+      "topic": "strategi menaklukkan alarm mental prokrastinasi",
+      "title": "Alarm Bahaya Otak: Cara Brutal Hentikan Prokrastinasi dalam Tiga Detik",
+      "path": "/home/runner/work/konten6/konten6/output/20261014_001710_strategi-menaklukkan-alarm-mental-prokrastinasi/final.mp4",
+      "video_id": "u2HzIkAi5tY",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 181
+  "_voice_idx": 182
 }
