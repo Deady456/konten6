@@ -174,7 +174,8 @@
     "Strategi Bayangan Pengendalian Pikiran",
     "strategi menaklukkan alarm mental prokrastinasi",
     "manipulasi diri brutal menghancurkan prokrastinasi",
-    "aksi tiga detik anti malas"
+    "aksi tiga detik anti malas",
+    "bayangan-baja-menghancurkan-malas"
   ],
   "published": [
     {
@@ -1897,7 +1898,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261015_121655",
+      "topic": "bayangan-baja-menghancurkan-malas",
+      "title": "Membunuh Prokrastinasi dengan Bayangan Baja: Rahasia Mentalitas Tanpa Rasa Malas",
+      "path": "/home/runner/work/konten6/konten6/output/20261015_121655_bayangan-baja-menghancurkan-malas/final.mp4",
+      "video_id": "zJ00QeOaKDw",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 184
+  "_voice_idx": 185
 }
