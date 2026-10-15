@@ -173,7 +173,8 @@
     "visualisasi-membekukan-prokrastinasi",
     "Strategi Bayangan Pengendalian Pikiran",
     "strategi menaklukkan alarm mental prokrastinasi",
-    "manipulasi diri brutal menghancurkan prokrastinasi"
+    "manipulasi diri brutal menghancurkan prokrastinasi",
+    "aksi tiga detik anti malas"
   ],
   "published": [
     {
@@ -1886,7 +1887,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261015_001714",
+      "topic": "aksi tiga detik anti malas",
+      "title": "Bagaimana Satu Aturan Tiga Detik Membunuh Prokrastinasi Secara Brutal dan Membangun Disiplin Baja",
+      "path": "/home/runner/work/konten6/konten6/output/20261015_001714_aksi-tiga-detik-anti-malas/final.mp4",
+      "video_id": "qJG1eUj_Qlg",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 183
+  "_voice_idx": 184
 }
