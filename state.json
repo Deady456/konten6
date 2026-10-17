@@ -178,7 +178,8 @@
     "bayangan-baja-menghancurkan-malas",
     "strategi-stoik-brutal-menghancurkan-malas",
     "napas-stoik-menghancurkan-prokrastinasi",
-    "ilusi-kontrol-mental-nihil"
+    "ilusi-kontrol-mental-nihil",
+    "negentropy-mental"
   ],
   "published": [
     {
@@ -1941,7 +1942,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261017_121647",
+      "topic": "negentropy-mental",
+      "title": "Negentropy Mental: Cara Mengubah Kekacauan Menjadi Kendali Tanpa Batas",
+      "path": "/home/runner/work/konten6/konten6/output/20261017_121647_negentropy-mental/final.mp4",
+      "video_id": "HW0owc15Yy8",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 188
+  "_voice_idx": 189
 }
