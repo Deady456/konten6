@@ -177,7 +177,8 @@
     "aksi tiga detik anti malas",
     "bayangan-baja-menghancurkan-malas",
     "strategi-stoik-brutal-menghancurkan-malas",
-    "napas-stoik-menghancurkan-prokrastinasi"
+    "napas-stoik-menghancurkan-prokrastinasi",
+    "ilusi-kontrol-mental-nihil"
   ],
   "published": [
     {
@@ -1930,7 +1931,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261017_001701",
+      "topic": "ilusi-kontrol-mental-nihil",
+      "title": "Bagaimana Menghancurkan Ilusi Kontrol dan Menjadi Mesin Aksi Tanpa Ragu",
+      "path": "/home/runner/work/konten6/konten6/output/20261017_001701_ilusi-kontrol-mental-nihil/final.mp4",
+      "video_id": "GVJP0bQmQsU",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 187
+  "_voice_idx": 188
 }
