@@ -179,7 +179,8 @@
     "strategi-stoik-brutal-menghancurkan-malas",
     "napas-stoik-menghancurkan-prokrastinasi",
     "ilusi-kontrol-mental-nihil",
-    "negentropy-mental"
+    "negentropy-mental",
+    "silent-observation-empowerment"
   ],
   "published": [
     {
@@ -1952,7 +1953,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261018_001709",
+      "topic": "silent-observation-empowerment",
+      "title": "Diam Membunuh Keraguan: Cara Menguasai Situasi dengan Observasi Sunyi yang Mematikan",
+      "path": "/home/runner/work/konten6/konten6/output/20261018_001709_silent-observation-empowerment/final.mp4",
+      "video_id": "qcAhmlxMegM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 189
+  "_voice_idx": 190
 }
