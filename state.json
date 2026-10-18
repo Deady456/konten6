@@ -180,7 +180,8 @@
     "napas-stoik-menghancurkan-prokrastinasi",
     "ilusi-kontrol-mental-nihil",
     "negentropy-mental",
-    "silent-observation-empowerment"
+    "silent-observation-empowerment",
+    "zero-choice execution"
   ],
   "published": [
     {
@@ -1963,7 +1964,17 @@
       "publish_at": null,
       "format": null,
       "voice": "unknown"
+    },
+    {
+      "ts": "20261018_121718",
+      "topic": "zero-choice execution",
+      "title": "Zero-Choice Execution: Paksa Dirimu Bertindak Sekejap Tanpa Keraguan",
+      "path": "/home/runner/work/konten6/konten6/output/20261018_121718_zero-choice-execution/final.mp4",
+      "video_id": "khOql3qE1XM",
+      "publish_at": null,
+      "format": null,
+      "voice": "unknown"
     }
   ],
-  "_voice_idx": 190
+  "_voice_idx": 191
 }
