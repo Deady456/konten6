@@ -91,7 +91,7 @@ Rules:
 - No emojis, no subscription prompts in the middle.
 
 Return ONLY valid JSON with this schema:
-{{"title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "segments": [{{"title": "...", "text": "...", "image_prompt": "..."}}]}}"""
+{{"title": "title max 95 chars, min 40 chars, curiosity-driven and engaging", "thumbnail_text": "Super short hook text (3-5 words, ALL CAPS) for YouTube thumbnail", "description": "3-4 sentences with 5-8 relevant hashtags", "tags": ["10-15 lowercase relevant tags"], "segments": [{{"title": "...", "text": "...", "image_prompt": "..."}}]}}"""
 
     s = state.load()
     used = s.get("used_topics", [])
@@ -147,10 +147,18 @@ Return ONLY valid JSON with this schema:
     title = result.get("title", segments[0]["title"]) if isinstance(result, dict) else segments[0]["title"]
     description = result.get("description", CONFIG.get("description", "")) if isinstance(result, dict) else ""
     tags = result.get("tags", CONFIG["upload"]["default_tags"]) if isinstance(result, dict) else CONFIG["upload"]["default_tags"]
+    thumbnail_text = result.get("thumbnail_text", "") if isinstance(result, dict) else ""
 
     from .script import replace_numbers_id
     for s in segments:
         s["text"] = replace_numbers_id(s.get("text", ""))
 
     full_text = " ... ".join(s["text"] for s in segments)
-    return {"segments": segments, "full_text": full_text, "title": title, "description": description, "tags": tags}
+    return {
+        "segments": segments,
+        "full_text": full_text,
+        "title": title,
+        "description": description,
+        "tags": tags,
+        "thumbnail_text": thumbnail_text,
+    }

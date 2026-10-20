@@ -88,6 +88,11 @@ if GROQ_API_KEYS:
     FALLBACK_PROVIDERS.append({"name": "groq", "keys": GROQ_API_KEYS, "base_url": "https://api.groq.com/openai/v1", "model": "openai/gpt-oss-120b"})
     FALLBACK_PROVIDERS.append({"name": "groq-20b", "keys": GROQ_API_KEYS, "base_url": "https://api.groq.com/openai/v1", "model": "openai/gpt-oss-20b"})
 
+GROQ_BASE_URL = "https://api.groq.com/openai/v1"
+FALLBACK_API_KEY = GROQ_API_KEYS[0] if GROQ_API_KEYS else (OPENROUTER_API_KEYS[0] if OPENROUTER_API_KEYS else None)
+FALLBACK_BASE_URL = "https://api.groq.com/openai/v1" if GROQ_API_KEYS else "https://openrouter.ai/api/v1"
+FALLBACK_MODEL = "qwen/qwen3.8-27b" if GROQ_API_KEYS else "meta-llama/llama-3.3-70b-instruct"
+
 # Invalid providers (kept for reference only - API keys expired):
 # GEMINI_API_KEYS: 401 Unauthorized
 # GROQ_API_KEYS: VALID (verified all 12 keys working)  

@@ -106,6 +106,15 @@ def run_once(
         except Exception as e:
             _log(f"    sulih suara failed (non-fatal): {e}")
 
+    # Generate High-CTR 16:9 Thumbnail
+    thumb_path = work / "thumbnail.jpg"
+    thumb = None
+    try:
+        hook_text = data.get("thumbnail_text") or data["title"]
+        thumb = thumbnail.generate(hook_text, thumb_path, bg_path=image_paths[0] if image_paths else None)
+    except Exception as e:
+        _log(f"    thumbnail generation failed (non-fatal): {e}")
+
     final_for_upload = final_clean
 
     video_id = None
@@ -119,11 +128,11 @@ def run_once(
             publish_at=publish_at,
         )
         _log(f"    uploaded: https://youtube.com/watch?v={video_id}")
-        try:
-            thumb = thumbnail.generate(data["title"], work / "thumbnail.jpg", bg_path=image_paths[0] if image_paths else None)
-            thumbnail.upload(upload.get_service(), video_id, thumb)
-        except Exception as e:
-            _log(f"    thumbnail failed (non-fatal): {e}")
+        if thumb and thumb.exists():
+            try:
+                thumbnail.upload(upload.get_service(), video_id, thumb)
+            except Exception as e:
+                _log(f"    thumbnail upload failed (non-fatal): {e}")
 
     state.add_published({
         "ts": stamp,
@@ -133,6 +142,7 @@ def run_once(
         "publish_at": publish_at,
         "dubbed_audio": dub_result.get("standalone_audio_track"),
         "multi_audio_video": dub_result.get("multi_audio_video"),
+        "thumbnail": str(thumb) if thumb else None,
     })
 
     return {
@@ -140,6 +150,7 @@ def run_once(
         "clean_video": str(final_clean),
         "dubbed_audio": dub_result.get("standalone_audio_track"),
         "multi_audio_video": dub_result.get("multi_audio_video"),
+        "thumbnail": str(thumb) if thumb else None,
         "title": data["title"]
     }
 

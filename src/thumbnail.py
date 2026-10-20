@@ -1,92 +1,107 @@
 from pathlib import Path
+import re
 import random
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image, ImageDraw, ImageFont, ImageEnhance
 
 THUMB_W, THUMB_H = 1280, 720
 _COLORS = [
-    ["#667eea", "#764ba2"], ["#f093fb", "#f5576c"],
-    ["#4facfe", "#00f2fe"], ["#43e97b", "#38f9d7"],
-    ["#fa709a", "#fee140"], ["#a18cd1", "#fbc2eb"],
-    ["#fccb90", "#d57eeb"], ["#e0c3fc", "#8ec5fc"],
-    ["#30cfd0", "#330867"],
+    ["#1e293b", "#0f172a"], ["#18181b", "#27272a"],
+    ["#1f2937", "#111827"], ["#292524", "#1c1917"],
 ]
 
-def _hex(c):
-    return (int(c[1:3], 16), int(c[3:5], 16), int(c[5:7], 16))
-
-def _gradient(w, h, colors):
-    img = Image.new("RGB", (w, h))
-    pix = img.load()
-    rgb = [_hex(c) for c in colors]
-    n = len(rgb) - 1
-    for y in range(h):
-        ratio = y / h
-        idx = min(int(ratio * n), n - 1)
-        local_r = (ratio * n) - idx
-        c1 = rgb[idx]
-        c2 = rgb[min(idx + 1, n)]
-        r = int(c1[0] + (c2[0] - c1[0]) * local_r)
-        g = int(c1[1] + (c2[1] - c1[1]) * local_r)
-        b = int(c1[2] + (c2[2] - c1[2]) * local_r)
-        for x in range(w):
-            pix[x, y] = (r, g, b)
-    return img
-
 def _load_font(size: int) -> ImageFont:
-    for name in ["arialbd.ttf", "DejaVuSans-Bold.ttf", "NotoSans-Bold.ttf"]:
+    candidates = [
+        Path(__file__).parent.parent / "Bevan.ttf",
+        Path("C:/Windows/Fonts/impact.ttf"),
+        Path("C:/Windows/Fonts/arialbd.ttf"),
+        "Bevan.ttf",
+        "impact.ttf",
+        "arialbd.ttf",
+        "DejaVuSans-Bold.ttf",
+        "NotoSans-Bold.ttf",
+    ]
+    for c in candidates:
         try:
-            return ImageFont.truetype(name, size)
+            return ImageFont.truetype(str(c), size)
         except (IOError, OSError):
-            pass
+            continue
     return ImageFont.load_default()
 
-def generate(title: str, out_path: Path, bg_path: Path | None = None) -> Path:
+def _extract_hook(text: str, max_words: int = 4) -> str:
+    clean = re.sub(r"[:\-\–\—\(\)\[\]]", " ", text).strip()
+    words = clean.split()
+    return " ".join(words[:max_words]).upper()
+
+def generate(title_or_hook: str, out_path: Path, bg_path: Path | None = None) -> Path:
+    """
+    Generate a high-CTR 16:9 thumbnail (1280x720) optimized for YouTube Long-Form Documentaries.
+    - Punchy hook text (2-4 words, ALL CAPS) anchored at upper-left.
+    - Two-tone high contrast colors (White + Golden Yellow) with thick black stroke outline.
+    - Contrast/saturation boosted architectural cutaway background.
+    - Safe zone: Bottom-right is completely unblocked for YouTube video duration badge (e.g. 14:20).
+    """
     out_path.parent.mkdir(parents=True, exist_ok=True)
     if bg_path and bg_path.exists():
         try:
             bg = Image.open(bg_path).convert("RGB")
+            bw, bh = bg.size
+            target_ratio = 16 / 9
+            current_ratio = bw / bh
+            if current_ratio > target_ratio:
+                new_w = int(bh * target_ratio)
+                left = (bw - new_w) // 2
+                bg = bg.crop((left, 0, left + new_w, bh))
+            elif current_ratio < target_ratio:
+                new_h = int(bw / target_ratio)
+                top = (bh - new_h) // 2
+                bg = bg.crop((0, top, bw, top + new_h))
             bg = bg.resize((THUMB_W, THUMB_H), Image.LANCZOS)
+            bg = ImageEnhance.Contrast(bg).enhance(1.15)
+            bg = ImageEnhance.Color(bg).enhance(1.20)
         except Exception:
-            bg = _gradient(THUMB_W, THUMB_H, random.choice(_COLORS))
+            bg = Image.new("RGB", (THUMB_W, THUMB_H), (20, 24, 33))
     else:
-        bg = _gradient(THUMB_W, THUMB_H, random.choice(_COLORS))
+        bg = Image.new("RGB", (THUMB_W, THUMB_H), (20, 24, 33))
 
-    draw = ImageDraw.Draw(bg)
-    overlay = Image.new("RGBA", (THUMB_W, THUMB_H), (0, 0, 0, 0))
-    overlay_draw = ImageDraw.Draw(overlay)
-    overlay_draw.rectangle([0, THUMB_H // 2, THUMB_W, THUMB_H], fill=(0, 0, 0, 140))
-    bg.paste(overlay, (0, 0), overlay)
+    # Left-side dark gradient vignette to ensure text legibility over any background visual
+    vignette = Image.new("RGBA", (THUMB_W, THUMB_H), (0, 0, 0, 0))
+    v_draw = ImageDraw.Draw(vignette)
+    for x in range(750):
+        alpha = int(170 * (1 - (x / 750) ** 1.5))
+        v_draw.line([(x, 0), (x, THUMB_H)], fill=(0, 0, 0, alpha))
+    bg.paste(vignette, (0, 0), vignette)
 
-    font_size = 56
+    # Process text hook (limit to max 5 words / max 40 chars)
+    raw_text = title_or_hook.strip()
+    if len(raw_text.split()) > 5 or len(raw_text) > 35:
+        raw_text = _extract_hook(raw_text, max_words=4)
+    words = raw_text.upper().split()
+
+    if len(words) <= 2:
+        lines = [" ".join(words)]
+    elif len(words) <= 4:
+        mid = (len(words) + 1) // 2
+        lines = [" ".join(words[:mid]), " ".join(words[mid:])]
+    else:
+        lines = [" ".join(words[:2]), " ".join(words[2:4]), " ".join(words[4:6])]
+
+    font_size = 78 if len(lines) <= 2 else 66
     font = _load_font(font_size)
-    lines = []
-    words = title.split()
-    current = ""
-    for w in words:
-        test = (current + " " + w).strip()
-        lw = font.getlength(test) if hasattr(font, "getlength") else font.getsize(test)[0]
-        if lw < THUMB_W - 80 and len(current.split()) < 6:
-            current = test
-        else:
-            lines.append(current)
-            current = w
-    if current:
-        lines.append(current)
-    if len(lines) > 3:
-        lines = lines[:3]
-        lines[-1] += "..."
+    draw = ImageDraw.Draw(bg)
 
-    start_y = THUMB_H // 2 + 30
-    for i, l in enumerate(lines):
-        tw = font.getlength(l) if hasattr(font, "getlength") else font.getsize(l)[0]
-        x = (THUMB_W - tw) // 2
-        y = start_y + i * 68
-        draw.text((x + 3, y + 3), l, font=font, fill=(0, 0, 0, 160))
-        draw.text((x, y), l, font=font, fill=(255, 255, 255))
+    start_x = 60
+    start_y = 70
+    line_spacing = font_size + 14
+    colors = ["#FFFFFF", "#FFDE00", "#FFFFFF"]
+
+    for i, line in enumerate(lines):
+        color = colors[i % len(colors)]
+        y = start_y + i * line_spacing
+        draw.text((start_x, y), line, font=font, fill=color, stroke_width=7, stroke_fill="#000000")
 
     img = bg.convert("RGB")
     img.save(out_path, quality=92)
-    print(f"    thumbnail saved ({out_path.stat().st_size//1024} KB)")
+    print(f"    thumbnail saved: {out_path.name} ({out_path.stat().st_size//1024} KB)")
     return out_path
 
 def upload(yt_service, video_id: str, thumb_path: Path):
