@@ -1,3 +1,8 @@
+import sys
+try:
+    sys.stdout.reconfigure(encoding='utf-8', errors='replace')
+except Exception:
+    pass
 #!/usr/bin/env python3
 """
 voice.py - TTS Synthesis dengan hierarki provider:
@@ -228,7 +233,7 @@ def synth(text: str, out_path: Path) -> Path:
     if _ELEVENLABS_AVAILABLE:
         provider = CONFIG.get("voice", {}).get("provider", "elevenlabs")
         if provider == "elevenlabs":
-            keys_str = os.environ.get("ELEVENLABS_API_KEYS", "")
+            keys_str = os.environ.get("ELEVENLABS_API_KEYS", "") or os.environ.get("ELEVENLABS_API_KEY", "")
             keys = [k.strip() for k in re.split(r',|\n|\\n', keys_str) if k.strip()]
             if keys:
                 for i, api_key in enumerate(keys):

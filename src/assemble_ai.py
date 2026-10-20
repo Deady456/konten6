@@ -38,16 +38,22 @@ def _scene_durations(words: list[dict], scenes: list[dict]) -> list[float]:
 def build(
     image_paths: list[Path],
     voice_audio: Path,
-    captions_ass: Path,
-    words: list[dict],
-    scenes: list[dict],
-    out_path: Path,
-    work_dir: Path,
+    captions_ass: Path | None = None,
+    words: list[dict] | None = None,
+    scenes: list[dict] = None,
+    out_path: Path = None,
+    work_dir: Path = None,
     hook_text: str = "",
     has_hook: bool = False,
+    width: int = None,
+    height: int = None,
+    fps: int = None,
 ) -> Path:
     v = CONFIG["video"]
-    w, h, fps = v["width"], v["height"], v["fps"]
+    w = width or v["width"]
+    h = height or v["height"]
+    fps = fps or v["fps"]
+    scenes = scenes or []
     work_dir.mkdir(parents=True, exist_ok=True)
 
     MAX_CLIP = 20
@@ -57,7 +63,19 @@ def build(
         inc = (ze - zs) / max(1, n - 1)
         return f"z='if(eq(on,1),{zs},min({ze},zoom+{inc:.6f}))':d={n}:s={w}x{h}:fps={fps}"
 
-    durations = _scene_durations(words, scenes)
+    audio_dur = probe_duration(voice_audio)
+
+    if words and len(words) > 0 and scenes:
+        durations = _scene_durations(words, scenes)
+    else:
+        # Proportional durations based on scene word counts against total audio length
+        counts = [max(1, len(s.get("text", "").split())) for s in scenes] if scenes else [1] * max(1, len(image_paths))
+        total_counts = max(1, sum(counts))
+        durations = [max(1.0, (c / total_counts) * audio_dur) for c in counts]
+        # Pad or trim to match number of images
+        if len(durations) < len(image_paths):
+            durations.extend([audio_dur / len(image_paths)] * (len(image_paths) - len(durations)))
+        durations = durations[:len(image_paths)]
     
     # Ensure hook stays on screen for at least 3 seconds
     if has_hook and len(durations) > 1:
@@ -74,7 +92,6 @@ def build(
                     durations[i] -= borrow
                     deficit -= borrow
                     
-    audio_dur = probe_duration(voice_audio)
     total_video = sum(durations)
     if total_video < audio_dur:
         extra = audio_dur - total_video + 1.0
@@ -119,10 +136,7 @@ def build(
         str(combined),
     ], "concat scenes")
 
-    ass_arg = str(captions_ass).replace("\\", "/").replace(":", "\\:")
-    fonts_arg = str(ROOT / "assets" / "fonts").replace("\\", "/").replace(":", "\\:")
-
-    # Build video filter chain: optional hook_text drawtext + subtitles
+    # Build video filter chain: optional hook_text drawtext + optional subtitles
     vf_parts = []
     hook_cfg = CONFIG.get("hook_text", {})
     if hook_text and hook_cfg.get("enabled", False):
@@ -138,7 +152,12 @@ def build(
             f":y=(h-th)/2"
             f":enable='between(t\\,0\\,{ht_duration})'"
         )
-    vf_parts.append(f"subtitles='{ass_arg}':fontsdir='{fonts_arg}'")
+
+    if captions_ass and Path(captions_ass).exists():
+        ass_arg = str(captions_ass).replace("\\", "/").replace(":", "\\:")
+        fonts_arg = str(ROOT / "assets" / "fonts").replace("\\", "/").replace(":", "\\:")
+        vf_parts.append(f"subtitles='{ass_arg}':fontsdir='{fonts_arg}'")
+    
     vf_chain = ",".join(vf_parts)
 
     # Select background music (random if multiple exist in assets/music or assets/)
@@ -162,7 +181,9 @@ def build(
             cmd.extend(["-filter_complex", audio_filter, "-map", "0:v", "-map", "[a]"])
     else:
         if vf_chain:
-            cmd.extend(["-vf", vf_chain])
+            cmd.extend(["-vf", vf_chain, "-map", "0:v", "-map", "1:a"])
+        else:
+            cmd.extend(["-map", "0:v", "-map", "1:a"])
             
     cmd.extend([
         "-c:v", "libx264", "-preset", "medium", "-crf", "20",

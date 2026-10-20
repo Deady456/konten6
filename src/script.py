@@ -209,21 +209,23 @@ def _system_prompt(content_format: str = None) -> str:
 
     if lang == "id":
         ts, tw = s["target_seconds"], target_words
-        return f"""Anda adalah penulis skrip YouTube Shorts bertema MOTIVASI HIDUP, DISIPLIN DIRI, STOIKISME, & PENGEMBANGAN DIRI (SELF-IMPROVEMENT).
+        return f"""Anda adalah penulis skrip YouTube Shorts bertema RAHASIA ARSITEKTUR KUNO, MISTERI TEKNOLOGI MASA LALU, & SAINS EDUKASI PERADABAN KUNO (bergaya channel edukasi komik/diagram visual seperti ROVO).
+
+Fokus Topik: Bagaimana manusia zaman dahulu memecahkan masalah besar tanpa listrik dan mesin modern (contoh: sistem pendingin alami rumah Mesir kuno, pendingin es gurun Persia 'Yakhchal', teknik tahan gempa pagoda kayu kuno, semen beras ketan Tembok China, beton Romawi kuno yang abadi di air laut, sistem pembuangan air Indus Mohenjo-Daro, tambang air Qanat bawah tanah, dll).
 
 Aturan:
 - Skrip harus {ts} detik, ~{tw} kata total ({tw//ts} kata per detik).
 - RAHASIA RETENSI (SEAMLESS INFINITY LOOP): Kalimat terakhir pada scene penutup WAJIB dibuat menggantung atau menyatu mulus kembali ke kalimat HOOK pertama di scene 1 (retensi >100%).
-- Mulai dengan HOOK 1 kalimat yang menampar realitas (reality check) atau bikin merinding sadar dalam <3 detik. Jangan pakai "Halo guys", "Hai", atau basa-basi perkenalan. Langsung to the point!
-- Isi: Pesan motivasi yang berbobot, fakta psikologi ketabahan, prinsip stoikisme (kendali diri vs hal di luar kendali), cara menghancurkan rasa malas/prokrastinasi, rahasia konsistensi, atau pola pikir orang-orang tangguh.
-- DILARANG klise murahan atau toxic positivity yang bertele-tele. Sajikan wawasan tajam, realistis, dan membakar semangat tindakan nyata.
-- Akhiri dengan CTA 1 kalimat singkat dan berdampak ("Simpan video ini untuk pengingat saat kamu lelah, dan subscribe untuk terus upgrade dirimu.").
-- Gunakan bahasa Indonesia yang tegas, percaya diri, maskulin, elegan, dan menggerakkan jiwa pendengar.
-- DILARANG KERAS menggunakan angka numerik/digit (seperti 1, 2, 10, 25, 100, 1945, 50%). SEMUA ANGKA WAJIB DITULIS LENGKAP MENGGUNAKAN HURUF/KATA BAHASA INDONESIA (contoh: "sepuluh", "dua puluh lima", "seratus", "lima puluh persen"). Ini SANGAT PENTING untuk kelancaran text-to-speech.
-- Setiap scene WAJIB menyertakan 'visual_query' (WAJIB 100% BAHASA INGGRIS MURNI, 2-3 kata benda/sifat spesifik untuk pencarian footage HD sinematik di Pixabay/Pexels, DILARANG bahasa Indonesia, contoh: "man running dark morning", "workout gym focus", "businessman city skyline", "mountain summit climbing", "chess strategy dramatic", "lone wolf snow", "discipline desk study", "boxing punching bag", "walking rain alone"), dan 'factual_subject' (tokoh inspiratif / filosofi / konsep dalam bahasa Inggris jika ada, misal: 'Marcus Aurelius', 'Seneca', 'Discipline', 'Focus', 'Meditation', jika tidak ada isi null).
+- Mulai dengan HOOK pertanyaan yang sangat memicu rasa ingin tahu (curiosity gap) dalam <3 detik (contoh: "Bagaimana orang Mesir kuno bisa tidur nyenyak di suhu lima puluh derajat Celsius tanpa AC?"). Jangan pakai basa-basi!
+- Isi: Jelaskan trik arsitektur jenius dan prinsip sains di baliknya (massa termal tanah liat, arah angin, pendinginan evaporatif tempayan air, ventilasi atap penarik udara panas) dengan bahasa yang renyah, seru, dan membuat penonton kagum pada kecerdikan nenek moyang.
+- Akhiri dengan CTA 1 kalimat singkat dan memicu subscribe ("Subscribe ke Reka Kuno untuk membongkar kecerdikan peradaban masa lalu lainnya!").
+- DILARANG KERAS menggunakan angka numerik/digit (seperti 1, 2, 50, 100, 5000, 50%). SEMUA ANGKA WAJIB DITULIS LENGKAP MENGGUNAKAN HURUF/KATA BAHASA INDONESIA (contoh: "lima puluh", "dua ribu tahun", "seratus", "lima puluh persen"). Ini SANGAT PENTING untuk kelancaran text-to-speech.
+- Setiap scene WAJIB menyertakan 'visual_prompt': PROMPT LENGKAP DALAM BAHASA INGGRIS untuk AI Image Generator (FLUX/Gemini). Format gaya gambar WAJIB: 2D cartoon architectural cutaway, comic diagram style, bold clean vector outlines, warm atmospheric lighting, expressive cartoon characters, vibrant colors, clear educational infographic, no realistic photograph.
+Contoh visual_prompt: "2D cartoon architectural cutaway of ancient Egyptian clay house interior, showing blue airflow arrows entering from lower floor vent and red hot air exiting roof chimney, ancient people resting comfortably, comic vector diagram style"
+- Sertakan juga 'visual_query': 2-3 kata benda bahasa Inggris murni untuk fallback (misal: "ancient egypt architecture", "desert sun pyramid").
 {format_instruction}
 Kembalikan ONLY valid JSON, tanpa teks lain. Skema:
-{{"topic": "nama-topik-spesifik", "title": "Judul YouTube max 95 chars, minimal 40 karakter, tajam, menggugah emosi dan bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk ditampilkan besar di layar 3 detik pertama sebagai hook/thumbnail", "description": "3-4 kalimat pesan motivasi mendalam dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_query": "2-3 pure English keywords for Pixabay video", "factual_subject": "Historical figure or concept name in English or null"}}]}}"""
+{{"topic": "nama-topik-spesifik", "title": "Judul YouTube max 95 chars, minimal 40 karakter, berupa pertanyaan misteri atau trik arsitektur yang bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, HURUF KAPITAL) untuk hook besar di layar 3 detik pertama", "description": "3-4 kalimat penjelasan sains sejarah dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "scenes": [{{"text": "kalimat narasi bahasa Indonesia", "visual_prompt": "detailed English prompt for 2D cartoon cutaway/diagram", "visual_query": "2-3 english keywords"}}]}}"""
     else:
         return f"""You write viral YouTube Shorts scripts for a faceless educational facts channel.
 
@@ -328,7 +330,7 @@ def generate(content_format: str = None) -> dict:
 
     s_cfg = CONFIG["script"]
     target_words = int(s_cfg["target_seconds"] * s_cfg["words_per_second"])
-    min_words = int(target_words * 0.75)
+    min_words = max(25, int(target_words * 0.5))
 
     for attempt in range(4):
         user_msg = base_msg

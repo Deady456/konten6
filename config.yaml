@@ -1,34 +1,33 @@
-niche: "psikologi gelap, hukum kekuasaan, stoikisme keras, dan rahasia mentalitas disiplin tanpa ampun (cara membaca pikiran orang, hukum manipulasi, menghentikan kemalasan secara brutal, dan membangun ketenangan dingin)"
-audience: "anak muda Indonesia yang ingin membangun mentalitas baja, disiplin tanpa kompromi, dan memahami psikologi manusia secara mendalam"
+niche: "arsitektur kuno, rahasia teknologi masa lalu, kecerdikan peradaban kuno, trik bertahan hidup nenek moyang tanpa listrik, dan sains sejarah populer bergaya komik/diagram edukasi"
+audience: "penonton Indonesia yang menyukai sejarah, misteri peradaban kuno, arsitektur jenius masa lalu, dan sains praktis yang membuka wawasan"
 language: id
 
 script:
-  model: openai/gpt-oss-120b
-  target_seconds: 40
-  words_per_second: 2.5
+  model: qwen/qwen3.8-27b
+  target_seconds: 35
+  words_per_second: 2.6
 
 voice:
-  provider: elevenlabs
-  elevenlabs_model: eleven_multilingual_v2
+  provider: shellshock
   variety:
     enabled: true
     voices:
-      - edge_id: "id-ID-ArdiNeural"
-        elevenlabs_id: "VR6AewLTigWG4xSOukaG"
-        name: "Arnold"
+      - name: "Charon"
+        gemini_model: "gemini/gemini-2.5-flash-preview-tts/Charon"
         gender: "male"
-      - edge_id: "id-ID-ArdiNeural"
-        elevenlabs_id: "ErXwobaYiN019PkySvjV"
-        name: "Jaka"
+      - name: "Puck"
+        gemini_model: "gemini/gemini-2.5-flash-preview-tts/Puck"
+        gender: "male"
+      - name: "Orus"
+        gemini_model: "gemini/gemini-2.5-flash-preview-tts/Orus"
         gender: "male"
     strategy: "round_robin"
-  voice: id-ID-ArdiNeural
-  elevenlabs_voice_id: VR6AewLTigWG4xSOukaG
+  voice: "gemini/gemini-2.5-flash-preview-tts/Charon"
 
 captions:
-  whisper_model: base
+  whisper_model: qwen/qwen3.8-27b
   font: "Anton"
-  font_size: 56
+  font_size: 54
   primary_color: "&H0000FFFF"
   outline_color: "&H00000000"
   outline: 5
@@ -40,12 +39,26 @@ video:
   height: 1920
   fps: 30
 
+video_long:
+  width: 1920
+  height: 1080
+  fps: 30
+
+subtitles:
+  enabled: false # Default false: video visual bersih tanpa subtitle permanen
+
+dubbing:
+  enabled: true # Fungsi sulih suara aktif
+  default_language: "en"
+  voice: "gemini/gemini-2.5-flash-preview-tts/Puck"
+  secondary_voice: "gemini/gemini-2.5-flash-preview-tts/Charon"
+
 upload:
   privacy: "public"
   category_id: "27"
   made_for_kids: false
-  channel: "serenitymind"
-  default_tags: ["motivasi", "motivasi hidup", "disiplin", "mindset", "self improvement", "pengembangan diri", "stoikisme", "sukses", "kebiasaan sukses", "mentalitas juara", "shorts"]
+  channel: "rekakuno"
+  default_tags: ["sejarah kuno", "arsitektur kuno", "teknologi masa lalu", "fakta sejarah", "sains populer", "mesir kuno", "romawi kuno", "misteri dunia", "edukasi", "shorts"]
 
 
 
@@ -75,3 +88,7 @@ hook_text:
   outline: 5
   position: "center_left"
   duration: 3
+
+visuals:
+  engine: "flux"
+  model: "cf/@cf/black-forest-labs/flux-2-klein-9b"

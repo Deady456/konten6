@@ -162,6 +162,8 @@ def search_pexels_hd_video(query: str, min_duration: float = 3.0) -> list[str]:
                 if not videos:
                     # RULE 2: If query returned 0 videos, do NOT loop backup keys. Break early!
                     break
+                    # RULE 2: If query returned 0 videos, do NOT loop backup keys. Break early!
+                    break
                 for v in videos:
                     if v.get("duration", 0) < min_duration:
                         continue
@@ -285,6 +287,31 @@ def _calculate_scene_durations(words: list[dict], scenes: list[dict], total_audi
     return durations
 
 
+
+def build_flux_prompt(scene: dict, sub_idx: int = 0, total_subclips: int = 1) -> str:
+    """Build a rich, atmospheric prompt for FLUX.2 Klein 9B image generation."""
+    factual = scene.get("factual_subject") or ""
+    vq = scene.get("visual_query") or ""
+    scene_text = scene.get("text") or scene.get("quote") or ""
+
+    parts = []
+    if factual and str(factual).lower() != "null":
+        parts.append(str(factual))
+    if vq:
+        parts.append(str(vq))
+
+    subject_desc = ", ".join(parts) if parts else clean_query(scene_text)
+
+    angle_styles = [
+        "cinematic vertical 9:16 dramatic dark psychology portrait, moody noir corporate executive atmosphere, intense piercing eye contact, sharp chiaroscuro shadows, David Fincher cinematic lighting, 8k photorealistic masterpiece",
+        "cinematic vertical 9:16 strategic chess game in dimly lit high-rise penthouse, deep shadows, cold calculating stoic mastery, 8k photorealistic",
+        "cinematic vertical 9:16 intense psychological power dominance, mysterious silhouette in foggy city street at night, neo-noir thriller aesthetic, 8k resolution"
+    ]
+    style = angle_styles[sub_idx % len(angle_styles)]
+    prompt = f"{style}, depicting {subject_desc}, hyperrealistic, cinematic lighting, 8k resolution, photorealistic, masterpiece"
+    return prompt
+
+
 def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice_audio: Path = None) -> list[Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     all_clips = []
@@ -293,6 +320,8 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
 
     total_audio_dur = probe_duration(voice_audio) if (voice_audio and voice_audio.exists()) else (len(scenes) * 7.0)
     scene_durations = _calculate_scene_durations(words, scenes, total_audio_dur)
+
+    visual_engine = CONFIG.get("visuals", {}).get("engine", "flux")
 
     # Usage trackers to enforce strict MAX 2X visual repetition rule across the entire video
     used_sources = {}  # url/link -> usage_count
@@ -313,6 +342,21 @@ def fetch_all(scenes: list[dict], out_dir: Path, words: list[dict] = None, voice
         for sub_idx in range(num_subclips):
             out_clip_path = out_dir / f"clip_{clip_counter:03d}.mp4"
             clip_ready = False
+            # ========================================================
+            # 1. PRIMARY: AI FLUX.2 Klein 9B via ShellShock AWS
+            # ========================================================
+            if visual_engine == "flux":
+                ai_prompt = build_flux_prompt(scene, sub_idx, num_subclips)
+                temp_img = out_dir / f"flux_{clip_counter}.jpg"
+                try:
+                    from . import visuals_ai
+                    print(f"      generating FLUX.2 visual clip {clip_counter+1}/{num_subclips * len(scenes)}: \"{ai_prompt[:50]}...\"")
+                    if visuals_ai.generate_shellshock_image(ai_prompt, temp_img, model="cf/@cf/black-forest-labs/flux-2-klein-9b", width=w, height=h):
+                        convert_image_to_hd_clip(temp_img, out_clip_path, subclip_dur, w, h, fps, zoom_idx=clip_counter)
+                        if out_clip_path.exists() and out_clip_path.stat().st_size > 1000:
+                            clip_ready = True
+                except Exception as e:
+                    print(f"      FLUX generation failed: {e}")
 
             # 1. Search Pixabay HD Motion Video (Primary Provider)
             for q in tiered_queries:

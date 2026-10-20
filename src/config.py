@@ -61,8 +61,8 @@ elif LLM_PROVIDER == "gemini":
     LLM_MODEL = CONFIG.get("script", {}).get("model", "meta-llama/llama-3.3-70b-instruct")
 elif LLM_PROVIDER == "groq":
     LLM_API_KEYS = GROQ_API_KEYS if GROQ_API_KEYS else OPENROUTER_API_KEYS
-    LLM_BASE_URL = "https://openrouter.ai/api/v1"
-    LLM_MODEL = "openai/gpt-oss-120b"
+    LLM_BASE_URL = "https://api.groq.com/openai/v1"
+    LLM_MODEL = CONFIG.get("script", {}).get("model", "qwen/qwen3.8-27b")
 else:
     LLM_API_KEYS = OPENROUTER_API_KEYS if OPENROUTER_API_KEYS else NVIDIA_API_KEYS if NVIDIA_API_KEYS else ["no-key"]
     LLM_BASE_URL = "https://openrouter.ai/api/v1"

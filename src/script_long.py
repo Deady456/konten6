@@ -50,26 +50,32 @@ def _call_llm(api_key, base_url, model, max_tokens, response_format, messages, r
 def generate():
     s = CONFIG["script"]
     lang = CONFIG.get("language", "en")
-    ts = s["target_seconds"]
-    target_words = int(ts * s["words_per_second"])
-    sections = max(5, ts // 20)
+    ts = s.get("target_seconds_long", 480) # Default 8 menit (480 detik) untuk syarat monetisasi & mid-roll ads
+    target_words = int(ts * s.get("words_per_second", 2.5))
+    sections = max(8, ts // 40)
 
     if lang == "id":
-        system_prompt = f"""Anda adalah penulis naskah video dokumenter YouTube.
+        system_prompt = f"""Anda adalah kepala penulis naskah video dokumenter edukasi mendalam (Long-Form) YouTube untuk channel 'Reka Kuno' (gaya visual storytelling komik/diagram cutaway arsitektur kuno seperti channel ROVO).
 
-Aturan:
-- Buat naskah video dokumenter {ts} detik, ~{target_words} kata, dibagi {sections} segmen.
-- Gaya bahasa Indonesia formal-informatif, seperti narator dokumenter Discovery/National Geographic.
-- Setiap segmen punya:
-  - "title": judul singkat segmen (untuk prompt gambar, dalam Bahasa Inggris)
-  - "text": narasi 30-60 detik
-  - "image_prompt": deskripsi visual Bahasa Inggris untuk generate gambar (deskriptif, 1-2 kalimat)
-- Mulai dengan hook kuat yang bikin penasaran.
-- Akhiri dengan kesimpulan yang memuaskan.
-- Jangan pakai emoji, format khusus, atau seruan subscribe di tengah.
+Topik Utama: Menjelajahi rahasia arsitektur kuno, teknologi rekayasa masa lalu yang luar biasa, trik bertahan hidup cerdas tanpa listrik/mesin modern, dan sains alami peradaban kuno (Mesir Kuno, Persia, Romawi, Tiongkok Dinasti, Maya, Yunani, dll).
 
-Kembalikan ONLY valid JSON dengan skema berikut:
-{{"title": "Judul video max 95 chars, minimal 40 karakter, bikin penasaran dan engaging", "description": "3-4 kalimat deskripsi menarik dengan 5-8 hashtag relevan", "tags": ["10-15 tag huruf kecil yang relevan"], "segments": [{{"title": "...", "text": "...", "image_prompt": "..."}}]}}"""
+Struktur Video ({ts} detik, ~{target_words} kata, dibagi {sections} segmen narasi):
+1. Segmen 1 (Hook Misteri & Paradoks): Pertanyaan provokatif yang membongkar anggapan umum tentang keterbelakangan orang kuno.
+2. Segmen 2-3 (Kondisi Ekstrem & Tantangan Nyata): Penjelasan lingkungan ekstrem yang dihadapi (suhu 50 derajat, ancaman gempa, air asin, banjir tahunan).
+3. Segmen 4-6 (Anatomi & Rekayasa Arsitektur): Bedah denah, potongan melintang (cutaway), material bahan (bata lumpur, kapur tohor, abu vulkanik pozzolana, saluran bawah tanah), dan desain cerobong.
+4. Segmen 7-9 (Prinsip Sains & Fisika Alami): Hukum termodinamika alami, pendinginan evaporatif, massa termal, gravitasi hidrolika, dan konveksi udara.
+5. Segmen Penutup: Hubungan dengan arsitektur hijau dunia modern & kesimpulan memukau, diakhiri ajakan subscribe ke Reka Kuno.
+
+Aturan Penting:
+- DILARANG menggunakan angka digit/numerik (1, 2, 50, 100, 2000). SEMUA ANGKA WAJIB DITULIS LENGKAP DALAM KATA BAHASA INDONESIA (misal: "lima puluh", "dua ribu tahun", "tiga ratus").
+- Bahasa Indonesia yang renyah, imersif, seperti bercerita di depan api unggun, tidak kaku, dan mudah dimengerti.
+- Setiap segmen WAJIB memiliki:
+  - "title": Judul topik segmen (Bahasa Inggris singkat)
+  - "text": Naskah narasi segmen (30-50 kata, Bahasa Indonesia)
+  - "image_prompt": Prompt visual 100% BAHASA INGGRIS untuk AI Image Generator (FLUX/Gemini). WAJIB bergaya: "2D cartoon architectural cutaway, comic diagram style, bold clean vector outlines, warm atmospheric lighting, expressive cartoon characters, vibrant colors, clear educational infographic, cross-section blueprint, no realistic photograph".
+
+Kembalikan ONLY valid JSON dengan skema:
+{{"title": "Judul video max 95 chars, minimal 40 karakter, berupa pertanyaan misteri sejarah/arsitektur yang bikin penasaran", "thumbnail_text": "Teks super pendek (3-5 kata, ALL CAPS) untuk teks thumbnail YouTube", "description": "3-4 paragraf rangkuman dokumenter dengan 6-8 hashtag relevan", "tags": ["10-15 tag huruf kecil relevan"], "segments": [{{"title": "...", "text": "...", "image_prompt": "..."}}]}}"""
     else:
         system_prompt = f"""You write YouTube documentary scripts.
 
@@ -130,10 +136,6 @@ Return ONLY valid JSON with this schema:
         except Exception as e:
             last_err = e
             print(f"    {prov_name} failed: {e}")
-            if prov_name == providers[-1][0]:
-                raise
-            print(f"    falling back to next provider...")
-
     if raw is None:
         raise last_err or RuntimeError("All LLM providers failed")
 
@@ -141,11 +143,14 @@ Return ONLY valid JSON with this schema:
     if text.startswith("```"):
         text = re.sub(r"^```(?:json)?\s*|\s*```$", "", text, flags=re.MULTILINE)
     result = json.loads(text)
-
     segments = result.get("segments", result if isinstance(result, list) else [])[:sections]
     title = result.get("title", segments[0]["title"]) if isinstance(result, dict) else segments[0]["title"]
     description = result.get("description", CONFIG.get("description", "")) if isinstance(result, dict) else ""
     tags = result.get("tags", CONFIG["upload"]["default_tags"]) if isinstance(result, dict) else CONFIG["upload"]["default_tags"]
+
+    from .script import replace_numbers_id
+    for s in segments:
+        s["text"] = replace_numbers_id(s.get("text", ""))
 
     full_text = " ... ".join(s["text"] for s in segments)
     return {"segments": segments, "full_text": full_text, "title": title, "description": description, "tags": tags}

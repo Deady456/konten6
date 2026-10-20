@@ -221,7 +221,13 @@ def _generate_stability_ai(prompt: str, out_path, width=1080, height=1920):
             
     return False
 
-def generate_shellshock_image(prompt: str, out_path, model: str = "cf/@cf/black-forest-labs/flux-1-schnell", width=1080, height=1920) -> bool:
+IMAGE_MODELS_CASCADE = [
+    "cf/@cf/black-forest-labs/flux-2-klein-9b",
+    "cf/@cf/leonardo/phoenix-1.0",
+    "cf/@cf/black-forest-labs/flux-1-schnell",
+]
+
+def generate_shellshock_image(prompt: str, out_path, model: str = None, width=1080, height=1920) -> bool:
     """Generate high-quality image via ShellShock AI Gateway on AWS EC2."""
     import os, base64, requests
     from pathlib import Path
@@ -229,40 +235,44 @@ def generate_shellshock_image(prompt: str, out_path, model: str = "cf/@cf/black-
     gateway_url = os.environ.get("SHELLSHOCK_URL", "http://13.214.34.200:20128/v1/images/generations")
     api_key = os.environ.get("SHELLSHOCK_API_KEY", "sk-1f7d1788ce9c1aa7-qgi726-f1cb1818")
 
-    payload = {
-        "model": model,
-        "prompt": prompt,
-    }
-    if "flux" not in model.lower():
-        payload["size"] = "1024x1024"
+    models_to_try = [model] if model else IMAGE_MODELS_CASCADE
 
-    try:
-        req = requests.post(
-            gateway_url,
-            json=payload,
-            headers={
-                "Content-Type": "application/json",
-                "Authorization": f"Bearer {api_key}"
-            },
-            timeout=45
-        )
-        if req.status_code == 200:
-            res = req.json()
-            if "data" in res and len(res["data"]) > 0:
-                item = res["data"][0]
-                if "b64_json" in item and item["b64_json"]:
-                    out_path.write_bytes(base64.b64decode(item["b64_json"]))
-                    print(f"  [ShellShock] Image successfully generated with {model} ({out_path.stat().st_size} bytes)")
-                    return True
-                elif "url" in item and item["url"]:
-                    r_img = requests.get(item["url"], timeout=30)
-                    if r_img.status_code == 200:
-                        out_path.write_bytes(r_img.content)
-                        print(f"  [ShellShock] Image downloaded from {model} URL ({out_path.stat().st_size} bytes)")
+    for m in models_to_try:
+        payload = {
+            "model": m,
+            "prompt": prompt,
+        }
+        if "flux" not in m.lower():
+            payload["size"] = "1024x1024"
+
+        try:
+            req = requests.post(
+                gateway_url,
+                json=payload,
+                headers={
+                    "Content-Type": "application/json",
+                    "Authorization": f"Bearer {api_key}"
+                },
+                timeout=45
+            )
+            if req.status_code == 200:
+                res = req.json()
+                if "data" in res and len(res["data"]) > 0:
+                    item = res["data"][0]
+                    if "b64_json" in item and item["b64_json"]:
+                        out_path.write_bytes(base64.b64decode(item["b64_json"]))
+                        print(f"  [ShellShock] Image successfully generated with {m} ({out_path.stat().st_size} bytes)")
                         return True
-        print(f"  [ShellShock] Image API returned {req.status_code}: {req.text[:180]}")
-    except Exception as e:
-        print(f"  [ShellShock] Gateway request error: {e}")
+                    elif "url" in item and item["url"]:
+                        r_img = requests.get(item["url"], timeout=30)
+                        if r_img.status_code == 200:
+                            out_path.write_bytes(r_img.content)
+                            print(f"  [ShellShock] Image downloaded from {m} URL ({out_path.stat().st_size} bytes)")
+                            return True
+            print(f"  [ShellShock] Model {m} returned {req.status_code}: {req.text[:100]}")
+        except Exception as e:
+            print(f"  [ShellShock] Gateway request error ({m}): {e}")
+
     return False
 
 def generate(prompt: str, out_path, width=1080, height=1920, hook_text: str = None):
@@ -271,9 +281,13 @@ def generate(prompt: str, out_path, width=1080, height=1920, hook_text: str = No
     out_path = Path(out_path)
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    # 1. Primary: ShellShock AI Gateway on AWS (Cloudflare FLUX.1 Schnell)
-    print("  Generating image via ShellShock AI Gateway (AWS FLUX)...")
-    success = generate_shellshock_image(prompt, out_path, model="cf/@cf/black-forest-labs/flux-1-schnell", width=width, height=height)
+    # Ensure consistent 2D cartoon architectural cutaway comic style (ROVO style)
+    if "2d cartoon" not in prompt.lower() and "comic" not in prompt.lower():
+        prompt = f"{prompt}, 2D cartoon architectural cutaway, comic diagram style, bold clean vector outlines, warm atmospheric lighting, expressive cartoon characters, vibrant colors, clear educational infographic, cross-section blueprint, no realistic photograph"
+
+    # 1. Primary: ShellShock AI Gateway on AWS (FLUX.2 Klein 9B / Leonardo Phoenix)
+    print("  Generating image via ShellShock AI Gateway (AWS FLUX.2)...")
+    success = generate_shellshock_image(prompt, out_path, model="cf/@cf/black-forest-labs/flux-2-klein-9b", width=width, height=height)
 
     # 2. Secondary: Stability AI fallback via ShellShock
     if not success:
