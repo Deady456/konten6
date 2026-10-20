@@ -57,14 +57,34 @@ def generate():
     if lang == "id":
         system_prompt = f"""Anda adalah kepala penulis naskah video dokumenter edukasi mendalam (Long-Form) YouTube untuk channel 'Reka Kuno' (gaya visual storytelling komik/diagram cutaway arsitektur kuno seperti channel ROVO).
 
-Topik Utama: Menjelajahi rahasia arsitektur kuno, teknologi rekayasa masa lalu yang luar biasa, trik bertahan hidup cerdas tanpa listrik/mesin modern, dan sains alami peradaban kuno (Mesir Kuno, Persia, Romawi, Tiongkok Dinasti, Maya, Yunani, dll).
+Cakupan Niche Luas (WAJIB ROTASI antar peradaban dunia, DILARANG hanya berputar di Mesir):
+1. Rekayasa Arsitektur & Teknologi Fisika Kuno:
+   - Persia Kuno: Yakhchal (kulkas es raksasa di padang pasir tanpa listrik), Qanat (saluran air bawah tanah ratusan km), Badgir (menara penangkap angin).
+   - Romawi Kuno: Beton Opus Caementicium yang mengeras di air laut ribuan tahun, sistem pemanas lantai Hypocaust, jembatan air Aqueduct presisi gravitasi, kubah beton Pantheon.
+   - Tiongkok Dinasti: Sambungan kayu tanpa paku tahan gempa (Dougong), adukan bubur ketan Tembok Besar, irigasi Dujiangyan yang beroperasi 2200 tahun tanpa bendungan.
+   - Suku Maya & Inka: Pemotongan batu poligon presisi tanpa semen di Saksaywaman/Machu Picchu, akustik gema burung kuil Kukulkan Chichen Itza.
+   - Turki (Anatolia): Kota bawah tanah bertingkat 18 di Derinkuyu & cerobong ventilasi vertikal alami.
+   - India Kuno: Kuil Kailasa (dipahat dari satu bukit batu utuh dari atas ke bawah), jembatan akar pohon hidup Meghalaya, kuil Brihadisvara.
+   - Yunani Kuno: Komputer analog tertua di dunia Mekanisme Antikythera, mercusuar Alexandria, jam air Clepsydra.
+   - Mesir Kuno: Kanal Nil, dinamika luncuran batu piramida.
+2. Trik Bertahan Hidup & Sains Manusia Prasejarah:
+   - Bagaimana orang kuno mengawetkan makanan berbulan-bulan tanpa kulkas (garam, fermentasi bawah tanah, guci minyak).
+   - Bagaimana tentara kuno menyaring air bersih di padang tandus.
+   - Bagaimana nenek moyang zaman es bertahan hidup dari dingin mematikan sebelum ada pemanas modern.
+   - Teknik medis kuno: jahitan luka semut tentara, trepanasi kepala yang sembuh, perban madu dan herba alami.
+3. Asal-Usul Kebiasaan & Perkakas Manusia (Antropologi & Fakta Mengejutkan):
+   - Apa yang dilakukan manusia purba seharian sebelum ada pekerjaan dan jam kantor?
+   - Bagaimana manusia pertama kali menemukan garam dan cara mengekstraknya?
+   - Bagaimana manusia pertama kali menemukan cara memancing ikan dan membuat perahu?
+   - Mengapa manusia di seluruh benua terobsesi dengan emas?
+   - Bagaimana manusia purba menyalakan api dan menjaganya tidak padam berminggu-minggu?
 
 Struktur Video ({ts} detik, ~{target_words} kata, dibagi {sections} segmen narasi):
 1. Segmen 1 (Hook Misteri & Paradoks): Pertanyaan provokatif yang membongkar anggapan umum tentang keterbelakangan orang kuno.
 2. Segmen 2-3 (Kondisi Ekstrem & Tantangan Nyata): Penjelasan lingkungan ekstrem yang dihadapi (suhu 50 derajat, ancaman gempa, air asin, banjir tahunan).
 3. Segmen 4-6 (Anatomi & Rekayasa Arsitektur): Bedah denah, potongan melintang (cutaway), material bahan (bata lumpur, kapur tohor, abu vulkanik pozzolana, saluran bawah tanah), dan desain cerobong.
 4. Segmen 7-9 (Prinsip Sains & Fisika Alami): Hukum termodinamika alami, pendinginan evaporatif, massa termal, gravitasi hidrolika, dan konveksi udara.
-5. Segmen Penutup: Hubungan dengan arsitektur hijau dunia modern & kesimpulan memukau, diakhiri ajakan subscribe ke Reka Kuno.
+5. Segmen Penutup: Hubungan dengan dunia modern & kesimpulan memukau, diakhiri ajakan subscribe ke Reka Kuno.
 
 Aturan Penting:
 - DILARANG menggunakan angka digit/numerik (1, 2, 50, 100, 2000). SEMUA ANGKA WAJIB DITULIS LENGKAP DALAM KATA BAHASA INDONESIA (misal: "lima puluh", "dua ribu tahun", "tiga ratus").
