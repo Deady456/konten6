@@ -56,12 +56,14 @@ def build(
     scenes = scenes or []
     work_dir.mkdir(parents=True, exist_ok=True)
 
-    MAX_CLIP = 20
+    MAX_CLIP = 5.0
 
-    def _zoom_expr(zs, ze, dur):
+    def _zoom_expr(zs, ze, dur, x_expr=None, y_expr=None):
         n = int(dur * fps)
         inc = (ze - zs) / max(1, n - 1)
-        return f"z='if(eq(on,1),{zs},min({ze},zoom+{inc:.6f}))':d={n}:s={w}x{h}:fps={fps}"
+        x = x_expr or "(iw-iw/zoom)/2"
+        y = y_expr or "(ih-ih/zoom)/2"
+        return f"z='if(eq(on,1),{zs},min({ze},zoom+{inc:.6f}))':x='{x}':y='{y}':d={n}:s={w}x{h}:fps={fps}"
 
     audio_dur = probe_duration(voice_audio)
 
@@ -98,32 +100,37 @@ def build(
         durations[-1] += extra
         print(f"    last scene extended +{extra:.1f}s to match audio")
 
-    zoom_profiles = [
-        (1.0, 1.06),    # slow zoom-in
-        (1.04, 1.0),    # zoom-out
-        (1.0, 1.0),     # static
-    ]
-
     seg_files = []
     for i, (img, dur) in enumerate(zip(image_paths, durations)):
-        n_clips = max(1, int(dur // MAX_CLIP))
+        n_clips = max(1, int(round(dur / MAX_CLIP)))
         clip_dur = dur / n_clips
+        n_frames = max(1, int(clip_dur * fps))
+
+        # 6 Cinematic camera focal shot profiles (ROVO-style fast pacing & multi-angle cuts):
+        camera_shots = [
+            (1.0, 1.08, "(iw-iw/zoom)/2", "(ih-ih/zoom)/2"),                               # 1. Wide Establishing Zoom-In
+            (1.22, 1.28, "(iw-iw/zoom)/2", "(ih-ih/zoom)*0.15"),                           # 2. Close-up Top (Roof / Intake / Ceiling)
+            (1.18, 1.18, f"(iw-iw/zoom)*(on/{n_frames})", "(ih-ih/zoom)/2"),                # 3. Dynamic Pan Left-to-Right
+            (1.22, 1.28, "(iw-iw/zoom)/2", "(ih-ih/zoom)*0.85"),                           # 4. Close-up Bottom (Subterranean Canal / Foundation)
+            (1.20, 1.26, "(iw-iw/zoom)*0.85", "(ih-ih/zoom)*0.4"),                         # 5. Feature Zoom-In (Characters / Mechanism Detail)
+            (1.10, 1.0, "(iw-iw/zoom)/2", "(ih-ih/zoom)/2"),                               # 6. Wide Reveal Zoom-Out
+        ]
+
         for j in range(n_clips):
-            z_in, z_out = zoom_profiles[j % len(zoom_profiles)]
+            zs, ze, x_expr, y_expr = camera_shots[(i * 2 + j) % len(camera_shots)]
             seg = work_dir / f"seg_{i:04d}_{j:02d}.mp4"
-            n_frames = max(1, int(clip_dur * fps))
             _run([
                 "ffmpeg", "-y", "-loop", "1", "-i", str(img),
                 "-vf", (
                     f"scale={w}:{h}:flags=lanczos:force_original_aspect_ratio=increase,"
                     f"crop={w}:{h},"
                     f"unsharp=5:5:0.6:3:3:0.3,"
-                    f"zoompan=" + _zoom_expr(z_in, z_out, clip_dur)
+                    f"zoompan=" + _zoom_expr(zs, ze, clip_dur, x_expr, y_expr)
                 ),
                 "-c:v", "libx264", "-preset", "fast", "-crf", "22",
                 "-pix_fmt", "yuv420p", "-t", f"{clip_dur:.3f}",
                 str(seg),
-            ], f"scene {i+1}/{len(image_paths)} clip {j+1}/{n_clips} ({z_in}->{z_out})")
+            ], f"scene {i+1}/{len(image_paths)} cut {j+1}/{n_clips} ({clip_dur:.1f}s)")
             seg_files.append(seg)
 
     concat_list = work_dir / "concat.txt"
