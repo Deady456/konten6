@@ -119,20 +119,16 @@ def run_once(
 
     video_id = None
     if upload_to_youtube:
-        _log("Uploading clean video to YouTube")
+        _log("Uploading clean video to YouTube with high-CTR custom thumbnail")
         video_id = upload.upload_video(
             video_path=final_for_upload,
             title=data["title"],
             description=data.get("description", CONFIG.get("description", "Dokumenter AI - Sejarah & Arsitektur Kuno")),
             tags=data.get("tags", CONFIG["upload"]["default_tags"]),
             publish_at=publish_at,
+            thumb_path=thumb,
         )
         _log(f"    uploaded: https://youtube.com/watch?v={video_id}")
-        if thumb and thumb.exists():
-            try:
-                thumbnail.upload(upload.get_service(), video_id, thumb)
-            except Exception as e:
-                _log(f"    thumbnail upload failed (non-fatal): {e}")
 
     state.add_published({
         "ts": stamp,

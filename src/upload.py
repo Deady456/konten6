@@ -37,7 +37,7 @@ def get_service():
 
 
 def upload_video(video_path: Path, title: str, description: str, tags: list[str],
-                 publish_at: str | None = None) -> str:
+                 publish_at: str | None = None, thumb_path: Path | None = None) -> str:
     yt = get_service()
     up = CONFIG["upload"]
     all_tags = list({*tags, *up["default_tags"]})
@@ -66,17 +66,27 @@ def upload_video(video_path: Path, title: str, description: str, tags: list[str]
         
     video_id = resp["id"]
     try:
-        import subprocess
-        thumb_path = video_path.with_name("thumb_auto.jpg")
-        subprocess.run([
-            "ffmpeg", "-y", "-ss", "1.0", "-i", str(video_path),
-            "-vframes", "1", "-q:v", "2", str(thumb_path)
-        ], capture_output=True)
-        if thumb_path.exists():
-            thumb_media = MediaFileUpload(str(thumb_path), mimetype="image/jpeg")
+        target_thumb = None
+        if thumb_path and Path(thumb_path).exists():
+            target_thumb = Path(thumb_path)
+        elif video_path.with_name("thumbnail.jpg").exists():
+            target_thumb = video_path.with_name("thumbnail.jpg")
+        else:
+            import subprocess
+            auto_thumb = video_path.with_name("thumb_auto.jpg")
+            subprocess.run([
+                "ffmpeg", "-y", "-ss", "1.0", "-i", str(video_path),
+                "-vframes", "1", "-q:v", "2", str(auto_thumb)
+            ], capture_output=True)
+            if auto_thumb.exists():
+                target_thumb = auto_thumb
+
+        if target_thumb and target_thumb.exists():
+            thumb_media = MediaFileUpload(str(target_thumb), mimetype="image/jpeg")
             yt.thumbnails().set(videoId=video_id, media_body=thumb_media).execute()
+            print(f"    Custom thumbnail uploaded to YouTube Studio for video {video_id}")
     except Exception as e:
-        print(f"    [Warn] Gagal mengupload custom thumbnail: {e}")
+        print(f"    [Warn] Gagal mengupload custom thumbnail ke YouTube Studio: {e}")
         
     return video_id
 
