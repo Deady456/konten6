@@ -5,7 +5,8 @@ language: id
 script:
   model: qwen/qwen3.8-27b
   target_seconds: 35
-  words_per_second: 2.6
+  target_seconds_long: 720 # 12 menit durasi video longform mendalam (10-20 menit)
+  words_per_second: 2.5
 
 voice:
   provider: shellshock
