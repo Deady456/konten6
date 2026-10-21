@@ -9,21 +9,17 @@ script:
   words_per_second: 2.5
 
 voice:
-  provider: shellshock
+  provider: gemini
+  voice_name: "Orus"
+  style: "sober, solemn, investigative journalist, steady cadence, deep authoritative tone"
+  speed: 1.18
   variety:
-    enabled: true
+    enabled: false
     voices:
-      - name: "Charon"
-        gemini_model: "gemini/gemini-2.5-flash-preview-tts/Charon"
-        gender: "male"
-      - name: "Puck"
-        gemini_model: "gemini/gemini-2.5-flash-preview-tts/Puck"
-        gender: "male"
       - name: "Orus"
         gemini_model: "gemini/gemini-2.5-flash-preview-tts/Orus"
         gender: "male"
-    strategy: "round_robin"
-  voice: "gemini/gemini-2.5-flash-preview-tts/Charon"
+  voice: "gemini/gemini-2.5-flash-preview-tts/Orus"
 
 captions:
   whisper_model: qwen/qwen3.8-27b

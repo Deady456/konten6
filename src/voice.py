@@ -134,15 +134,18 @@ def _select_voice(voices: list[dict], strategy: str) -> dict:
 # TTS Providers
 # ============================================================
 
-def _convert_wav_to_mp3(wav_bytes: bytes, out_path: Path) -> None:
-    """Convert raw WAV audio bytes into a standard MP3 file."""
+DEFAULT_VOICE_STYLE = "sober, solemn, investigative journalist, steady cadence, deep authoritative tone"
+
+def _convert_wav_to_mp3(wav_bytes: bytes, out_path: Path, speed: float = 1.18) -> None:
+    """Convert raw WAV audio bytes into a standard MP3 file with speed adjustment."""
     tmp_wav = out_path.with_suffix(".tmp.wav")
     tmp_wav.write_bytes(wav_bytes)
     try:
-        res = subprocess.run(
-            ["ffmpeg", "-y", "-i", str(tmp_wav), "-vn", "-c:a", "libmp3lame", "-q:a", "2", str(out_path)],
-            capture_output=True
-        )
+        ffmpeg_cmd = ["ffmpeg", "-y", "-i", str(tmp_wav)]
+        if speed and abs(speed - 1.0) > 0.01:
+            ffmpeg_cmd += ["-filter:a", f"atempo={speed}"]
+        ffmpeg_cmd += ["-vn", "-c:a", "libmp3lame", "-q:a", "2", str(out_path)]
+        res = subprocess.run(ffmpeg_cmd, capture_output=True)
         if res.returncode == 0 and out_path.exists() and out_path.stat().st_size > 512:
             tmp_wav.unlink(missing_ok=True)
             return
@@ -154,11 +157,16 @@ def _convert_wav_to_mp3(wav_bytes: bytes, out_path: Path) -> None:
 
 
 def _synth_shellshock_gemini_tts(text: str, out_path: Path) -> None:
-    """PRIMARY: ShellShock AWS Gemini 2.5 Flash TTS."""
+    """PRIMARY: ShellShock AWS Gemini TTS via 9Router with serious investigative delivery."""
+    v_cfg = CONFIG.get("voice", {})
+    style = v_cfg.get("style") or v_cfg.get("instructions") or DEFAULT_VOICE_STYLE
+    speed = float(v_cfg.get("speed", 1.18))
+    
     payload = json.dumps({
         "model": SHELLSHOCK_GEMINI_MODEL,
         "input": text,
-        "language": "Indonesian"
+        "language": "Indonesian",
+        "instructions": style
     }).encode("utf-8")
     req = urllib.request.Request(
         SHELLSHOCK_AWS_BASE + "/v1/audio/speech",
@@ -175,7 +183,7 @@ def _synth_shellshock_gemini_tts(text: str, out_path: Path) -> None:
         raise RuntimeError(f"ShellShock Gemini TTS returned too small audio: {len(audio)} bytes")
     
     if audio[:4] == b'RIFF':
-        _convert_wav_to_mp3(audio, out_path)
+        _convert_wav_to_mp3(audio, out_path, speed=speed)
     else:
         out_path.write_bytes(audio)
 
