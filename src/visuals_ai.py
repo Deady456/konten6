@@ -222,18 +222,23 @@ def _generate_stability_ai(prompt: str, out_path, width=1080, height=1920):
     return False
 
 IMAGE_MODELS_CASCADE = [
+    "ag/gemini-3.1-flash-image",
     "cf/@cf/black-forest-labs/flux-2-klein-9b",
     "cf/@cf/leonardo/phoenix-1.0",
     "cf/@cf/black-forest-labs/flux-1-schnell",
 ]
 
 def generate_shellshock_image(prompt: str, out_path, model: str = None, width=1080, height=1920) -> bool:
-    """Generate high-quality image via ShellShock AI Gateway on AWS EC2."""
+    """Generate high-quality image via 9Router AI Gateway on AWS EC2."""
     import os, base64, requests
     from pathlib import Path
     out_path = Path(out_path)
-    gateway_url = os.environ.get("SHELLSHOCK_URL", "http://13.214.34.200:20128/v1/images/generations")
-    api_key = os.environ.get("SHELLSHOCK_API_KEY", "sk-1f7d1788ce9c1aa7-qgi726-f1cb1818")
+    raw_gateway = os.environ.get("NINEROUTER_URL") or os.environ.get("SHELLSHOCK_URL") or "http://13.214.34.200:20128"
+    if not raw_gateway.endswith("/v1/images/generations"):
+        gateway_url = f"{raw_gateway.rstrip('/')}/v1/images/generations"
+    else:
+        gateway_url = raw_gateway
+    api_key = os.environ.get("NINEROUTER_KEY") or os.environ.get("NINEROUTER_API_KEY") or os.environ.get("SHELLSHOCK_API_KEY") or "sk-1f7d1788ce9c1aa7-gixqcc-64a9e8fd"
 
     models_to_try = [model] if model else IMAGE_MODELS_CASCADE
 
@@ -285,14 +290,14 @@ def generate(prompt: str, out_path, width=1080, height=1920, hook_text: str = No
     if "2d cartoon" not in prompt.lower() and "comic" not in prompt.lower():
         prompt = f"{prompt}, 2D cartoon architectural cutaway, comic diagram style, bold clean vector outlines, warm atmospheric lighting, expressive cartoon characters, vibrant colors, clear educational infographic, cross-section blueprint, no realistic photograph"
 
-    # 1. Primary: ShellShock AI Gateway on AWS (FLUX.2 Klein 9B / Leonardo Phoenix)
-    print("  Generating image via ShellShock AI Gateway (AWS FLUX.2)...")
-    success = generate_shellshock_image(prompt, out_path, model="cf/@cf/black-forest-labs/flux-2-klein-9b", width=width, height=height)
+    # 1. Primary: 9Router AI Gateway on AWS (ag/gemini-3.1-flash-image)
+    print("  Generating image via 9Router Gateway (AWS Gemini 3.1 Flash Image)...")
+    success = generate_shellshock_image(prompt, out_path, model="ag/gemini-3.1-flash-image", width=width, height=height)
 
-    # 2. Secondary: Stability AI fallback via ShellShock
+    # 2. Secondary: FLUX / Cascade via 9Router
     if not success:
-        print("  ShellShock FLUX failed. Falling back to ShellShock Stability AI...")
-        success = generate_shellshock_image(prompt, out_path, model="stability-ai/core", width=width, height=height)
+        print("  9Router Gemini image failed. Falling back to 9Router FLUX/Cascade...")
+        success = generate_shellshock_image(prompt, out_path, model="cf/@cf/black-forest-labs/flux-2-klein-9b", width=width, height=height)
 
     # 3. Tertiary: Pollinations AI
     if not success:

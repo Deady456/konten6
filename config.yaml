@@ -91,5 +91,5 @@ hook_text:
   duration: 3
 
 visuals:
-  engine: "flux"
-  model: "cf/@cf/black-forest-labs/flux-2-klein-9b"
+  engine: "gemini"
+  model: "ag/gemini-3.1-flash-image"
