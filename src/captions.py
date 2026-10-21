@@ -126,6 +126,7 @@ def write_ass(words: list[dict], out_path: Path, video_w: int, video_h: int, off
         "whatif": "&H000066FF&",       # Amber Orange
         "lofisleep": "&H00808000&",    # Soft Teal
         "serenitymind": "&H0054082E&", # Deep Indigo
+        "rekakuno": "&H001EB8D4&",     # Ancient Terracotta Gold / Ochre
         "default": "&H000000CC&",      # Red Accent
     }
     accent_pill = channel_pill_colors.get(channel, "&H000000CC&")
