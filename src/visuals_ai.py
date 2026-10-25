@@ -233,12 +233,13 @@ def generate_shellshock_image(prompt: str, out_path, model: str = None, width=10
     import os, base64, requests
     from pathlib import Path
     out_path = Path(out_path)
-    raw_gateway = os.environ.get("NINEROUTER_URL") or os.environ.get("SHELLSHOCK_URL") or "http://13.214.34.200:20128"
-    if not raw_gateway.endswith("/v1/images/generations"):
-        gateway_url = f"{raw_gateway.rstrip('/')}/v1/images/generations"
-    else:
-        gateway_url = raw_gateway
-    api_key = os.environ.get("NINEROUTER_KEY") or os.environ.get("NINEROUTER_API_KEY") or os.environ.get("SHELLSHOCK_API_KEY") or "sk-1f7d1788ce9c1aa7-gixqcc-64a9e8fd"
+    gateway_base = os.environ.get("NINEROUTER_URL", "https://router.otakai.cloud").rstrip("/")
+    gateway_url = f"{gateway_base}/v1/images/generations"
+    api_key = os.environ.get("NINEROUTER_KEY", "")
+
+    if not api_key:
+        print("  [9Router] NINEROUTER_KEY is required")
+        return False
 
     models_to_try = [model] if model else IMAGE_MODELS_CASCADE
 
