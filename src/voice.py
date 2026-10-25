@@ -78,8 +78,8 @@ def replace_numbers_id(text: str) -> str:
 # ============================================================
 # ShellShock AWS Constants (Gemini TTS)
 # ============================================================
-SHELLSHOCK_AWS_BASE     = os.environ.get("NINEROUTER_URL") or os.environ.get("SHELLSHOCK_URL") or "http://13.214.34.200:20128"
-SHELLSHOCK_AWS_KEY      = os.environ.get("NINEROUTER_KEY") or os.environ.get("NINEROUTER_API_KEY") or os.environ.get("SHELLSHOCK_API_KEY") or "sk-1f7d1788ce9c1aa7-gixqcc-64a9e8fd"
+SHELLSHOCK_AWS_BASE = os.environ.get("NINEROUTER_URL", "https://router.otakai.cloud").rstrip("/")
+SHELLSHOCK_AWS_KEY = os.environ.get("NINEROUTER_KEY", "")
 SHELLSHOCK_GEMINI_MODEL = "gemini/gemini-2.5-flash-preview-tts/Orus"
 
 
